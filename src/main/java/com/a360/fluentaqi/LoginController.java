@@ -44,12 +44,7 @@ public class LoginController{
     @FXML
     public void login(ActionEvent event) {
         boolean islogin = ;
-        switch (txt_type.getValue().toString()){
-            case 管理员：
 
-
-
-        }
     }
 
 }
