@@ -1,6 +1,8 @@
 package com.a360.fluentaqi.back.utils;
 
 import com.a360.fluentaqi.back.users.Admin;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -46,7 +48,7 @@ public class JsonReader {
         try {
             // 获取输出流，指向类路径下的目标文件
             OutputStream outputStream =
-                    new FileOutputStream(RWJsonTest.class.getClassLoader().getResource("NepDatas/JSONData/admins.json").getFile());
+                    new FileOutputStream(JsonReader.class.getClassLoader().getResource("com/a360/fluentaqi/back/users/Admin.json").getFile());
 
 
             // 下面的代码适用于创建新文件或覆盖现有文件的情况。
