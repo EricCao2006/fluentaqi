@@ -42,7 +42,4 @@ public class User implements Serializable {
     public void setRealName(String realName) {
         this.realName = realName;
     }
-    public class login{
-
-    }
 }
