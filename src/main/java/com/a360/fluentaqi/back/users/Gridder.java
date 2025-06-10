@@ -6,4 +6,7 @@ package com.a360.fluentaqi.back.users;
  */
 public class Gridder extends User{
     //todo by 尚阳
+    private static final long serialVersionUID = 1L;
+    private String gmTel;
+    private String state;
 }
