@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -13,6 +16,9 @@
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@total.css" />
+    </stylesheets>
     <children>
       <Label text="公 众 管 理 监 督 平 台" textFill="#003300">
          <font>
@@ -45,9 +51,26 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox prefWidth="150.0" style="-fx-background-radius: 10; -fx-background-color: #bbffbb; -fx-border-color: #002200; -fx-border-radius: 10;" GridPane.columnIndex="1" />
-            <TextField style="-fx-background-color: #bbffbb; -fx-background-radius: 10; -fx-border-color: #001100; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField style="-fx-background-color: #bbffbb; -fx-background-radius: 10; -fx-border-color: #001100; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox prefWidth="150.0" styleClass="styled-choice-box" GridPane.columnIndex="1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="管理员" />
+                        <String fx:value="网格员" />
+                        <String fx:value="监督员" />
+                    </FXCollections>
+                </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ChoiceBox>
+             <TextField style="-fx-background-color: #99ff99; -fx-background-radius: 10; -fx-border-color: #99cc99; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <TextField style="-fx-background-color: #99ff99; -fx-background-radius: 10; -fx-border-color: #99cc99; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
          </children>
          <padding>
             <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
@@ -57,6 +80,12 @@
          <font>
             <Font size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </VBox>

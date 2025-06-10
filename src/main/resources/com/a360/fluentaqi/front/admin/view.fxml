@@ -1,33 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane>
+      <Label text="A Q I 管 理 系 统" textFill="#003300">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <GridPane alignment="CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;" vgap="30.0" VBox.vgrow="NEVER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints fillWidth="false" hgrow="NEVER" />
+          <ColumnConstraints fillWidth="false" hgrow="NEVER" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="false" vgrow="NEVER" />
+          <RowConstraints fillHeight="false" vgrow="NEVER" />
+          <RowConstraints fillHeight="false" vgrow="NEVER" />
         </rowConstraints>
          <children>
-            <Label text="Label" />
-            <Label text="Label" GridPane.rowIndex="1" GridPane.rowSpan="2" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="监督员端" textFill="#003300" GridPane.rowSpan="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="网格员端" textFill="#003300" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" style="-fx-background-color: #99ff99; -fx-background-radius: 20; -fx-border-color: #99cc99; -fx-border-radius: 20; -fx-border-width: 2;" text="反馈数据查询&gt;" textFill="#003300" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: #99ff99; -fx-background-radius: 20; -fx-border-color: #99cc99; -fx-border-radius: 20; -fx-border-width: 2;" text="反馈数据指派&gt;" textFill="#003300" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" style="-fx-background-color: #99ff99; -fx-background-radius: 20; -fx-border-color: #99cc99; -fx-border-radius: 20; -fx-border-width: 2;" text="实测数据查询&gt;" textFill="#003300" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
       </GridPane>
-      <Button mnemonicParsing="false" text="Button" />
+      <Button mnemonicParsing="false" style="-fx-background-color: #336633; -fx-background-radius: 30; -fx-border-color: #ddffdd; -fx-border-radius: 30; -fx-border-width: 2;" text="&lt;返回" textFill="#ddffdd">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </VBox>
