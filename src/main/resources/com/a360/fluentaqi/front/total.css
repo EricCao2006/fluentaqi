@@ -1,0 +1,33 @@
+/* 统一设置ChoiceBox和下拉列表的样式 */
+.styled-choice-box {
+    -fx-background-radius: 10px;
+    -fx-background-color: #bbffbb;
+    -fx-border-color: #002200;
+    -fx-border-radius: 10px;
+}
+
+/* 下拉菜单样式 */
+.styled-choice-box .context-menu {
+    -fx-background-color: #bbffbb;      /* 与选择框相同的背景色 */
+    -fx-background-radius: 10px;       /* 与选择框相同的圆角 */
+    -fx-border-color: #002200;        /* 与选择框相同的边框色 */
+    -fx-border-radius: 10px;           /* 与选择框相同的圆角 */
+    -fx-padding: 5;                   /* 添加内边距 */
+}
+
+/* 下拉菜单项样式 */
+.styled-choice-box .menu-item {
+    -fx-background-color: transparent; /* 透明背景 */
+    -fx-padding: 5 10 5 10;           /* 增加内边距 */
+}
+
+/* 悬停和选中状态 */
+.styled-choice-box .menu-item:focused {
+    -fx-background-color: #88dd88;     /* 悬停/选中时的深绿色 */
+    -fx-background-radius: 5px;        /* 子项圆角稍小 */
+}
+
+/* 文本颜色 */
+.styled-choice-box .menu-item .label {
+    -fx-text-fill: #002200;            /* 深绿色文字 */
+}
