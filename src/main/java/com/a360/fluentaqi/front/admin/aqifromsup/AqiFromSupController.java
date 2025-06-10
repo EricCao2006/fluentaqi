@@ -1,4 +1,4 @@
 package com.a360.fluentaqi.front.admin.aqifromsup;
 
-public class Controller {
+public class AqiFromSupController {
 }

@@ -1,4 +1,4 @@
 package com.a360.fluentaqi.front.admin;
 
-public class Controller {
+public class AdminController {
 }

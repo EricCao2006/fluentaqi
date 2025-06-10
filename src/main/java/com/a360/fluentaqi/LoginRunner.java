@@ -8,25 +8,26 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class HelloApplication extends Application {
+public class LoginRunner extends Application {
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/a360/fluentaqi/hello-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/a360/fluentaqi/front/view.fxml"));
         VBox root = loader.load();
 
-        Scene scene = new Scene(root, 400, 300);
+        Scene scene = new Scene(root, 720, 540);
 
         // ✅ 应用 Transit 主题
         TransitTheme transitTheme = new TransitTheme(Style.LIGHT);
         transitTheme.setScene(scene);
         scene.setFill(javafx.scene.paint.Color.TRANSPARENT);
 
-        stage.setTitle("FluentAQI - JavaFX + Transit");
+        stage.setTitle("环保公共监督平台");
         stage.setScene(scene);
         stage.show();
     }
 }
+

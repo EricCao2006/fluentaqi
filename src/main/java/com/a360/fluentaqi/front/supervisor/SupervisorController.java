@@ -1,4 +1,4 @@
 package com.a360.fluentaqi.front.supervisor;
 
-public class Runner {
+public class SupervisorController {
 }

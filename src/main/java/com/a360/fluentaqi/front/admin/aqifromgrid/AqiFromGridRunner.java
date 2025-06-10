@@ -1,4 +1,4 @@
 package com.a360.fluentaqi.front.admin.aqifromgrid;
 
-public class Runner {
+public class AqiFromGridRunner {
 }
