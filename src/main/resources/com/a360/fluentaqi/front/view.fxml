@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -11,15 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
+    <children>
       <Label text="公 众 管 理 监 督 平 台" textFill="#003300">
          <font>
-            <Font size="48.0" />
+            <Font name="YoYuan" size="48.0" />
          </font>
       </Label>
-      <GridPane hgap="20.0" vgap="20.0" VBox.vgrow="NEVER">
+      <GridPane hgap="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;" vgap="20.0" VBox.vgrow="NEVER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" />
           <ColumnConstraints hgrow="SOMETIMES" />
@@ -45,15 +45,15 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ChoiceBox prefWidth="150.0" style="-fx-background-radius: 10; -fx-background-color: #bbffbb; -fx-border-color: #002200; -fx-border-radius: 10;" GridPane.columnIndex="1" />
+            <TextField style="-fx-background-color: #bbffbb; -fx-background-radius: 10; -fx-border-color: #001100; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField style="-fx-background-color: #bbffbb; -fx-background-radius: 10; -fx-border-color: #001100; -fx-border-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
          </padding>
       </GridPane>
-      <Button mnemonicParsing="false" style="-fx-background-color: #336633;" text="登录" textFill="#ddffdd">
+      <Button mnemonicParsing="false" style="-fx-background-color: #336633; -fx-background-radius: 30; -fx-border-color: #ddffdd; -fx-border-radius: 30; -fx-border-width: 1;" text="登录&gt;" textFill="#ddffdd">
          <font>
             <Font size="24.0" />
          </font>
