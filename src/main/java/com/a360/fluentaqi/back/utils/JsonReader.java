@@ -17,7 +17,7 @@ import java.util.List;
 public class JsonReader {
     // 获取当前项目类路径（读取json文件的时候会用到，对象格式数据用不到此对象）
     public static ClassLoader classLoader = JsonReader.class.getClassLoader();
-    // 操作json格式数据是用的工具类对象（操作json文件的时候会用到，对象格式数据用不到此对象）
+    // 操作json格式数据时用的工具类对象（操作json文件的时候会用到，对象格式数据用不到此对象）
     public static ObjectMapper objectMapper = new ObjectMapper();
 
 
