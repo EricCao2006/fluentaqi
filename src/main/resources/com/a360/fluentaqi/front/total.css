@@ -1,16 +1,16 @@
 /* 统一设置ChoiceBox和下拉列表的样式 */
 .styled-choice-box {
     -fx-background-radius: 10px;
-    -fx-background-color: #bbffbb;
-    -fx-border-color: #002200;
+    -fx-background-color: #99ff99;
+    -fx-border-color: #99cc99;
     -fx-border-radius: 10px;
 }
 
 /* 下拉菜单样式 */
 .styled-choice-box .context-menu {
-    -fx-background-color: #bbffbb;      /* 与选择框相同的背景色 */
+    -fx-background-color: #99ff99;      /* 与选择框相同的背景色 */
     -fx-background-radius: 10px;       /* 与选择框相同的圆角 */
-    -fx-border-color: #002200;        /* 与选择框相同的边框色 */
+    -fx-border-color: #99cc99;        /* 与选择框相同的边框色 */
     -fx-border-radius: 10px;           /* 与选择框相同的圆角 */
     -fx-padding: 5;                   /* 添加内边距 */
 }
