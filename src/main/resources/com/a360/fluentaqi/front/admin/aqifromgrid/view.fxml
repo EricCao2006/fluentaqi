@@ -15,16 +15,16 @@
     </stylesheets>
     <children>
         <Label styleClass="styled-title" text="网格员AQI实测数据" />
-      <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="NEVER">
+      <ScrollPane hbarPolicy="ALWAYS">
          <VBox.margin>
             <Insets left="20.0" right="20.0" />
          </VBox.margin>
          <content>
             <TableView styleClass="styled-table">
               <columns>
-                <TableColumn text="编号" />
-                <TableColumn text="省" />
-                <TableColumn text="市" />
+                <TableColumn prefWidth="50.0" text="编号" />
+                <TableColumn prefWidth="50.0" text="省" />
+                <TableColumn prefWidth="50.0" text="市" />
                 <TableColumn text="预估等级" />
                 <TableColumn text="反馈时间" />
                 <TableColumn text="反馈者" />

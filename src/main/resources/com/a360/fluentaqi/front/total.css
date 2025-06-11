@@ -51,21 +51,61 @@
 
 /*表格*/
 .styled-table {
-    -fx-background-color: #99ff99;
-    -fx-background-radius: 10px;
-    -fx-border-color: #99cc99;
-    -fx-border-radius: 10px;
+    -fx-background-color: #ccffcc;
+    -fx-border-color: #ccffcc;
+    -fx-text-fill: #002200;
     -fx-padding: 5;
 }
 
-.tableView .column-header {
+/*表格第一行即表头*/
+.styled-table .column-header {
     -fx-background-color: #99ff99;
-    -fx-text-fill: #002200;
-    -fx-border-color: #99cc99;
+    -fx-border-color: #559955;
+    -fx-padding: 5;
 }
 
-.tableView .column-header:hover {
-    -fx-background-color: #447744;
+/* 表格行 */
+.styled-table .table-row-cell {
+    -fx-background-color: #ccffcc;
+    -fx-border-color: #559955;
+}
+
+/* 滚动区 */
+.scroll-pane {
+    -fx-background-color: #ccffcc;
+    -fx-background-radius: 10px;
+    -fx-border-color: #99ff99;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+/* 滚动条轨道*/
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: #339933;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+
+/* 滚动条两端按钮样式 */
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color: #000000;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 0;
+    -fx-shape: null;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-effect: null;
 }
 
 /* 深色按钮 */
