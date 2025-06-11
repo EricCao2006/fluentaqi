@@ -4,9 +4,10 @@ import com.a360.fluentaqi.back.users.Admin;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
 public class JsonReader {
     // 获取当前项目类路径（读取json文件的时候会用到，对象格式数据用不到此对象）
     public static ClassLoader classLoader = JsonReader.class.getClassLoader();
-    // 操作json格式数据是用的工具类对象（操作json文件的时候会用到，对象格式数据用不到此对象）
+    // 操作json格式数据时用的工具类对象（操作json文件的时候会用到，对象格式数据用不到此对象）
     public static ObjectMapper objectMapper = new ObjectMapper();
 
 
@@ -66,10 +67,11 @@ public class JsonReader {
         }
     }
 
+
     public static void main(String[] args) {
         // 调用读取json格式数据方法
         List<Admin> admins = getListByJackson();
-        admins.add(new Admin(1, "1001", "111",null));
+        admins.add(new Admin(3, "admin", "111",null));
         // 调用写入json格式数据方法
         writeListByJson(admins);
     }

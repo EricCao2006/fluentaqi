@@ -9,4 +9,11 @@ import java.io.Serializable;
 public class Admin extends User implements Serializable {
     //todo by 尚阳
     private static final long serialVersionUID = 1L;
+
+    @Override
+    public String toString() {
+        return "Admin [getLoginCode()=" + getLoginCode() + ", getPassword()=" + getPassword() + ", getRealName()="
+                + getRealName() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+                + super.toString() + "]";
+    }
 }
