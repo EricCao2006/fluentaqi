@@ -16,7 +16,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean login(String loginCode, String password) throws IOException {
         // TODO Auto-generated method stub
-        String filePath = System.getProperty("user.dir") + "/src/main/resources/com.a360.fluentaqi/back/users/";
+        String filePath = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users.json/";
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             List<Admin> adminList = objectMapper.readValue(
