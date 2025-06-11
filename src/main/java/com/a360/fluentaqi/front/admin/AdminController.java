@@ -45,5 +45,10 @@ public class AdminController implements Initializable {
 
     }
 
+    @FXML
+    void getback(ActionEvent event) {
+
+    }
+
 }
 
