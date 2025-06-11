@@ -97,7 +97,9 @@
 
 /* 滚动条两端按钮样式 */
 .scroll-bar:horizontal .increment-button,
-.scroll-bar:horizontal .decrement-button {
+.scroll-bar:horizontal .decrement-button,
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button{
     -fx-background-color: #000000;
     -fx-background-radius: 5px;
     -fx-border-radius: 5px;
