@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -16,18 +17,18 @@
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="公众监督反馈指派" />
+        <Label styleClass="styled-title" text="公 众 监 督 AQI 反 馈 指 派" />
       <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20;">
          <children>
-            <Label styleClass="styled-content" text="AQI反馈数据编号" />
-            <TextField styleClass="styled-text-field" />
+            <Label styleClass="styled-content" text="请输入AQI反馈数据编号：" />
+            <TextField prefHeight="30.0" prefWidth="200.0" styleClass="styled-text-field" />
             <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="查询" />
          </children>
          <VBox.margin>
             <Insets left="20.0" right="20.0" />
          </VBox.margin>
          <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
          </padding>
       </HBox>
       <ScrollPane hbarPolicy="ALWAYS">
@@ -48,7 +49,20 @@
                </columnResizePolicy>
             </TableView>
          </content>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
       </ScrollPane>
+      <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20;">
+         <children>
+            <Label styleClass="styled-content" text="请选择您要指派的网格员：" />
+            <ChoiceBox prefWidth="200.0" styleClass="styled-choice-box" />
+            <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="指派" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
         <Button mnemonicParsing="false" styleClass="styled-dark-button" text="&lt;返回" />
 
     </children>
