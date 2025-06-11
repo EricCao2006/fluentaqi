@@ -14,9 +14,9 @@ import java.util.List;
 
 public class AdminServiceImpl implements AdminService {
     @Override
-    public boolean login(String loginCode, String password) {
+    public boolean login(String loginCode, String password) throws IOException {
         // TODO Auto-generated method stub
-        String filePath = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
+        String filePath = System.getProperty("user.dir") + "/src/main/resources/fluentaqi/back/users/";
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             List<Admin> adminList = objectMapper.readValue(
@@ -28,6 +28,7 @@ public class AdminServiceImpl implements AdminService {
                     return true;
                 }
             }
+            return false;
         } catch (StreamReadException e) {
             throw new RuntimeException(e);
         } catch (DatabindException e) {
@@ -35,6 +36,6 @@ public class AdminServiceImpl implements AdminService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return false;
     }
 }
+

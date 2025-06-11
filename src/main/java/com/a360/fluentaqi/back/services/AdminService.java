@@ -1,5 +1,7 @@
 package com.a360.fluentaqi.back.services;
 
+import java.io.IOException;
+
 public interface AdminService {
     /**
      * 管理员登录
@@ -7,5 +9,5 @@ public interface AdminService {
      * @param password
      * @return
      */
-    public boolean login(String loginCode,String password);
+    public boolean login(String loginCode,String password) throws IOException;
 }
