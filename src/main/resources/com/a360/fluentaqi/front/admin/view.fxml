@@ -67,7 +67,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </GridPane>
-      <Button mnemonicParsing="false" style="-fx-background-color: #336633; -fx-background-radius: 30; -fx-border-color: #ddffdd; -fx-border-radius: 30; -fx-border-width: 2;" text="&lt;返回" textFill="#ddffdd">
+      <Button mnemonicParsing="false" onAction="#getback" style="-fx-background-color: #336633; -fx-background-radius: 30; -fx-border-color: #ddffdd; -fx-border-radius: 30; -fx-border-width: 2;" text="&lt;返回" textFill="#ddffdd">
          <font>
             <Font size="24.0" />
          </font>
