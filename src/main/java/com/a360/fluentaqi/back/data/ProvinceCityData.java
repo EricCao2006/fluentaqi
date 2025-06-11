@@ -1,6 +1,7 @@
 package com.a360.fluentaqi.back.data;
 
 import com.a360.fluentaqi.back.aqiabouts.Province;
+import com.a360.fluentaqi.back.utils.JsonReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class ProvinceCityData {
         plist.add(p1);
         plist.add(p2);
         plist.add(p3);
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        FileUtil.writeObject(ProPaht+"province_city.txt", plist);
+        String ProPaht = System.getProperty("user.dir") + "src/main/resources/com/a360/fluentaqi/back/users";
+        JsonReader.writeListToJson(plist,ProPaht+"grid_province.json");
     }
 }

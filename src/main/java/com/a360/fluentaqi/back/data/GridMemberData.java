@@ -1,6 +1,7 @@
 package com.a360.fluentaqi.back.data;
 
 import com.a360.fluentaqi.back.users.Gridder;
+import com.a360.fluentaqi.back.utils.JsonReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,7 @@ public class GridMemberData {
         glist.add(gm3);
         glist.add(gm4);
         glist.add(gm5);
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        FileUtil.writeObject(ProPaht+"gridmember.txt", glist);
+        String ProPaht = System.getProperty("user.dir") + "src/main/resources/com/a360/fluentaqi/back/users";
+        JsonReader.writeListToJson(glist,ProPaht+"grid_member.json");
     }
 }

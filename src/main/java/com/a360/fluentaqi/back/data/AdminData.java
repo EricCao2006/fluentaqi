@@ -1,6 +1,7 @@
 package com.a360.fluentaqi.back.data;
 
 import com.a360.fluentaqi.back.users.Admin;
+import com.a360.fluentaqi.back.utils.JsonReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class AdminData {
         List<Admin> alist = new ArrayList<Admin>();
         alist.add(a1);
         alist.add(a2);
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        FileUtil.writeObject(ProPaht+"admin.json", alist);
+        String ProPaht = System.getProperty("user.dir") + "src/main/resources/com/a360/fluentaqi/back/users";
+        JsonReader.writeListToJson(alist,ProPaht+"admins.json");
     }
 }

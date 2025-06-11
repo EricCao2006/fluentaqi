@@ -1,6 +1,7 @@
 package com.a360.fluentaqi.back.data;
 
 import com.a360.fluentaqi.back.users.Supervisor;
+import com.a360.fluentaqi.back.utils.JsonReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,7 @@ public class SupervisorData {
         alist.add(s1);
         alist.add(s2);
         alist.add(s3);
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        FileUtil.writeObject(ProPaht+"supervisor.txt", alist);
+        String ProPaht = System.getProperty("user.dir") + "src/main/resources/com/a360/fluentaqi/back/users";
+        JsonReader.writeListToJson(alist,ProPaht+"Supervisor.json");
     }
 }

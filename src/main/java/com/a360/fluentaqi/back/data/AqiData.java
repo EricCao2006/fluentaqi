@@ -2,6 +2,7 @@ package com.a360.fluentaqi.back.data;
 
 import com.a360.fluentaqi.back.aqiabouts.Aqi;
 import com.a360.fluentaqi.back.users.Supervisor;
+import com.a360.fluentaqi.back.utils.JsonReader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class AqiData {
         alist.add(a4);
         alist.add(a5);
         alist.add(a6);
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        FileUtil.writeObject(ProPaht+"aqi.txt", alist);
+        String ProPaht = System.getProperty("user.dir") + "src/main/resources/com/a360/fluentaqi/back/users";
+        JsonReader.writeListToJson(alist,ProPaht+"aqi.json");
     }
 }
