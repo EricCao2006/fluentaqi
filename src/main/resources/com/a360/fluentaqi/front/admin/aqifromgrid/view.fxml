@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button mnemonicParsing="false" style="-fx-background-color: #336633; -fx-background-radius: 30; -fx-border-color: #ddffdd; -fx-border-radius: 30; -fx-border-width: 2;" text="&lt;返回" textFill="#ddffdd">
-         <font>
-            <Font size="24.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@../../total.css" />
+    </stylesheets>
+    <children>
+        <Label styleClass="styled-title" text="网格员AQI实测数据" />
+      <ScrollPane hbarPolicy="ALWAYS" vbarPolicy="NEVER">
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+         <content>
+            <TableView styleClass="styled-table">
+              <columns>
+                <TableColumn text="编号" />
+                <TableColumn text="省" />
+                <TableColumn text="市" />
+                <TableColumn text="预估等级" />
+                <TableColumn text="反馈时间" />
+                <TableColumn text="反馈者" />
+                <TableColumn text="SO2浓度" />
+                <TableColumn text="CO浓度" />
+                <TableColumn text="PM2.5浓度" />
+                <TableColumn text="实测等级" />
+                <TableColumn text="等级说明" />
+                <TableColumn text="实测日期" />
+                <TableColumn text="网格员" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+        <Button mnemonicParsing="false" styleClass="styled-dark-button" text="&lt;返回" />
+        
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
 </VBox>
