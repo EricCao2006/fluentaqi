@@ -23,8 +23,8 @@ public class SupervisorServiceImpl implements SupervisorService {
 
             for (Supervisor s : slist) {
                 if (s.getLoginCode().equals(loginCode) && s.getPassword().equals(password)) {
-                    AqiViewController.supervisor = s;
-                    FeedbackViewController.supervisor = s;
+//                    AqiViewController.supervisor = s;
+//                    FeedbackViewController.supervisor = s;
                     return true;
                 }
             }
