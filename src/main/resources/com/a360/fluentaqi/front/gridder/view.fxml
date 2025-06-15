@@ -114,7 +114,7 @@
                         <Insets bottom="-10.0" top="-5.0" />
                      </VBox.margin>
                   </VBox>
-                    <Button mnemonicParsing="false" styleClass="styled-dark-button" text="提交&gt;" />
+                    <Button mnemonicParsing="false" styleClass="styled-light-button" text="提交&gt;" />
                   <Button mnemonicParsing="false" styleClass="styled-dark-button" text="&lt;返回" />
                </children>
             </VBox>

@@ -3,13 +3,7 @@ package com.a360.fluentaqi.back.users;
 import java.io.Serial;
 import java.io.Serializable;
 
-/**
- * 用户类<br>
- * 包含登录函数（返回布尔值）
- * @author 尚阳@A360
- */
 public class User implements Serializable {
-    //todo by 尚阳
     @Serial
     private static final long serialVersionUID = 1L;
     private String loginCode;//登录账号
