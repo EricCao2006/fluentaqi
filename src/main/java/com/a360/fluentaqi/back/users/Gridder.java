@@ -7,7 +7,6 @@ import java.io.Serializable;
  * @author 尚阳@A360
  */
 public class Gridder extends User implements Serializable {
-    //todo by 尚阳
     private static final long serialVersionUID = 1L;
     private String gmTel;
     private String state;

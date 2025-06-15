@@ -29,13 +29,13 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.13.1</version>
+            <version>2.13.0</version>
         </dependency>
         <!-- Jackson Databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.12.3</version> <!-- 请使用适合您项目的版本 -->
+            <version>2.13.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

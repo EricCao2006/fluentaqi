@@ -8,7 +8,6 @@ import java.util.List;
  * @author 尚阳@A360
  */
 public class Province {
-    //todo by 尚阳
     private static final long serialVersionUID = 1L;
     private Integer provinceId;
     private String provinceName;
