@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FeedbackServiceImpl implements FeedbackService {
-    String FILE_PATH = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/aqifeedback.json";
+    String FILE_PATH = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/Feedback.json";
     ObjectMapper objectMapper = new ObjectMapper();
     @Override
     public void saveFeedBack(Feedback afb) {
