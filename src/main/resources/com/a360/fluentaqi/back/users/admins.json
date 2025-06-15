@@ -2,7 +2,7 @@
   {
     "admin_id": 1,
     "admin_code": "admin",
-    "LoginCode": "admin123",
+    "loginCode": "admin123",
     "password": "123",
     "remarks": null
   }
