@@ -37,7 +37,7 @@ public class SupervisorServiceImpl implements SupervisorService {
 
     @Override
     public boolean register(Supervisor supervisor) {
-        String filePath = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/supervisor.json";
+        String filePath = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/Supervisor.json";
         List<Supervisor> slist = new ArrayList<>();
 
         try {
