@@ -68,7 +68,7 @@ public class LoginController{
                 boolean isLogin = adminService.login(txt_id.getText(), txt_password.getText());
                 if(isLogin){
                     AdminController.primaryStage = primaryStage;
-                    JavafxUtil.showStage(LoginRunner.class,"src/main/resources/com/a360/fluentaqi/front/admin/view.fxml", primaryStage,"环保公众监督平台-管理端-主功能界面");
+                    JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/view.fxml", primaryStage,"环保公众监督平台-管理端-主功能界面");
                 }else{
                     JavafxUtil.showAlert(primaryStage, "登录失败", "用户名密码错误", "请重新输入用户名和密码","warn");
                 }
@@ -86,7 +86,7 @@ public class LoginController{
                 Gridder gm = gridMemberService.login(txt_id.getText(), txt_password.getText());
                 if(gm!=null){
                     AqiFromGridController.gridMember = gm;
-                    JavafxUtil.showStage(LoginRunner.class, "src/main/resources/com/a360/fluentaqi/front/gridder/view.fxml", primaryStage, "东软环保公众监督平台-确认AQI反馈数据");
+                    JavafxUtil.showStage(LoginRunner.class, "/com/a360/fluentaqi/front/gridder/view.fxml", primaryStage, "环保公众监督平台-确认AQI反馈数据");
 
                 }else{
                     JavafxUtil.showAlert(primaryStage, "登录失败", "登录账号和密码错误","请重新输入账号和密码","warn");
@@ -96,7 +96,7 @@ public class LoginController{
                 boolean flag = supervisorService.login(txt_id.getText(), txt_password.getText());
                 if(flag){
                     SupervisorController.primaryStage = primaryStage;
-                    JavafxUtil.showStage(LoginRunner.class,"src/main/resources/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage, "东软环保公众监督平台-公众监督员端-AQI数据反馈");
+                    JavafxUtil.showStage(LoginRunner.class,"/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage, "环保公众监督平台-公众监督员端-AQI数据反馈");
                 }else{
                     JavafxUtil.showAlert(primaryStage, "登录失败", "用户名密码错误", "","warn");
                 }
