@@ -1,5 +1,7 @@
 package com.a360.fluentaqi.front.admin;
 
+import com.a360.fluentaqi.back.utils.JavafxUtil;
+import com.a360.fluentaqi.front.admin.gridderorder.GridderOrderController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -31,23 +33,23 @@ public class AdminController implements Initializable {
     }
 
     @FXML
-    void aqiAssign(ActionEvent event){
-
+    void aqiAssign(){
+        GridderOrderController.aqiInfoStage = JavafxUtil.showSubStage(this.getClass(), "src/main/resources/com/a360/fluentaqi/front/admin/aqifromsup/view.fxml", primaryStage, "环保公众监督平台-管理端-AQI反馈数据指派");
     }
 
     @FXML
-    void aqiConfirm(ActionEvent event){
-
+    void aqiConfirm(){
+        JavafxUtil.showSubStage(this.getClass(), "/com/a360/fluentaqi/front/admin/aqifromgrid/view.fxml", primaryStage, "环保公众监督平台-管理端-AQI实测数据查询");
     }
 
     @FXML
-    void aqiInfo(ActionEvent event) {
-
+    void aqiInfo() {
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/aqiInfo.fxml",primaryStage,"环保公众监督平台-管理端-AQI反馈数据查询");
     }
 
     @FXML
-    void getback(ActionEvent event) {
-
+    void getback() {
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/login/view.fxml",primaryStage,"登录");
     }
 
 }
