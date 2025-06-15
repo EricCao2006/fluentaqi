@@ -12,10 +12,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="20.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
     <stylesheets>
         <URL value="@total.css" />
     </stylesheets>
@@ -54,7 +55,12 @@
             <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
          </padding>
       </GridPane>
-      <Button mnemonicParsing="false" onAction="#login" styleClass="styled-dark-button" text="登录&gt;" />
+      <HBox spacing="40.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#login" styleClass="styled-light-button" text="监督员注册&gt;" />
+            <Button mnemonicParsing="false" onAction="#login" styleClass="styled-dark-button" text="登录&gt;" />
+         </children>
+      </HBox>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
