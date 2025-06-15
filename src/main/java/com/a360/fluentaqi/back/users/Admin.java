@@ -12,7 +12,7 @@ public class Admin extends User implements Serializable {
     public String getAdmin_id(){
         return Admin_id;
     }
-    public String setAdmin_id(){
+    public void setAdmin_id(String Admin_id){
         this.Admin_id = Admin_id;
     }
     @Override
