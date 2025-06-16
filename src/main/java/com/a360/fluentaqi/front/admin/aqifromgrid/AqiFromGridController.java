@@ -102,8 +102,8 @@ public class AqiFromGridController implements Initializable {
 
         txt_tableView.getColumns().addAll(afIdColumn, proviceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,so2Column,coColumn,pmColumn,confirmLevelColumn,confirmExplainColumn,confirmDateColumn,gmNameColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        String filePath = ProPaht + "Feedback.json"; // 添加文件路径
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
+        String filePath = ProPaht + "aqi_feedback.json"; // 添加文件路径
         List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
         for(Feedback afb:afList){
             if(afb.getState().equals("已实测")){

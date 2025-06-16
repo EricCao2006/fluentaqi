@@ -79,8 +79,8 @@ public class AqiFromSupController implements Initializable {
 
         txt_tableView.getColumns().addAll(afIdColumn, proviceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,infoColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/";
-        String filePath = ProPaht + "Aqi.json";
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
+        String filePath = ProPaht + "aqi.json";
         List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
         for(Feedback afb:afList){
             if(afb.getState().equals("未指派")){
