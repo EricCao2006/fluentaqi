@@ -23,7 +23,8 @@ public class AdminServiceImpl implements AdminService {
                     objectMapper.getTypeFactory().constructCollectionType(List.class, Admin.class)
             );
             for (Admin admin : adminList) {
-                if (admin.getLoginCode().equals(loginCode) && admin.getPassword().equals(password)) {
+                if (admin.getLoginCode() != null && admin.getLoginCode().equals(loginCode)
+                        && admin.getPassword() != null && admin.getPassword().equals(password)) {
                     return true;
                 }
             }
