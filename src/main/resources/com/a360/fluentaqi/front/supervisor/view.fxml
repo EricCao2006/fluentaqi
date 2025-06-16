@@ -134,8 +134,8 @@
                               <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="查询历史记录&gt;" />
                               <HBox alignment="CENTER" prefHeight="12.0" prefWidth="194.0" spacing="20.0">
                                  <children>
-                                          <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="提交&gt;" />
                                           <Button mnemonicParsing="false" styleClass="styled-small-dark-button" text="&lt;返回" />
+                                          <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="提交&gt;" />
                                  </children>
                               </HBox>
                                 </children>

@@ -68,7 +68,7 @@ public class LoginController{
                 boolean isLogin = adminService.login(txt_id.getText(), txt_password.getText());
                 if(isLogin){
                     AdminController.primaryStage = primaryStage;
-                    JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/view.fxml", primaryStage,"环保公众监督平台-管理端-主功能界面");
+                    JavafxUtil.showStage(LoginRunner.class,"/com/a360/fluentaqi/front/admin/view.fxml", primaryStage,"环保公众监督平台-管理端-主功能界面");
                 }else{
                     JavafxUtil.showAlert(primaryStage, "登录失败", "用户名密码错误", "请重新输入用户名和密码","warn");
                 }

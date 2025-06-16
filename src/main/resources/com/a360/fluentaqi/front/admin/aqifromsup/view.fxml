@@ -20,7 +20,7 @@
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
             <content>
-                <TableView styleClass="styled-table">
+                <TableView fx:id="txt_tableView" styleClass="styled-table">
                     <columns>
                         <TableColumn prefWidth="50.0" text="编号" />
                         <TableColumn prefWidth="50.0" text="省" />
