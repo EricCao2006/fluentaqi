@@ -1,6 +1,7 @@
 package com.a360.fluentaqi.back.utils;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
@@ -49,8 +50,8 @@ public class JavafxUtil {
         URL url = clazz.getResource(path);
         loader.setLocation(url);
         try {
-            AnchorPane pane = loader.load();
-            Scene scene = new Scene(pane);
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
             primaryStage.setTitle(title);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -74,8 +75,8 @@ public class JavafxUtil {
         loader.setLocation(url);
         Stage subStage = new Stage();
         try {
-            AnchorPane pane = loader.load();
-            Scene scene = new Scene(pane);
+            Parent root = loader.load(); // 改为Parent
+            Scene scene = new Scene(root);
             subStage.setTitle(title);
             subStage.setScene(scene);
             subStage.initOwner(primaryStage);
