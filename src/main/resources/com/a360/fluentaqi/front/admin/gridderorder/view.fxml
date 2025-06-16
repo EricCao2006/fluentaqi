@@ -34,16 +34,16 @@
       <ScrollPane hbarPolicy="ALWAYS">
          <content>
             <TableView fx:id="txt_tableView" styleClass="styled-table">
-              <columns>
-                <TableColumn text="编号" />
-                <TableColumn text="日期" />
-                  <TableColumn text="省" />
-                  <TableColumn text="市" />
-                  <TableColumn text="详细地址" />
-                  <TableColumn text="预估AQI等级" />
-                  <TableColumn text="反馈者" />
-                  <TableColumn text="反馈详情" />
-              </columns>
+<!--              <columns>-->
+<!--                <TableColumn text="编号" />-->
+<!--                <TableColumn text="日期" />-->
+<!--                  <TableColumn text="省" />-->
+<!--                  <TableColumn text="市" />-->
+<!--                  <TableColumn text="详细地址" />-->
+<!--                  <TableColumn text="预估AQI等级" />-->
+<!--                  <TableColumn text="反馈者" />-->
+<!--                  <TableColumn text="反馈详情" />-->
+<!--              </columns>-->
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>

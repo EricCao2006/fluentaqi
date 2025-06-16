@@ -21,14 +21,14 @@
             </VBox.margin>
             <content>
                 <TableView fx:id="txt_tableView" styleClass="styled-table">
-                    <columns>
-                        <TableColumn prefWidth="50.0" text="编号" />
-                        <TableColumn prefWidth="50.0" text="省" />
-                        <TableColumn prefWidth="50.0" text="市" />
-                        <TableColumn text="预估等级" />
-                        <TableColumn text="反馈时间" />
-                        <TableColumn prefWidth="300.0" text="反馈信息" />
-                    </columns>
+<!--                    <columns>-->
+<!--                        <TableColumn prefWidth="50.0" text="编号" />-->
+<!--                        <TableColumn prefWidth="50.0" text="省" />-->
+<!--                        <TableColumn prefWidth="50.0" text="市" />-->
+<!--                        <TableColumn text="预估等级" />-->
+<!--                        <TableColumn text="反馈时间" />-->
+<!--                        <TableColumn prefWidth="300.0" text="反馈信息" />-->
+<!--                    </columns>-->
                 </TableView>
             </content>
         </ScrollPane>
