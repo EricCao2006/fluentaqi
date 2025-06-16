@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminController  {
+
     public static Stage primaryStage;
 
     private ImageView txt_imageView;
@@ -49,7 +50,7 @@ public class AdminController  {
 
     @FXML
     void getback() {
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/login/view.fxml",primaryStage,"登录");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml",primaryStage,"登录");
     }
 
 }

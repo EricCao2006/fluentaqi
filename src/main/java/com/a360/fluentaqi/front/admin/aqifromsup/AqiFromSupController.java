@@ -2,7 +2,10 @@ package com.a360.fluentaqi.front.admin.aqifromsup;
 
 
 import com.a360.fluentaqi.back.aqiabouts.Feedback;
+import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import com.a360.fluentaqi.front.admin.AdminController;
+import com.a360.fluentaqi.front.admin.aqifromgrid.AqiFromGridController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,13 +14,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class AqiFromSupController implements Initializable {
+
+    private static Stage primaryStage;
     public void getback(ActionEvent actionEvent) {
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/view.fxml",AdminController.primaryStage,"环保公众监督平台-管理端-主功能界面");
 
     }
 
