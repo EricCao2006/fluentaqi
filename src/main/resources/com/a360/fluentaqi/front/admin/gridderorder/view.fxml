@@ -21,8 +21,8 @@
       <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20;">
          <children>
             <Label styleClass="styled-content" text="请输入AQI反馈数据编号：" />
-            <TextField prefHeight="30.0" prefWidth="200.0" styleClass="styled-text-field" />
-            <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="查询" />
+            <TextField fx:id="txt_afId" prefHeight="30.0" prefWidth="200.0" styleClass="styled-text-field" />
+            <Button mnemonicParsing="false" onAction="#queryFeedback" styleClass="styled-small-light-button" text="查询" />
          </children>
          <VBox.margin>
             <Insets left="20.0" right="20.0" />
@@ -33,7 +33,7 @@
       </HBox>
       <ScrollPane hbarPolicy="ALWAYS">
          <content>
-            <TableView styleClass="styled-table">
+            <TableView fx:id="txt_tableView" styleClass="styled-table">
               <columns>
                 <TableColumn text="编号" />
                 <TableColumn text="日期" />
@@ -56,8 +56,8 @@
       <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20;">
          <children>
             <Label styleClass="styled-content" text="请选择您要指派的网格员：" />
-            <ChoiceBox prefWidth="200.0" styleClass="styled-choice-box" />
-            <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="指派" />
+            <ChoiceBox fx:id="combo_realName" prefWidth="200.0" styleClass="styled-choice-box" />
+            <Button mnemonicParsing="false" onAction="#assignGridMember" styleClass="styled-small-light-button" text="指派" />
          </children>
          <padding>
             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
