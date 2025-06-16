@@ -1,14 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.View"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@../total.css" />
+    </stylesheets>
+    <children>
+        <Label styleClass="styled-title" text="公 众 监 督 员 信 息 反 馈" />
+      <Accordion>
+         <panes>
+          <TitledPane contentDisplay="CENTER" expanded="false" styleClass="styled-titled-pane" text="AQI等级及说明">
+               <content>
+                  <GridPane alignment="CENTER" hgap="10.0" style="-fx-background-color: #ccffcc;" vgap="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" prefWidth="80.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="80.0" prefWidth="80.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="50.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="25.0" />
+                    </rowConstraints>
+                     <children>
+                           <Label styleClass="table-cell" text="对健康影响" GridPane.columnIndex="2" />
+                           <Label styleClass="table-cell" text="空气质量令人满意,基本无空气污染" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           <Label styleClass="table-cell" text="空气质量可接受,但某些污染物可能对极少数异常敏感人群健康有较弱的影响" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                           <Label styleClass="table-cell" text="易感人群症状有轻度加剧,健康人群出现刺激症状" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                           <Label prefWidth="447.0" styleClass="table-cell" text="进一步加剧易感人群症状,可能对健康人群心脏、呼吸系统有影响" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                           <Label styleClass="table-cell" text="心脏病和肺病患者症状显著加剧,运动耐受力降低,健康人群普遍出现症状" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                           <Label styleClass="table-cell" text="健康人群耐受力降低,有明显强烈症状,提前出现某些疾病" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                           <Label styleClass="table-cell" text="说明" GridPane.columnIndex="1" />
+                           <Label styleClass="table-cell" text="优" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           <Label styleClass="table-cell" text="良" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           <Label styleClass="table-cell" text="轻度污染" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           <Label styleClass="table-cell" text="中度污染" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           <Label styleClass="table-cell" text="重度污染" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           <Label styleClass="table-cell" text="严重污染" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                           <Label styleClass="table-cell" text="级别" />
+                           <Label styleClass="table-cell" text="一级" GridPane.rowIndex="1" />
+                           <Label styleClass="table-cell" text="二级" GridPane.rowIndex="2" />
+                           <Label styleClass="table-cell" text="三级" GridPane.rowIndex="3" />
+                           <Label styleClass="table-cell" text="四级" GridPane.rowIndex="4" />
+                           <Label styleClass="table-cell" text="五级" GridPane.rowIndex="5" />
+                           <Label styleClass="table-cell" text="六级" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <TitledPane contentDisplay="CENTER" expanded="false" styleClass="styled-titled-pane" text="信息提交区">
+               <content>
+                    <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc;">
+                        <children>
+                            <VBox alignment="CENTER" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;">
+                                <children>
+                                    <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: trabsparent; -fx-border-radius: 20;" vgap="10.0">
+                                        <columnConstraints>
+                                            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
+                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" />
+                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" />
+                                        </columnConstraints>
+                                        <rowConstraints>
+                                            <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+                                            <RowConstraints vgrow="SOMETIMES" />
+                                            <RowConstraints vgrow="SOMETIMES" />
+                                            <RowConstraints vgrow="SOMETIMES" />
+                                        </rowConstraints>
+                                        <padding>
+                                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                        </padding>
+                                        <children>
+                                            <Label styleClass="styled-small-content" text="具体地址" GridPane.rowIndex="1" />
+                                            <Label styleClass="styled-small-content" text="预估AQI等级" GridPane.rowIndex="2" />
+                                            <Label styleClass="styled-small-content" text="反馈信息" GridPane.rowIndex="3" />
+                                            <Label styleClass="styled-small-content" text="市" GridPane.columnIndex="2" />
+                                            <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                                            <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                            <Label styleClass="styled-small-content" text="所在省" />
+                                    <ChoiceBox minWidth="80.0" styleClass="styled-choice-box" GridPane.columnIndex="1" />
+                                    <ChoiceBox minWidth="80.0" styleClass="styled-choice-box" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="一级" />
+                                                <String fx:value="二级" />
+                                                <String fx:value="三级" />
+                                                <String fx:value="四级" />
+                                                <String fx:value="五级" />
+                                                <String fx:value="六级" />
+                                            </FXCollections>
+                                        </items>
+                                    </ChoiceBox>
+                                    <ChoiceBox minWidth="80.0" styleClass="styled-choice-box" GridPane.columnIndex="3" />
+                                        </children>
+                                    </GridPane>
+                                </children>
+                            </VBox>
+                            <VBox alignment="CENTER" spacing="20.0">
+                                <children>
+                              <HBox alignment="CENTER" spacing="20.0">
+                                 <children>
+                                    <Label styleClass="styled-small-content" text="监督员：" />
+                                    <VBox alignment="CENTER" style="-fx-background-color: #ccffcc; -fx-background-radius: 20;">
+                                       <children>
+                                                  <Label styleClass="styled-small-content" text="某某某">
+                                             <padding>
+                                                <Insets bottom="2.0" left="10.0" right="10.0" top="2.0" />
+                                             </padding>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="查询历史记录&gt;" />
+                              <HBox alignment="CENTER" prefHeight="12.0" prefWidth="194.0" spacing="20.0">
+                                 <children>
+                                          <Button mnemonicParsing="false" styleClass="styled-small-dark-button" text="&lt;返回" />
+                                          <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="提交&gt;" />
+                                 </children>
+                              </HBox>
+                                </children>
+                            </VBox>
+                        </children>
+                    </HBox>
+               </content>
+            </TitledPane>
+         </panes>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </Accordion>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
