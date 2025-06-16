@@ -5,16 +5,15 @@ package com.a360.fluentaqi.back.aqiabouts;
  * @author 尚阳@A360
  */
 public class Feedback {
-    //todo by 尚阳
     private static final long serialVersionUID = 1L;
-    private Integer afId;		//������Ϣ���
+    private Integer af_id;		//������Ϣ���
     private String afName;	//���ڼලԱ����
-    private String proviceName;	//ʡ��������
+    private String provinceName;	//ʡ��������
     private String cityName;	//����������
     private String address;		//�����ַ
-    private String infomation;	//��ϸ������Ϣ
-    private String estimateGrade;//Ԥ���ȼ�
-    private String date;		//��������
+    private String information;	//��ϸ������Ϣ
+    private String estimate_grade;//Ԥ���ȼ�
+    private String af_date;		//��������
     private String state;		//����״̬: δָ��,��ָ��,��ʵ��
     private String gmName;		//ָ������Ա
     private String confirmDate;	//ʵ������
@@ -25,10 +24,10 @@ public class Feedback {
     private String confirmExplain;//ʵ��AQI�ȼ�����
 
     public Integer getAfId() {
-        return afId;
+        return af_id;
     }
     public void setAfId(Integer afId) {
-        this.afId = afId;
+        this.af_id = af_id;
     }
     public String getAfName() {
         return afName;
@@ -36,11 +35,11 @@ public class Feedback {
     public void setAfName(String afName) {
         this.afName = afName;
     }
-    public String getProviceName() {
-        return proviceName;
+    public String getProvinceName() {
+        return provinceName;
     }
-    public void setProviceName(String proviceName) {
-        this.proviceName = proviceName;
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
     }
     public String getCityName() {
         return cityName;
@@ -54,23 +53,23 @@ public class Feedback {
     public void setAddress(String address) {
         this.address = address;
     }
-    public String getInfomation() {
-        return infomation;
+    public String getInformation() {
+        return information;
     }
-    public void setInfomation(String infomation) {
-        this.infomation = infomation;
+    public void setInformation(String information) {
+        this.information = information;
     }
     public String getEstimateGrade() {
-        return estimateGrade;
+        return estimate_grade;
     }
     public void setEstimateGrade(String estimateGrade) {
-        this.estimateGrade = estimateGrade;
+        this.estimate_grade = estimateGrade;
     }
     public String getDate() {
-        return date;
+        return af_date;
     }
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate(String af_date) {
+        this.af_date = af_date;
     }
     public String getState() {
         return state;
@@ -123,9 +122,9 @@ public class Feedback {
     }
     @Override
     public String toString() {
-        return "AqiFeedback [afId=" + afId + ", afName=" + afName + ", proviceName=" + proviceName + ", cityName="
-                + cityName + ", address=" + address + ", infomation=" + infomation + ", estimateGrade=" + estimateGrade
-                + ", date=" + date + ", state=" + state + ", gmName=" + gmName + ", confirmDate=" + confirmDate
+        return "AqiFeedback [afId=" + af_id + ", afName=" + afName + ", provinceName=" + provinceName + ", cityName="
+                + cityName + ", address=" + address + ", information=" + information + ", estimate_grade=" + estimate_grade
+                + ", af_date=" + af_date + ", state=" + state + ", gmName=" + gmName + ", confirmDate=" + confirmDate
                 + ", so2=" + so2 + ", co=" + co + ", pm=" + pm + ", confirmLevel=" + confirmLevel + ", confirmExplain="
                 + confirmExplain + "]";
     }
