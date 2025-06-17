@@ -22,7 +22,7 @@
          <children>
             <Label styleClass="light-content" text="请输入AQI反馈数据编号：" />
             <TextField prefHeight="30.0" prefWidth="200.0" styleClass="light-text-field" />
-            <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="查询" />
+            <Button mnemonicParsing="false" styleClass="light-small-button" text="查询" />
          </children>
          <VBox.margin>
             <Insets left="20.0" right="20.0" />
@@ -33,7 +33,7 @@
       </HBox>
       <ScrollPane hbarPolicy="ALWAYS">
          <content>
-            <TableView styleClass="styled-table">
+            <TableView styleClass="light-table">
               <columns>
                 <TableColumn text="编号" />
                 <TableColumn text="日期" />
@@ -57,13 +57,13 @@
          <children>
             <Label styleClass="light-content" text="请选择您要指派的网格员：" />
             <ChoiceBox prefWidth="200.0" styleClass="light-choice-box" />
-            <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="指派" />
+            <Button mnemonicParsing="false" styleClass="light-small-button" text="指派" />
          </children>
          <padding>
             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
          </padding>
       </HBox>
-        <Button mnemonicParsing="false" onAction="#getback" styleClass="styled-dark-button" text="&lt;返回" />
+        <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
 
     </children>
     <padding>
