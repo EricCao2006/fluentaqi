@@ -1,6 +1,7 @@
 package com.a360.fluentaqi.back.utils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -75,6 +76,8 @@ public class JsonReader {
         }
     }
 
+
+
     /**
      * 简化方法：读取JSON文件到指定类型的List
      * @param filePath JSON文件路径
@@ -83,6 +86,22 @@ public class JsonReader {
      * @param <T> 泛型类型
      */
     public static <T> List<T> readListFromJson(String filePath, Class<T> elementClass) {
-        return readListFromJson(filePath, new TypeReference<List<T>>() {});
+        try {
+            File file = new File(filePath);
+            if (!file.exists()) {
+                System.out.println("文件不存在: " + filePath);
+                return Collections.emptyList();
+            }
+
+            // 使用TypeFactory正确构造泛型类型
+            JavaType javaType = objectMapper.getTypeFactory()
+                    .constructCollectionType(List.class, elementClass);
+
+            return objectMapper.readValue(file, javaType);
+        } catch (IOException e) {
+            System.err.println("读取JSON文件失败: " + e.getMessage());
+            e.printStackTrace();
+            return Collections.emptyList();
+        }
     }
 }

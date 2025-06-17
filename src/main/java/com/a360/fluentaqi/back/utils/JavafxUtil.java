@@ -4,7 +4,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -39,26 +38,17 @@ public class JavafxUtil {
 
     /**
      * 界面切换函数
+     *
      * @param clazz
      * @param path
      * @param primaryStage
      * @param title
+     * @return
      */
-    public static void showStage(Class clazz,String path,Stage primaryStage,String title){
+    public static Stage showStage(Class clazz, String path, Stage primaryStage, String title){
         FXMLLoader loader = new FXMLLoader();
         System.out.println("path:"+path);
         URL url = clazz.getResource(path);
-
-
-        // 检查路径是否有效
-        if (url == null) {
-            throw new IllegalArgumentException("Resource not found for path: " + path);
-        }
-        else {
-            System.out.println("Resource URL: " + url);
-        }
-
-
         loader.setLocation(url);
         try {
             Parent root = loader.load();
@@ -70,6 +60,7 @@ public class JavafxUtil {
             // TODO: handle exception
             e.printStackTrace();
         }
+        return primaryStage;
     }
 
     /**
@@ -82,19 +73,7 @@ public class JavafxUtil {
      */
     public static Stage showSubStage(Class clazz,String path,Stage primaryStage,String title){
         FXMLLoader loader = new FXMLLoader();
-        System.out.println("path:"+path);
         URL url = clazz.getResource(path);
-
-        // 检查路径是否有效
-        if (url == null) {
-            throw new IllegalArgumentException("Resource not found for path: " + path);
-        }
-        else {
-            System.out.println("Resource URL: " + url);
-        }
-
-
-
         loader.setLocation(url);
         Stage subStage = new Stage();
         try {

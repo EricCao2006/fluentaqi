@@ -6,8 +6,6 @@ import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
 import com.a360.fluentaqi.front.admin.aqifromgrid.AqiFromGridController;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,8 +16,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -83,19 +79,14 @@ public class AqiFromSupController implements Initializable {
 
         txt_tableView.getColumns().addAll(afIdColumn, proviceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,infoColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
-        String filePath = ProPaht + "aqi.json";
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            File file = new File(filePath);
-            List<Feedback> afList = objectMapper.readValue(file, new TypeReference<List<Feedback>>() {});
-            for (Feedback afb : afList) {
-                if ("未指派".equals(afb.getState())) {
-                    data.add(afb);
-                }
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
+        String filePath = ProPaht + "Aqi.json";
+        List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
+        for(Feedback afb:afList){
+            if(afb.getState().equals("未指派")){
+                data.add(afb);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+
         }
         txt_tableView.setItems(data);
     }
