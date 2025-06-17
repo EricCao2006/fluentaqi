@@ -1,19 +1,33 @@
 /*FluentAqi公用css*/
 
+/* 字体 */
+@font-face {
+    font-family: 'Maple Mono NF CN Bold';
+    src: url('fonts/MapleMono-NF-CN-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Maple Mono NF CN Medium';
+    src: url('fonts/MapleMono-NF-CN-Medium.ttf');
+}
+
 /* 标题 */
 .styled-title {
+    -fx-font-family: 'Maple Mono NF CN Bold';
     -fx-text-fill: #003300;
-    -fx-font-size: 36px;
+    -fx-font-size: 48px;
 }
 
 /* 大字内容*/
 .styled-content {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 24px;
 }
 
 /* 小字内容*/
 .styled-small-content {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 18px;
 }
@@ -54,6 +68,7 @@
 }
 
 .styled-choice-box .menu-item .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #002200;
 }
 
@@ -129,6 +144,7 @@
 
 /* 标题栏 */
 .styled-titled-pane .title {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-background-color: #88dd88;
     -fx-text-fill: #002200;
     -fx-font-size: 18px;
@@ -140,6 +156,7 @@
 
 /*伪表格*/
 .table-cell {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-wrap-text: true;
     -fx-font-size: 16px;
     -fx-padding: 0 5px;
@@ -153,6 +170,7 @@
     -fx-border-color: #ddffdd;
     -fx-border-radius: 30;
     -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ddffdd;
     -fx-font-size: 24px;
     -fx-cursor: HAND;
@@ -165,6 +183,7 @@
     -fx-border-color: #ddffdd;
     -fx-border-radius: 30;
     -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ddffdd;
     -fx-font-size: 18px;
     -fx-cursor: HAND;
@@ -177,6 +196,7 @@
     -fx-border-color: #99cc99;
     -fx-border-radius: 30;
     -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #002200;
     -fx-font-size: 24px;
     -fx-cursor: HAND;
@@ -189,6 +209,7 @@
     -fx-border-color: #99cc99;
     -fx-border-radius: 30;
     -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #002200;
     -fx-font-size: 18px;
     -fx-cursor: HAND;
@@ -215,6 +236,7 @@
 
 /* 对话框标题文本 */
 .dialog-pane .header-panel .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 24px;
     -fx-font-weight: bold;
@@ -222,6 +244,7 @@
 
 /* 对话框内容文本 */
 .dialog-pane .content.label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 18px;
     -fx-wrap-text: true;
@@ -241,6 +264,7 @@
     -fx-border-color: #99cc99;
     -fx-border-radius: 30px;
     -fx-border-width: 1px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 18px;
     -fx-padding: 5px 15px;
