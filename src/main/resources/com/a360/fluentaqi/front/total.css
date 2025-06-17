@@ -308,13 +308,6 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-border-radius: 5px;
 }
 
-ScrollPane .scroll-bar:horizontal .increment-button,
-ScrollPane .scroll-bar:horizontal .decrement-button,
-ScrollPane .scroll-bar:vertical .increment-button,
-ScrollPane .scroll-bar:vertical .decrement-button {
-
-}
-
 /*标题区域-日间*/
 .light-titled-pane {
     -fx-background-color: #88dd88;
