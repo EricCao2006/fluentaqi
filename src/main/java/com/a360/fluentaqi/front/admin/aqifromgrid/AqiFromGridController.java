@@ -7,8 +7,6 @@ import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,8 +17,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -106,26 +102,13 @@ public class AqiFromGridController implements Initializable {
 
         txt_tableView.getColumns().addAll(afIdColumn, proviceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,so2Column,coColumn,pmColumn,confirmLevelColumn,confirmExplainColumn,confirmDateColumn,gmNameColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
-        String filePath = ProPaht + "aqi_feedback.json"; // 添加文件路径
-//        List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
-//        for(Feedback afb:afList){
-//            if(afb.getState().equals("已实测")){
-//                data.add(afb);
-//            }
-//        }
-
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            File file = new File(filePath);
-            List<Feedback> afList = objectMapper.readValue(file, new TypeReference<List<Feedback>>() {});
-            for (Feedback afb : afList) {
-                if ("未指派".equals(afb.getState())) {
-                    data.add(afb);
-                }
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
+        String filePath = ProPaht + "Feedback.json"; // 添加文件路径
+        List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
+        for(Feedback afb:afList){
+            if(afb.getState().equals("已实测")){
+                data.add(afb);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         txt_tableView.setItems(data);
     }
