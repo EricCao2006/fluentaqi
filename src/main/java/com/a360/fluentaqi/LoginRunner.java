@@ -1,8 +1,5 @@
 package com.a360.fluentaqi;
 
-import com.a360.fluentaqi.front.admin.AdminController;
-import com.a360.fluentaqi.front.gridder.GridderController;
-import com.a360.fluentaqi.front.supervisor.SupervisorController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -25,7 +22,7 @@ public class LoginRunner extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/a360/fluentaqi/front/view.fxml"));
         VBox root = loader.load();
         Scene scene = new Scene(root, 720, 540);
-        scene.setFill(javafx.scene.paint.Color.TRANSPARENT);
+
         Image icon = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/logo.png"));
         primaryStage.getIcons().add(icon);
         stage.setTitle("Fluent AQI 登录");
