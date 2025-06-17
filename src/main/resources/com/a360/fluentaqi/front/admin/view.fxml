@@ -14,7 +14,7 @@
       <URL value="@../total.css" />
    </stylesheets>
    <children>
-      <Label styleClass="styled-title" text="A Q I 管 理 系 统" />
+      <Label styleClass="styled-title" text="AQI管理系统" />
       <GridPane alignment="CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;" vgap="30.0" VBox.vgrow="NEVER">
         <columnConstraints>
           <ColumnConstraints fillWidth="false" hgrow="NEVER" />

@@ -21,7 +21,7 @@
         <URL value="@../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="公 众 监 督 员 信 息 反 馈" />
+        <Label styleClass="styled-title" text="公众监督员信息反馈" />
       <Accordion>
          <panes>
           <TitledPane contentDisplay="CENTER" expanded="false" styleClass="styled-titled-pane" text="AQI等级及说明">
