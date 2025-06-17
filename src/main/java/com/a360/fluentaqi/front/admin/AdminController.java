@@ -35,7 +35,7 @@ public class AdminController  {
 
     @FXML
     void aqiAssign(){
-        GridderOrderController.aqiInfoStage = JavafxUtil.showSubStage(this.getClass(), "/com/a360/fluentaqi/front/admin/aqifromsup/view.fxml", primaryStage, "环保公众监督平台-管理端-AQI反馈数据查询");
+        GridderOrderController.aqiInfoStage = JavafxUtil.showStage(this.getClass(), "/com/a360/fluentaqi/front/admin/aqifromsup/view.fxml", primaryStage, "环保公众监督平台-管理端-AQI反馈数据查询");
     }
 
     @FXML

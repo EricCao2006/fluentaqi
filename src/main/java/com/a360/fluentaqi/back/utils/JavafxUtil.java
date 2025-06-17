@@ -44,7 +44,7 @@ public class JavafxUtil {
      * @param primaryStage
      * @param title
      */
-    public static void showStage(Class clazz,String path,Stage primaryStage,String title){
+    public static Stage showStage(Class clazz,String path,Stage primaryStage,String title){
         FXMLLoader loader = new FXMLLoader();
         System.out.println("path:"+path);
         URL url = clazz.getResource(path);
@@ -70,6 +70,7 @@ public class JavafxUtil {
             // TODO: handle exception
             e.printStackTrace();
         }
+        return primaryStage;
     }
 
     /**
