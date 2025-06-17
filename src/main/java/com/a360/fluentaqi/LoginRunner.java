@@ -31,7 +31,7 @@ public class LoginRunner extends Application {
 
     // 显示启动画面（带圆角 Logo 和圆角窗口）
     private void showSplashScreen(Stage stage) {
-        Image splashImage = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/logo.png"));
+        Image splashImage = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/icons/logo.png"));
         ImageView imageView = new ImageView(splashImage);
         imageView.setFitWidth(200);
         imageView.setFitHeight(200);
@@ -41,7 +41,7 @@ public class LoginRunner extends Application {
         // 设置窗口无边框样式
         stage.initStyle(StageStyle.UNDECORATED);
         // 设置图标
-        Image icon = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/logo.png"));
+        Image icon = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/icons/logo.png"));
         stage.getIcons().add(icon);
         stage.setTitle("Fluent AQI");
         stage.setScene(scene);
@@ -69,7 +69,7 @@ public class LoginRunner extends Application {
         Scene scene = new Scene(root, 720, 540);
         scene.setFill(javafx.scene.paint.Color.TRANSPARENT);
         // 设置图标
-        Image icon = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/logo.png"));
+        Image icon = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/icons/logo.png"));
         primaryStage.getIcons().add(icon);
         stage.setTitle("Fluent AQI 登录");
         stage.setScene(scene);

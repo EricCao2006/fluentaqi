@@ -59,6 +59,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#toRegister" styleClass="light-button" text="监督员注册&gt;" />
             <Button mnemonicParsing="false" onAction="#login" styleClass="dark-button" text="登录&gt;" />
+            <Button mnemonicParsing="false" style="-fx-background-image: logo.png;" styleClass="dark-button" text="0" />
          </children>
       </HBox>
    </children>
