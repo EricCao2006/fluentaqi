@@ -1,3 +1,4 @@
+/* CSS file */
 /*FluentAqi公用css*/
 /*整体用色原则：
     1.色调为不同深浅明暗的纯绿色
@@ -293,7 +294,7 @@
     -fx-padding: 5px;
 }
 
-/* 滚动条轨道-日间*/
+/* 滚动条-日间*/
 .light-scroll-bar:horizontal .track,
 .light-scroll-bar:vertical .track {
     -fx-background-color: #339933;
@@ -306,7 +307,7 @@
     -fx-border-radius: 5px;
 }
 
-/*滚动条轨道-夜间*/
+/*滚动条-夜间*/
 .dark-scroll-bar:horizontal .track,
 .dark-scroll-bar:vertical .track {
     -fx-background-color: #66cc66;

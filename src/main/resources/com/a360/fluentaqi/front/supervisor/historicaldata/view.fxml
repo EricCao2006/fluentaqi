@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -9,14 +10,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.ScrollBar?>
 <VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
     <stylesheets>
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
         <Label styleClass="light-title" text="AQI反馈历史记录" />
-        <ScrollPane styleClass="light-scroll-pane" hbarPolicy="ALWAYS">
+        <ScrollPane styleClass="light-scroll-pane light-scroll-bar" hbarPolicy="ALWAYS">
             <VBox.margin>
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
@@ -32,7 +32,6 @@
                     </columns>
                 </TableView>
             </content>
-        <ScrollBar styleClass="light-scroll-bar" />
         </ScrollPane>
         <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
 
