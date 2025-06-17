@@ -1,15 +1,18 @@
 package com.a360.fluentaqi.back.users;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 
 /**
  * 监督员子类
  * @author 尚阳@A360
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Supervisor extends User implements Serializable{
-    //todo by 尚阳
     private static final long serialVersionUID = 1L;
     private String sex ;
+    private String birthday;
     public Supervisor() {
         super();
         // TODO Auto-generated constructor stub
@@ -21,8 +24,14 @@ public class Supervisor extends User implements Serializable{
     public String getSex(){
         return sex;
     }
-    public void setSex(){
+    public void setSex(String sex) {
         this.sex = sex;
+    }
+    public String getBirthday(){
+        return birthday;
+    }
+    public void setBirthday(String birthday){
+        this.birthday = birthday;
     }
     @Override
     public String toString() {

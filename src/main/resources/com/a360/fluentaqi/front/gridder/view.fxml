@@ -14,15 +14,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="10.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="10.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
     <stylesheets>
         <URL value="@../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="AQI反馈数据实测信息" />
+        <Label styleClass="light-title" text="AQI反馈数据实测信息" />
         <ScrollPane hbarPolicy="ALWAYS">
             <content>
-                <TableView styleClass="styled-table">
+                <TableView styleClass="light-table">
                     <columns>
                         <TableColumn text="编号" />
                         <TableColumn text="日期" />
@@ -48,8 +48,8 @@
                <children>
                   <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 30; -fx-border-color: #dddddd; -fx-border-radius: 30; -fx-border-width: 2;">
                      <children>
-                        <Label styleClass="styled-content" text="AQI反馈数据编号：" />
-                        <TextField styleClass="styled-text-field" />
+                        <Label styleClass="light-content" text="AQI反馈数据编号：" />
+                        <TextField styleClass="light-text-field" />
                      </children>
                      <padding>
                         <Insets left="20.0" right="20.0" />
@@ -71,24 +71,24 @@
                         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </padding>
                      <children>
-                        <Label styleClass="styled-small-content" text="SO2" GridPane.rowIndex="1" />
-                        <Label styleClass="styled-small-content" text="CO" GridPane.rowIndex="2" />
-                        <Label styleClass="styled-small-content" text="PM2.5" GridPane.rowIndex="3" />
-                        <Label styleClass="styled-small-content" text="浓度等级：" GridPane.columnIndex="2" />
-                        <Label styleClass="styled-small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label styleClass="styled-small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label styleClass="styled-small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label styleClass="styled-small-content" text="污染物" />
-                        <Label styleClass="styled-small-content" text="浓度（单位：ug/m3）" GridPane.columnIndex="1" />
+                        <Label styleClass="light-small-content" text="SO2" GridPane.rowIndex="1" />
+                        <Label styleClass="light-small-content" text="CO" GridPane.rowIndex="2" />
+                        <Label styleClass="light-small-content" text="PM2.5" GridPane.rowIndex="3" />
+                        <Label styleClass="light-small-content" text="浓度等级：" GridPane.columnIndex="2" />
+                        <Label styleClass="light-small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label styleClass="light-small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label styleClass="light-small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <TextField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label styleClass="light-small-content" text="污染物" />
+                        <Label styleClass="light-small-content" text="浓度（单位：ug/m3）" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
                   <HBox alignment="CENTER" spacing="40.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 30; -fx-border-color: #dddddd; -fx-border-radius: 30; -fx-border-width: 2;">
                      <children>
-                        <Label styleClass="styled-small-content" text="实测AQI最终等级：" />
-                        <Label styleClass="styled-small-content" text="无" />
+                        <Label styleClass="light-small-content" text="实测AQI最终等级：" />
+                        <Label styleClass="light-small-content" text="无" />
                      </children>
                      <padding>
                         <Insets left="20.0" right="20.0" />
@@ -98,14 +98,14 @@
             </VBox>
             <VBox alignment="CENTER" spacing="20.0">
                <children>
-                      <Label styleClass="styled-small-content" text="网格员：">
+                      <Label styleClass="light-small-content" text="网格员：">
                      <padding>
                         <Insets bottom="-10.0" />
                      </padding>
                   </Label>
                   <VBox alignment="CENTER" spacing="5.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20;">
                      <children>
-                        <Label styleClass="styled-small-content" text="某某某" />
+                        <Label styleClass="light-small-content" text="某某某" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" top="5.0" />
@@ -114,8 +114,8 @@
                         <Insets bottom="-10.0" top="-5.0" />
                      </VBox.margin>
                   </VBox>
-                    <Button mnemonicParsing="false" styleClass="styled-light-button" text="提交&gt;" />
-                  <Button mnemonicParsing="false" styleClass="styled-dark-button" text="&lt;返回" />
+                    <Button mnemonicParsing="false" styleClass="light-button" text="提交&gt;" />
+                  <Button mnemonicParsing="false" styleClass="dark-button" text="&lt;返回" />
                </children>
             </VBox>
          </children>

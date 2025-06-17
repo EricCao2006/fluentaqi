@@ -14,7 +14,7 @@ import java.util.List;
 public class SupervisorServiceImpl implements SupervisorService {
     @Override
     public boolean login(String loginCode, String password) {
-        String filePath = System.getProperty("user.dir") + "/src/main/resources/NepDatas/ObjectData/supervisor.json";
+        String filePath = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/Supervisor.json";
         try {
             String jsonContent = Files.readString(Path.of(filePath));
             ObjectMapper objectMapper = new ObjectMapper();
