@@ -21,7 +21,7 @@
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="公众监督员注册" />
+        <Label styleClass="light-title" text="公众监督员注册" />
         <GridPane hgap="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;" vgap="20.0" VBox.vgrow="NEVER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" />
@@ -35,10 +35,10 @@
                 <RowConstraints vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label styleClass="styled-content" text="姓名" GridPane.rowIndex="1" />
-                <Label styleClass="styled-content" text="手机号" GridPane.rowIndex="2" />
-                <Label styleClass="styled-content" text="确认密码" GridPane.rowIndex="4" />
-                <ChoiceBox prefWidth="150.0" styleClass="styled-choice-box" GridPane.columnIndex="1">
+                <Label styleClass="light-content" text="姓名" GridPane.rowIndex="1" />
+                <Label styleClass="light-content" text="手机号" GridPane.rowIndex="2" />
+                <Label styleClass="light-content" text="确认密码" GridPane.rowIndex="4" />
+                <ChoiceBox prefWidth="150.0" styleClass="light-choice-box" GridPane.columnIndex="1">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="男" />
@@ -49,12 +49,12 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ChoiceBox>
-                <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <PasswordField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label styleClass="styled-content" text="性别" />
-            <Label styleClass="styled-content" text="密码" GridPane.rowIndex="3" />
-            <TextField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <PasswordField styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <PasswordField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label styleClass="light-content" text="性别" />
+            <Label styleClass="light-content" text="密码" GridPane.rowIndex="3" />
+            <TextField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
             <padding>
                 <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
