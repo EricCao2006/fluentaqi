@@ -1,5 +1,6 @@
 package com.a360.fluentaqi.front.supervisor;
 
+import com.a360.fluentaqi.LoginController;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -15,6 +16,6 @@ public class SupervisorController {
     }
     @FXML
     void getback() {
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml",primaryStage,"环保公共监督平台");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml", primaryStage,"Fluent AQI 登录");
     }
 }
