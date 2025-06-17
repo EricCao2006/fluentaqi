@@ -24,7 +24,7 @@
     -fx-min-width: 720px;
     -fx-pref-height: 540px;
     -fx-pref-width: 720px;
-    -fx-spacing: 20px;
+    -fx-spacing: 10px;
     -fx-background-color: #eeffee;
 }
 
@@ -36,7 +36,7 @@
     -fx-min-width: 720px;
     -fx-pref-height: 540px;
     -fx-pref-width: 720px;
-    -fx-spacing: 20px;
+    -fx-spacing: 10px;
     -fx-background-color: #003300;
 }
 
@@ -82,6 +82,60 @@
     -fx-font-size: 18px;
 }
 
+/*网格-日间*/
+.light-grid-pane {
+    -fx-alignment: CENTER;
+    -fx-background-color: #ccffcc;
+    -fx-background-radius: 20px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+}
+
+/* 网格-夜间*/
+.dark-grid-pane {
+    -fx-background-color: #003300;
+    -fx-background-radius: 20px;
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+}
+
+/*自定义横向区域-日间*/
+.light-h-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: #ccffcc;
+    -fx-background-radius: 20px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 20px;
+}
+
+/*自定义横向区域-夜间*/
+.dark-h-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: #003300;
+    -fx-background-radius: 20px;
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
+
+/*自定义纵向区域-日间*/
+.light-v-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: #ccffcc;
+    -fx-background-radius: 20px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 20px;
+}
+
+/*自定义纵向区域-夜间*/
+.dark-v-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: #003300;
+    -fx-background-radius: 20px;
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
 /* 输入框-日间 */
 .light-text-field {
     -fx-background-color: #99ff99;
@@ -294,7 +348,7 @@
     -fx-effect: null;
 }
 
-/*标题区域*/
+/*标题区域-日间*/
 .light-titled-pane {
     -fx-background-color: #88dd88;
     -fx-background-radius: 10px;
