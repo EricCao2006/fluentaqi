@@ -294,59 +294,25 @@
     -fx-padding: 5px;
 }
 
-/* 滚动条-日间*/
-.light-scroll-bar:horizontal .track,
-.light-scroll-bar:vertical .track {
+/* 滚动条-统一*/
+ScrollPane .scroll-bar:horizontal .track,
+ScrollPane .scroll-bar:vertical .track {
     -fx-background-color: #339933;
     -fx-background-radius: 5px;
 }
-.light-scroll-bar:horizontal .thumb,
-.light-scroll-bar:vertical .thumb {
+
+ScrollPane .scroll-bar:horizontal .thumb,
+ScrollPane .scroll-bar:vertical .thumb {
     -fx-background-color: #eeffee;
     -fx-background-radius: 5px;
     -fx-border-radius: 5px;
 }
 
-/*滚动条-夜间*/
-.dark-scroll-bar:horizontal .track,
-.dark-scroll-bar:vertical .track {
-    -fx-background-color: #66cc66;
-    -fx-background-radius: 5px;
-}
-.dark-scroll-bar:horizontal .thumb,
-.dark-scroll-bar:vertical .thumb{
-    -fx-background-color: #001100;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-}
+ScrollPane .scroll-bar:horizontal .increment-button,
+ScrollPane .scroll-bar:horizontal .decrement-button,
+ScrollPane .scroll-bar:vertical .increment-button,
+ScrollPane .scroll-bar:vertical .decrement-button {
 
-/* 滚动按钮-日间 */
-.light-scroll-bar:horizontal .increment-button,
-.light-scroll-bar:horizontal .decrement-button,
-.light-scroll-bar:vertical .increment-button,
-.light-scroll-bar:vertical .decrement-button{
-    -fx-background-color: #001100;
-    -fx-background-radius: 5px;
-    -fx-border-radius: 5px;
-    -fx-padding: 0;
-    -fx-shape: null;
-    -fx-focus-color: transparent;
-    -fx-faint-focus-color: transparent;
-    -fx-effect: null;
-}
-
-/*滚动按钮-夜间*/
-.dark-scroll-bar:horizontal .increment-button,
-.dark-scroll-bar:horizontal .decrement-button,
-.dark-scroll-bar:vertical .increment-button,
-.dark-scroll-bar:vertical .decrement-button{
-    -fx-background-color: #eeffee;
-    -fx-background-radius: 5px;
-    -fx-padding: 0;
-    -fx-shape: null;
-    -fx-focus-color: transparent;
-    -fx-faint-focus-color: transparent;
-    -fx-effect: null;
 }
 
 /*标题区域-日间*/

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" spacing="10.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
+<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
     <stylesheets>
         <URL value="@../total.css" />
     </stylesheets>
@@ -30,12 +31,16 @@
             <VBox.margin>
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
+         <styleClass>
+            <String fx:value="light-scroll-pane" />
+            <String fx:value="light-scroll-bar" />
+         </styleClass>
         </ScrollPane>
       <HBox alignment="CENTER" spacing="40.0">
          <children>
-            <VBox alignment="CENTER" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;">
+            <VBox styleClass="light-v-box">
                <children>
-                  <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 30; -fx-border-color: #dddddd; -fx-border-radius: 30; -fx-border-width: 2;">
+                  <HBox spacing="20.0" styleClass="light-h-box">
                      <children>
                         <Label styleClass="light-content" text="AQI反馈数据编号：" />
                         <TextField fx:id="txt_afId" styleClass="light-text-field" />
@@ -74,7 +79,7 @@
                         <Label styleClass="light-small-content" text="浓度（单位：ug/m3）" GridPane.columnIndex="1" />
                      </children>
                   </GridPane>
-                  <HBox alignment="CENTER" spacing="40.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 30; -fx-border-color: #dddddd; -fx-border-radius: 30; -fx-border-width: 2;">
+                  <HBox spacing="40.0" styleClass="light-h-box">
                      <children>
                         <Label styleClass="light-small-content" text="实测AQI最终等级：" />
                         <Label fx:id="label_confirmlevel" styleClass="light-small-content" text="无" />
@@ -92,7 +97,7 @@
                         <Insets bottom="-10.0" />
                      </padding>
                   </Label>
-                  <VBox alignment="CENTER" spacing="5.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20;">
+                  <VBox spacing="5.0" styleClass="light-v-box">
                      <children>
                         <Label fx:id="txt_name" styleClass="light-small-content" text="某某某" />
                      </children>

@@ -16,7 +16,7 @@
     </stylesheets>
     <children>
         <Label styleClass="light-title" text="AQI反馈历史记录" />
-        <ScrollPane styleClass="light-scroll-pane light-scroll-bar" hbarPolicy="ALWAYS">
+        <ScrollPane hbarPolicy="ALWAYS">
             <VBox.margin>
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
@@ -32,6 +32,10 @@
                     </columns>
                 </TableView>
             </content>
+         <styleClass>
+            <String fx:value="light-scroll-pane" />
+            <String fx:value="light-scroll-bar" />
+         </styleClass>
         </ScrollPane>
         <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
 
