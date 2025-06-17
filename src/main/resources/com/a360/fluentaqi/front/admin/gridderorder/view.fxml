@@ -17,11 +17,11 @@
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="公众监督AQI反馈指派" />
+        <Label styleClass="light-title" text="公众监督AQI反馈指派" />
       <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20;">
          <children>
-            <Label styleClass="styled-content" text="请输入AQI反馈数据编号：" />
-            <TextField prefHeight="30.0" prefWidth="200.0" styleClass="styled-text-field" />
+            <Label styleClass="light-content" text="请输入AQI反馈数据编号：" />
+            <TextField prefHeight="30.0" prefWidth="200.0" styleClass="light-text-field" />
             <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="查询" />
          </children>
          <VBox.margin>
@@ -55,8 +55,8 @@
       </ScrollPane>
       <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20;">
          <children>
-            <Label styleClass="styled-content" text="请选择您要指派的网格员：" />
-            <ChoiceBox prefWidth="200.0" styleClass="styled-choice-box" />
+            <Label styleClass="light-content" text="请选择您要指派的网格员：" />
+            <ChoiceBox prefWidth="200.0" styleClass="light-choice-box" />
             <Button mnemonicParsing="false" styleClass="styled-small-light-button" text="指派" />
          </children>
          <padding>
