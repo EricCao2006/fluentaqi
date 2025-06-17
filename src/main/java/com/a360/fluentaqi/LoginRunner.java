@@ -2,20 +2,15 @@ package com.a360.fluentaqi;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.animation.PauseTransition;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-
-import static com.a360.fluentaqi.LoginController.primaryStage;
 
 public class LoginRunner extends Application {
     public static void main(String[] args) {

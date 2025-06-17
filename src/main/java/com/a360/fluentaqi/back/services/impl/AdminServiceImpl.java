@@ -2,8 +2,6 @@ package com.a360.fluentaqi.back.services.impl;
 
 import com.a360.fluentaqi.back.services.AdminService;
 import com.a360.fluentaqi.back.users.Admin;
-import com.a360.fluentaqi.back.users.Supervisor;
-import com.a360.fluentaqi.back.users.User;
 import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.DatabindException;
 import com.fasterxml.jackson.databind.ObjectMapper;

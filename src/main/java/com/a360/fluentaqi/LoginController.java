@@ -10,7 +10,6 @@ import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.front.admin.AdminController;
 import com.a360.fluentaqi.front.admin.aqifromgrid.AqiFromGridController;
-import com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController;
 import com.a360.fluentaqi.front.gridder.GridderController;
 import com.a360.fluentaqi.front.supervisor.SupervisorController;
 import javafx.fxml.FXML;

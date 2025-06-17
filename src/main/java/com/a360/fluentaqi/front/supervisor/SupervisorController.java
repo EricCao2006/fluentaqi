@@ -1,6 +1,5 @@
 package com.a360.fluentaqi.front.supervisor;
 
-import com.a360.fluentaqi.LoginController;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;

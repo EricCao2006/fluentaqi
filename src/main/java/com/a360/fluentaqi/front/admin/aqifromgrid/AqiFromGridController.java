@@ -2,7 +2,6 @@ package com.a360.fluentaqi.front.admin.aqifromgrid;
 
 
 import com.a360.fluentaqi.back.aqiabouts.Feedback;
-import com.a360.fluentaqi.back.data.AqiFeedbackData;
 import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;

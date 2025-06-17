@@ -5,7 +5,6 @@ import com.a360.fluentaqi.back.aqiabouts.Feedback;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
-import com.a360.fluentaqi.front.admin.aqifromgrid.AqiFromGridController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
