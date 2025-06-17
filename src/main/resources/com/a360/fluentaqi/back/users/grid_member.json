@@ -1,21 +1,21 @@
 [
   {
     "gmTel": "1234567890",
-    "state": "已实测",
+    "state": "未工作",
     "loginCode": "gridUser001",
     "password": "securePassword123",
     "realName": "张三"
   },
   {
     "gmTel": "9876543210",
-    "state": "未实测",
+    "state": "未工作",
     "loginCode": "gridUser002",
     "password": "anotherSecurePass",
     "realName": "李四"
   },
   {
     "gmTel": "5555555555",
-    "state": "已实测",
+    "state": "未工作",
     "loginCode": "gridUser003",
     "password": "testPassword",
     "realName": "王五"
