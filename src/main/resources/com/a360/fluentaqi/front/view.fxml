@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
+<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
     <stylesheets>
         <URL value="@total.css" />
     </stylesheets>
@@ -57,7 +57,7 @@
       </GridPane>
       <HBox alignment="CENTER" spacing="40.0">
          <children>
-            <Button mnemonicParsing="false" styleClass="light-button" text="监督员注册&gt;" />
+            <Button mnemonicParsing="false" onAction="#toRegister" styleClass="light-button" text="监督员注册&gt;" />
             <Button mnemonicParsing="false" onAction="#login" styleClass="dark-button" text="登录&gt;" />
          </children>
       </HBox>
