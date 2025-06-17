@@ -14,7 +14,7 @@
       <URL value="@../total.css" />
    </stylesheets>
    <children>
-      <Label styleClass="styled-title" text="AQI管理系统" />
+      <Label styleClass="light-title" text="AQI管理系统" />
       <GridPane alignment="CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;" vgap="30.0" VBox.vgrow="NEVER">
         <columnConstraints>
           <ColumnConstraints fillWidth="false" hgrow="NEVER" />
@@ -26,17 +26,17 @@
           <RowConstraints fillHeight="false" vgrow="NEVER" />
         </rowConstraints>
          <children>
-            <Label styleClass="styled-content" text="监督员端" GridPane.rowSpan="2" />
-            <Label styleClass="styled-content" text="网格员端" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#aqiAssign" styleClass="styled-light-button" text="反馈数据查询&gt;" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#aqiConfirm" styleClass="styled-light-button" text="反馈数据指派&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#aqiInfo" styleClass="styled-light-button" text="实测数据查询&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label styleClass="light-content" text="监督员端" GridPane.rowSpan="2" />
+            <Label styleClass="light-content" text="网格员端" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#aqiAssign" styleClass="light-button" text="反馈数据查询&gt;" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#aqiConfirm" styleClass="light-button" text="反馈数据指派&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#aqiInfo" styleClass="light-button" text="实测数据查询&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </GridPane>
-      <Button mnemonicParsing="false" onAction="#getback" styleClass="styled-dark-button" text="&lt;返回" />
+      <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

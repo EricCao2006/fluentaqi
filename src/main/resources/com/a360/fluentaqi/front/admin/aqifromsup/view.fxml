@@ -14,13 +14,13 @@
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="公众监督AQI反馈数据" />
+        <Label styleClass="light-title" text="公众监督AQI反馈数据" />
         <ScrollPane hbarPolicy="ALWAYS">
             <VBox.margin>
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
             <content>
-                <TableView fx:id="txt_tableView" styleClass="styled-table">
+                <TableView fx:id="txt_tableView" styleClass="light-table">
                     <columns>
                         <TableColumn prefWidth="50.0" text="编号" />
                         <TableColumn prefWidth="50.0" text="省" />
@@ -32,7 +32,7 @@
                 </TableView>
             </content>
         </ScrollPane>
-        <Button mnemonicParsing="false" onAction="#getback" styleClass="styled-dark-button" text="&lt;返回" />
+        <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
 
     </children>
     <padding>
