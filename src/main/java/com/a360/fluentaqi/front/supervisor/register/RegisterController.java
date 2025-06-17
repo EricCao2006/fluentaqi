@@ -1,5 +1,6 @@
 package com.a360.fluentaqi.front.supervisor.register;
 
+import com.a360.fluentaqi.LoginController;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
@@ -53,7 +54,7 @@ public class RegisterController {
     }
     @FXML
     void getback() {
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml",primaryStage,"环保公共监督平台");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml", LoginController.primaryStage,"Fluent AQI 登录");
     }
 
 }
