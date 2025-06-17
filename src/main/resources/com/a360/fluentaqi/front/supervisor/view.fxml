@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="720.0" style="-fx-background-color: #eeffee;" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.SupervisorController">
+<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.SupervisorController">
     <stylesheets>
         <URL value="@../total.css" />
     </stylesheets>
@@ -27,7 +27,7 @@
          <panes>
           <TitledPane contentDisplay="CENTER" expanded="false" styleClass="light-titled-pane" text="AQI等级及说明">
                <content>
-                  <GridPane alignment="CENTER" hgap="10.0" style="-fx-background-color: #ccffcc;" vgap="10.0">
+                  <GridPane styleClass="light-grid-pane" hgap="10.0" vgap="10.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="60.0" prefWidth="80.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="80.0" prefWidth="80.0" />
@@ -70,16 +70,16 @@
             </TitledPane>
             <TitledPane contentDisplay="CENTER" expanded="false" styleClass="light-titled-pane" text="信息提交区">
                <content>
-                    <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #ccffcc;">
+                    <HBox styleClass="light-h-box" spacing="20.0">
                         <children>
-                            <VBox alignment="CENTER" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;">
+                            <VBox styleClass="light-v-box">
                                 <children>
                                     <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: trabsparent; -fx-border-radius: 20;" vgap="10.0">
                                         <columnConstraints>
                                             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" />
                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" />
+                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" />
                                         </columnConstraints>
                                         <rowConstraints>
                                             <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
@@ -121,7 +121,7 @@
                               <HBox alignment="CENTER" spacing="20.0">
                                  <children>
                                     <Label styleClass="light-small-content" text="监督员：" />
-                                    <VBox alignment="CENTER" style="-fx-background-color: #ccffcc; -fx-background-radius: 20;">
+                                    <VBox styleClass="light-v-box">
                                        <children>
                                                   <Label styleClass="light-small-content" text="某某某">
                                              <padding>
