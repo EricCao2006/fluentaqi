@@ -105,6 +105,17 @@ public class LoginController{
         }
 
     }
-
+    @FXML
+    void toRegister() {
+        System.out.println("注册按钮被点击");
+        try {
+            JavafxUtil.showStage(LoginRunner.class,
+                    "/com/a360/fluentaqi/front/supervisor/register/view.fxml",
+                    primaryStage,
+                    "环保公众监督平台-监督员端-注册界面");
+        } catch (Exception e) {
+            e.printStackTrace(); // 捕获可能的异常
+        }
+    }
 }
 
