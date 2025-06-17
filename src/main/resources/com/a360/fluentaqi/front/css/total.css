@@ -9,12 +9,12 @@
 /* 字体 */
 @font-face {
     font-family: 'Maple Mono NF CN Bold';
-    src: url('fonts/MapleMono-NF-CN-Bold.ttf');
+    src: url('../fonts/MapleMono-NF-CN-Bold.ttf');
 }
 
 @font-face {
     font-family: 'Maple Mono NF CN Medium';
-    src: url('fonts/MapleMono-NF-CN-Medium.ttf');
+    src: url('../fonts/MapleMono-NF-CN-Medium.ttf');
 }
 
 /* 主容器-日间 */

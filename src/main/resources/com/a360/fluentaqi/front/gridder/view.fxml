@@ -16,7 +16,7 @@
 
 <VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
     <stylesheets>
-        <URL value="@../total.css" />
+        <URL value="@../css/total.css" />
     </stylesheets>
     <children>
         <Label styleClass="light-title" text="AQI反馈数据实测信息" />

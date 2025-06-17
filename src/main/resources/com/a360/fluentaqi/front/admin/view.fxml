@@ -11,7 +11,7 @@
 
 <VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.AdminController">
    <stylesheets>
-      <URL value="@../total.css" />
+      <URL value="@../css/total.css" />
    </stylesheets>
    <children>
       <Label styleClass="light-title" text="AQI管理系统" />
