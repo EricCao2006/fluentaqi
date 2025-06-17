@@ -25,7 +25,7 @@ public class LoginRunner extends Application {
         VBox root = loader.load();
         Scene scene = new Scene(root, 720, 540);
         scene.setFill(javafx.scene.paint.Color.TRANSPARENT);
-        stage.setTitle("环保公共监督平台");
+        stage.setTitle("Fluent AQI 登录");
         stage.setScene(scene);
         stage.show();
     }
