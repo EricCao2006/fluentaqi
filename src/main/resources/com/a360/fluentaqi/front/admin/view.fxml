@@ -14,7 +14,7 @@
       <URL value="@../total.css" />
    </stylesheets>
    <children>
-      <Label styleClass="light-title" text="A Q I 管 理 系 统" />
+      <Label styleClass="light-title" text="AQI管理系统" />
       <GridPane styleClass="light-grid-pane" hgap="30.0" vgap="30.0" VBox.vgrow="NEVER">
         <columnConstraints>
           <ColumnConstraints fillWidth="false" hgrow="NEVER" />
