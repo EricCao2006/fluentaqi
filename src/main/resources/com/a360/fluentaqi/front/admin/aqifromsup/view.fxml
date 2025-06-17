@@ -14,7 +14,7 @@
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="styled-title" text="公 众 监 督 AQI 反 馈 数 据" />
+        <Label styleClass="styled-title" text="公众监督AQI反馈数据" />
         <ScrollPane hbarPolicy="ALWAYS">
             <VBox.margin>
                 <Insets left="20.0" right="20.0" />

@@ -82,6 +82,7 @@
 
 /*表格第一行即表头*/
 .styled-table .column-header {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-background-color: #99ff99;
     -fx-border-color: #559955;
     -fx-padding: 5;
