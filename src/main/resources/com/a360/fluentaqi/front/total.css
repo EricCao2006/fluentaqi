@@ -43,6 +43,7 @@
 
 /* 标题-日间 */
 .light-title {
+    -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Bold';
     -fx-text-fill: #003300;
     -fx-font-size: 48px;
@@ -50,6 +51,7 @@
 
 /* 标题-夜间 */
 .dark-title {
+    -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Bold';
     -fx-text-fill: #ccffcc;
     -fx-font-size: 48px;
@@ -57,6 +59,7 @@
 
 /* 内容-日间*/
 .light-content {
+    -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 24px;
@@ -64,6 +67,7 @@
 
  /* 内容-夜间*/
 .dark-content {
+    -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
     -fx-font-size: 24px;
@@ -71,6 +75,7 @@
 
 /* 小字-日间*/
 .light-small-content {
+    -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 18px;
@@ -78,6 +83,7 @@
 
 /* 小字-夜间*/
 .dark-small-content {
+    -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
     -fx-font-size: 18px;
@@ -163,6 +169,14 @@
     -fx-border-radius: 10px;
 }
 
+/* 选择框-日间-聚焦 */
+.light-choice-box:focused {
+    -fx-background-color: #88dd88;
+    -fx-background-radius: 10px;
+    -fx-border-color: #88dd88;
+    -fx-border-radius: 10px;
+}
+
 /*选项菜单-日间*/
 .light-choice-box .context-menu {
     -fx-background-color: #99ff99;
@@ -197,6 +211,14 @@
     -fx-border-color: #00aa00;
     -fx-border-radius: 10px;
     -fx-font-family: 'Maple Mono NF CN Medium';
+}
+
+/* 选择框-夜间-聚焦 */
+.dark-choice-box:focused {
+    -fx-background-color: #226622;
+    -fx-background-radius: 10px;
+    -fx-border-color: #226622;
+    -fx-border-radius: 10px;
 }
 
 /*选项菜单-夜间*/
@@ -294,16 +316,25 @@
     -fx-padding: 5px;
 }
 
-/* 滚动条-统一*/
+/* 滚动条轨道-统一*/
 ScrollPane .scroll-bar:horizontal .track,
 ScrollPane .scroll-bar:vertical .track {
     -fx-background-color: #339933;
     -fx-background-radius: 5px;
 }
 
+/* 滚动条滑块-统一*/
 ScrollPane .scroll-bar:horizontal .thumb,
 ScrollPane .scroll-bar:vertical .thumb {
     -fx-background-color: #eeffee;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+/*滚动条滑块-聚焦-统一*/
+ScrollPane .scroll-bar:horizontal .thumb:hover,
+ScrollPane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #66ff66;
     -fx-background-radius: 5px;
     -fx-border-radius: 5px;
 }
@@ -372,6 +403,17 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-cursor: HAND;
 }
 
+/* 按钮-聚焦-日间 */
+.light-button:hover {
+    -fx-background-color: #88ee88;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
+    -fx-text-fill: #002200;
+    -fx-font-size: 24px;
+    -fx-cursor: HAND;
+}
+
 /* 按钮-夜间 */
 .dark-button {
     -fx-background-color: #336633;
@@ -380,6 +422,17 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-border-radius: 30;
     -fx-border-width: 1;
     -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 24px;
+    -fx-cursor: HAND;
+}
+
+/* 按钮-聚焦-夜间 */
+.dark-button:hover {
+    -fx-background-color: #447744;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
     -fx-text-fill: #ddffdd;
     -fx-font-size: 24px;
     -fx-cursor: HAND;
@@ -398,6 +451,17 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-cursor: HAND;
 }
 
+/* 小按钮-聚焦-日间 */
+.light-small-button:hover {
+    -fx-background-color: #88ee88;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
+    -fx-text-fill: #002200;
+    -fx-font-size: 18px;
+    -fx-cursor: HAND;
+}
+
 /*小按钮-夜间 */
 .dark-small-button {
     -fx-background-color: #336633;
@@ -406,6 +470,17 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-border-radius: 30;
     -fx-border-width: 1;
     -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 18px;
+    -fx-cursor: HAND;
+}
+
+/* 小按钮-聚焦-夜间 */
+.dark-small-button:hover {
+    -fx-background-color: #447744;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
     -fx-text-fill: #ddffdd;
     -fx-font-size: 18px;
     -fx-cursor: HAND;
@@ -486,6 +561,8 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-background-color: #99ff99;
     -fx-background-radius: 0 0 30px 30px;
     -fx-padding: 10px;
+    -fx-border-color: #99cc99;
+    -fx-border-width: 1px;
 }
 
 /* 对话框按钮区域-夜间 */
@@ -493,6 +570,8 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-background-color: #006600;
     -fx-background-radius: 0 0 30px 30px;
     -fx-padding: 10px;
+    -fx-border-color: #336633;
+    -fx-border-width: 1px;
 }
 
 /* 对话框按钮-日间 */
@@ -509,6 +588,16 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-cursor: hand;
 }
 
+/*对话框按钮-聚焦-日间*/
+.light-dialog-pane .button:focused {
+    -fx-background-color: #88ee88;
+    -fx-border-color: #33cc33;
+    -fx-text-fill: #003300;
+    -fx-font-size: 18px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
 /* 对话框按钮-夜间 */
 .dark-dialog-pane .button {
     -fx-background-color: #006600;
@@ -518,6 +607,16 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-border-width: 1px;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
+    -fx-font-size: 18px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+/*对话框按钮-聚焦-夜间*/
+.dark-dialog-pane .button:focused {
+    -fx-background-color: #117711;
+    -fx-border-color: #006600;
+    -fx-text-fill: #006600;
     -fx-font-size: 18px;
     -fx-padding: 5px 15px;
     -fx-cursor: hand;

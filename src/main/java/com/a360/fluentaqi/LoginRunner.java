@@ -73,6 +73,8 @@ public class LoginRunner extends Application {
         primaryStage.getIcons().add(icon);
         stage.setTitle("Fluent AQI 登录");
         stage.setScene(scene);
+        stage.setMinWidth(720);   // 最小宽度
+        stage.setMinHeight(580);  // 最小高度（含标题栏）
         stage.show();
     }
 }
