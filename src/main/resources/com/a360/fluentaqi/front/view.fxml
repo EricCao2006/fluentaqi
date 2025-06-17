@@ -20,7 +20,7 @@
         <URL value="@total.css" />
     </stylesheets>
     <children>
-      <Label styleClass="styled-title" text="公 众 管 理 监 督 平 台" />
+      <Label styleClass="styled-title" text="AQI 公 众 管 理 监 督" />
       <GridPane hgap="20.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 20; -fx-border-color: #dddddd; -fx-border-radius: 20; -fx-border-width: 2;" vgap="20.0" VBox.vgrow="NEVER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" />
