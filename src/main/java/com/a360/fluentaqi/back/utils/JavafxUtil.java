@@ -48,6 +48,17 @@ public class JavafxUtil {
         FXMLLoader loader = new FXMLLoader();
         System.out.println("path:"+path);
         URL url = clazz.getResource(path);
+
+
+        // 检查路径是否有效
+        if (url == null) {
+            throw new IllegalArgumentException("Resource not found for path: " + path);
+        }
+        else {
+            System.out.println("Resource URL: " + url);
+        }
+
+
         loader.setLocation(url);
         try {
             Parent root = loader.load();
@@ -71,7 +82,19 @@ public class JavafxUtil {
      */
     public static Stage showSubStage(Class clazz,String path,Stage primaryStage,String title){
         FXMLLoader loader = new FXMLLoader();
+        System.out.println("path:"+path);
         URL url = clazz.getResource(path);
+
+        // 检查路径是否有效
+        if (url == null) {
+            throw new IllegalArgumentException("Resource not found for path: " + path);
+        }
+        else {
+            System.out.println("Resource URL: " + url);
+        }
+
+
+
         loader.setLocation(url);
         Stage subStage = new Stage();
         try {

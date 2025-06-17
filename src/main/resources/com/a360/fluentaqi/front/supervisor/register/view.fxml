@@ -62,8 +62,8 @@
         </GridPane>
       <HBox alignment="CENTER" spacing="40.0">
          <children>
-            <Button mnemonicParsing="false" styleClass="styled-dark-button" text="&lt;返回" />
-              <Button mnemonicParsing="false" styleClass="styled-light-button" text="注册&gt;" />
+            <Button mnemonicParsing="false" styleClass="dark-button" text="&lt;返回" />
+              <Button mnemonicParsing="false" styleClass="light-button" text="注册&gt;" />
          </children>
       </HBox>
     </children>

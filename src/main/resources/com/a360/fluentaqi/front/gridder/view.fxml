@@ -22,7 +22,7 @@
         <Label styleClass="light-title" text="AQI反馈数据实测信息" />
         <ScrollPane hbarPolicy="ALWAYS">
             <content>
-                <TableView styleClass="styled-table">
+                <TableView styleClass="light-table">
                     <columns>
                         <TableColumn text="编号" />
                         <TableColumn text="日期" />
@@ -114,8 +114,8 @@
                         <Insets bottom="-10.0" top="-5.0" />
                      </VBox.margin>
                   </VBox>
-                    <Button mnemonicParsing="false" styleClass="styled-light-button" text="提交&gt;" />
-                  <Button mnemonicParsing="false" styleClass="styled-dark-button" text="&lt;返回" />
+                    <Button mnemonicParsing="false" styleClass="light-button" text="提交&gt;" />
+                  <Button mnemonicParsing="false" styleClass="dark-button" text="&lt;返回" />
                </children>
             </VBox>
          </children>
