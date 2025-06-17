@@ -1,28 +1,40 @@
 [
-  {
-    "af_id": 1,
-    "tel_id": "13147859658",
-    "province_id": 1,
-    "provinceName": "辽宁省",
-    "city_id": 1,
-    "cityName": "沈阳市",
-    "address": "朝阳区建国路123号",
-    "information": "空气能见度不足，稍有异味。",
-    "estimated_grade": 3,
-    "af_date": "2022-01-26",
-    "af_time": "09:28:04",
-    "gm_id": 0,
-    "gm_name": "0",
-    "assign_date": null,
-    "assign_time": null,
-    "state": 0,
-    "remarks": null,
-    "confirmData": "",
-    "co": 25.0,
-    "confirmLevel": "四级",
-    "pm": 10.5,
-    "so2": 2.5,
-    "state": "已实测",
-    "confirmExplain": "中度污染"
-  }
+  [
+    {
+      "af_id": 1,
+      "afName": "张三",
+      "provinceName": "广东省",
+      "cityName": "广州市",
+      "address": "天河区体育西路 123 号",
+      "information": "空气有异味，能见度较低",
+      "estimate_grade": "轻度污染",
+      "af_date": "2024-10-15",
+      "state": "未指派",
+      "gmName": "",
+      "confirmDate": "",
+      "so2": 30.5,
+      "co": 2.1,
+      "pm": 60.2,
+      "confirmLevel": "",
+      "confirmExplain": ""
+    },
+    {
+      "af_id": 2,
+      "afName": "李四",
+      "provinceName": "江苏省",
+      "cityName": "南京市",
+      "address": "鼓楼区中山路 456 号",
+      "information": "天空灰蒙蒙，疑似有雾霾",
+      "estimate_grade": "中度污染",
+      "af_date": "2024-10-16",
+      "state": "已指派",
+      "gmName": "王五",
+      "confirmDate": "2024-10-17",
+      "so2": 80.0,
+      "co": 5.5,
+      "pm": 100.8,
+      "confirmLevel": "中度污染",
+      "confirmExplain": "经检测，各项污染物指标达到中度污染标准"
+    }
+  ]
 ]
