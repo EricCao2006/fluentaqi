@@ -6,7 +6,6 @@ package com.a360.fluentaqi.back.aqiabouts;
  * @author 尚阳@A360
  */
 public class LimitDto {
-    //todo by 尚阳
     private int intlevel;
     private String level;
     private String explain;
@@ -21,7 +20,6 @@ public class LimitDto {
     }
     public LimitDto() {
         super();
-        // TODO Auto-generated constructor stub
     }
     public int getIntlevel() {
         return intlevel;
