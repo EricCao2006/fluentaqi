@@ -1,4 +1,4 @@
-package com.a360.fluentaqi;
+package com.a360.fluentaqi.front;
 
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
-import static com.a360.fluentaqi.LoginController.primaryStage;
+import static com.a360.fluentaqi.front.LoginController.primaryStage;
 
 public class LoginRunner extends Application {
     public static void main(String[] args) {

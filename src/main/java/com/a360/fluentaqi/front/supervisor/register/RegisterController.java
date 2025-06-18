@@ -2,7 +2,7 @@ package com.a360.fluentaqi.front.supervisor.register;
 
 import com.a360.fluentaqi.back.services.SupervisorService;
 
-import com.a360.fluentaqi.LoginController;
+import com.a360.fluentaqi.front.LoginController;
 import com.a360.fluentaqi.back.services.impl.SupervisorServiceImpl;
 import com.a360.fluentaqi.back.users.Supervisor;
 import com.a360.fluentaqi.back.utils.JavafxUtil;

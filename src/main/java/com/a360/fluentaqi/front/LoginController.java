@@ -1,4 +1,4 @@
-package com.a360.fluentaqi;
+package com.a360.fluentaqi.front;
 
 import com.a360.fluentaqi.back.services.AdminService;
 import com.a360.fluentaqi.back.services.GridderService;
@@ -9,7 +9,6 @@ import com.a360.fluentaqi.back.services.impl.SupervisorServiceImpl;
 import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.front.admin.AdminController;
-import com.a360.fluentaqi.front.admin.aqifromgrid.AqiFromGridController;
 import com.a360.fluentaqi.front.gridder.GridderController;
 import com.a360.fluentaqi.front.supervisor.SupervisorController;
 import javafx.fxml.FXML;
