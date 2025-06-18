@@ -126,7 +126,8 @@ public class SupervisorController implements Initializable {
         txt_level.setValue("预估AQI等级");
 
         //初始化省市区域
-        String filePath2 = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/Province.json";
+//        String filePath2 = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/Province.json";
+        String filePath2 =ProPaht + "Province.json";
         List<Province> PList = (List<Province>) JsonReader.readListFromJson(filePath2, Province.class);
         for(Province province:PList){
             txt_province.getItems().add(province.getProvinceName());
