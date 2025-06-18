@@ -1,7 +1,6 @@
 [
-  [
     {
-      "af_id": 1,
+      "afId": 1,
       "afName": "张三",
       "provinceName": "广东省",
       "cityName": "广州市",
@@ -10,13 +9,13 @@
       "estimate_grade": "轻度污染",
       "af_date": "2024-10-15",
       "state": "未指派",
-      "gmName": "",
-      "confirmDate": "",
+      "gmName": "王五55",
+      "confirmDate": "2024-10-17",
       "so2": 30.5,
       "co": 2.1,
       "pm": 60.2,
-      "confirmLevel": "",
-      "confirmExplain": ""
+      "confirmLevel": "中度污染55",
+      "confirmExplain": "经检测，各项污染物指标达到中度污染标准55"
     },
     {
       "af_id": 2,
@@ -36,5 +35,4 @@
       "confirmLevel": "中度污染",
       "confirmExplain": "经检测，各项污染物指标达到中度污染标准"
     }
-  ]
 ]

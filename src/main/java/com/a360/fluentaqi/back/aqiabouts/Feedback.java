@@ -1,12 +1,17 @@
 package com.a360.fluentaqi.back.aqiabouts;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Date;
+
 /**
  * AQI反馈信息
  * @author 尚阳@A360
  */
 public class Feedback {
     private static final long serialVersionUID = 1L;
-    private Integer af_id;		//������Ϣ���
+    private Integer afId;		//������Ϣ���
     private String afName;	//���ڼලԱ����
     private String provinceName;	//ʡ��������
     private String cityName;	//����������
@@ -24,10 +29,10 @@ public class Feedback {
     private String confirmExplain;//ʵ��AQI�ȼ�����
 
     public Integer getAfId() {
-        return af_id;
+        return afId;
     }
     public void setAfId(Integer afId) {
-        this.af_id = af_id;
+        this.afId = afId;
     }
     public String getAfName() {
         return afName;
@@ -122,10 +127,12 @@ public class Feedback {
     }
     @Override
     public String toString() {
-        return "AqiFeedback [afId=" + af_id + ", afName=" + afName + ", provinceName=" + provinceName + ", cityName="
+        return "AqiFeedback [afId=" + afId + ", afName=" + afName + ", provinceName=" + provinceName + ", cityName="
                 + cityName + ", address=" + address + ", information=" + information + ", estimate_grade=" + estimate_grade
                 + ", af_date=" + af_date + ", state=" + state + ", gmName=" + gmName + ", confirmDate=" + confirmDate
                 + ", so2=" + so2 + ", co=" + co + ", pm=" + pm + ", confirmLevel=" + confirmLevel + ", confirmExplain="
                 + confirmExplain + "]";
     }
+
+
 }
