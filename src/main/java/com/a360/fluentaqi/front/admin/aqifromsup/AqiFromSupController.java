@@ -40,7 +40,6 @@ public class AqiFromSupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
         //初始化table 数据表
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
         afIdColumn.setMinWidth(40);

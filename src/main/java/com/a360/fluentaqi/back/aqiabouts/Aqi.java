@@ -8,14 +8,14 @@ import java.io.Serializable;
  * @author 尚阳@A360
  */
 public class Aqi implements Serializable {
-    //todo by 尚阳
+
     private static final long serialVersionUID = 1L;
     private String level;
     private String explain;
     private String impact;
     public Aqi() {
         super();
-        // TODO Auto-generated constructor stub
+
     }
 
     public Aqi(String level, String explain, String impact) {
