@@ -135,8 +135,8 @@ public class GridderController implements Initializable {
 
         txt_tableView.getColumns().addAll(afIdColumn,afNameColumn,dateColumn,estimateGradeColumn, proviceNameColumn,cityNameColumn,addressColumn,infoColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
-        String filePath = ProPaht + "Feedback.json";
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
+        String filePath = ProPaht + "aqi_feedback.json";
         List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filePath , Feedback.class);
         for(Feedback afb:afList){
             if(afb.getGmName() != null && afb.getGmName().equals(gridMember.getRealName()) && afb.getState().equals("已指派")){

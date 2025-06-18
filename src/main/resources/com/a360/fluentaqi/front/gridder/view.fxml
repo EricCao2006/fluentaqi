@@ -99,7 +99,7 @@
                   </Label>
                   <VBox spacing="5.0" styleClass="v-box">
                      <children>
-                        <Label fx:id="txt_name" styleClass="small-content" text="某某某" />
+                        <Label fx:id="label_realName" styleClass="small-content" text="某某某" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" top="5.0" />
