@@ -9,18 +9,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
     <stylesheets>
         <URL value="@../../css/total.css" />
     </stylesheets>
     <children>
-        <Label styleClass="light-title" text="公众监督AQI反馈数据" />
-        <ScrollPane styleClass="light-scroll-pane" hbarPolicy="ALWAYS">
+        <Label styleClass="title" text="公众监督AQI反馈数据" />
+        <ScrollPane styleClass="scroll-pane" hbarPolicy="ALWAYS">
             <VBox.margin>
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
             <content>
-                <TableView fx:id="txt_tableView" styleClass="light-table">
+                <TableView fx:id="txt_tableView" styleClass="table">
 <!--                    <columns>-->
 <!--                        <TableColumn prefWidth="50.0" text="编号" />-->
 <!--                        <TableColumn prefWidth="50.0" text="省" />-->
@@ -32,7 +32,7 @@
                 </TableView>
             </content>
         </ScrollPane>
-        <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
+        <Button mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回" />
 
     </children>
     <padding>

@@ -18,13 +18,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
     <stylesheets>
         <URL value="@css/total.css" />
     </stylesheets>
     <children>
-      <Label styleClass="light-title" text="AQI公众管理监督" />
-      <GridPane hgap="20.0" styleClass="light-grid-pane" vgap="20.0" VBox.vgrow="NEVER">
+      <Label styleClass="title" text="AQI公众管理监督" />
+      <GridPane hgap="20.0" styleClass="grid-pane" vgap="20.0" VBox.vgrow="NEVER">
         <columnConstraints>
           <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
           <ColumnConstraints hgrow="SOMETIMES" />
@@ -35,10 +35,10 @@
           <RowConstraints vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label styleClass="light-content" text="账户类型" GridPane.rowIndex="0" />
-            <Label styleClass="light-content" text="账号ID" GridPane.rowIndex="1" />
-            <Label styleClass="light-content" text="密码" GridPane.rowIndex="2" />
-            <ChoiceBox fx:id="txt_type" maxWidth="1.7976931348623157E308" styleClass="light-choice-box" GridPane.columnIndex="1">
+            <Label styleClass="content" text="账户类型" GridPane.rowIndex="0" />
+            <Label styleClass="content" text="账号ID" GridPane.rowIndex="1" />
+            <Label styleClass="content" text="密码" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="txt_type" maxWidth="1.7976931348623157E308" styleClass="choice-box" GridPane.columnIndex="1">
                 <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="管理员" />
@@ -50,8 +50,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ChoiceBox>
-             <TextField fx:id="txt_id" maxWidth="1.7976931348623157E308" styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <PasswordField fx:id="txt_password" maxWidth="1.7976931348623157E308" styleClass="light-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+             <TextField fx:id="txt_id" maxWidth="1.7976931348623157E308" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="txt_password" maxWidth="1.7976931348623157E308" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
          <padding>
             <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
@@ -62,9 +62,9 @@
       </GridPane>
       <HBox alignment="CENTER" spacing="40.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#toRegister" styleClass="light-button" text="监督员注册&gt;" />
-            <Button mnemonicParsing="false" onAction="#login" styleClass="dark-button" text="登录&gt;" />
-             <Button mnemonicParsing="false" styleClass="dark-button">
+            <Button mnemonicParsing="false" onAction="#toRegister" styleClass="A-button" text="监督员注册&gt;" />
+            <Button mnemonicParsing="false" onAction="#login" styleClass="B-button" text="登录&gt;" />
+             <Button mnemonicParsing="false" styleClass="B-button">
                  <graphic>
                      <ImageView fitHeight="24" fitWidth="24">
                          <image>

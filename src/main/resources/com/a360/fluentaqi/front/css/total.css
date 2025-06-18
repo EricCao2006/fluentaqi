@@ -18,7 +18,7 @@
 }
 
 /* 主容器-日间 */
-.light-container {
+.container {
     -fx-alignment: center;
     -fx-fill-width: false;
     -fx-min-height: 540px;
@@ -29,105 +29,51 @@
     -fx-background-color: #eeffee;
 }
 
-/*主容器-夜间 */
-.dark-container {
-    -fx-alignment: center;
-    -fx-fill-width: false;
-    -fx-min-height: 540px;
-    -fx-min-width: 720px;
-    -fx-pref-height: 540px;
-    -fx-pref-width: 720px;
-    -fx-spacing: 10px;
-    -fx-background-color: #003300;
-}
-
 /* 标题-日间 */
-.light-title {
+.title {
     -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Bold';
     -fx-text-fill: #003300;
-    -fx-font-size: 48px;
-}
-
-/* 标题-夜间 */
-.dark-title {
-    -fx-alignment: CENTER;
-    -fx-font-family: 'Maple Mono NF CN Bold';
-    -fx-text-fill: #ccffcc;
     -fx-font-size: 48px;
 }
 
 /* 内容-日间*/
-.light-content {
+.content {
     -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
-    -fx-font-size: 24px;
-}
-
- /* 内容-夜间*/
-.dark-content {
-    -fx-alignment: CENTER;
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
     -fx-font-size: 24px;
 }
 
 /* 小字-日间*/
-.light-small-content {
+.small-content {
     -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 18px;
 }
 
-/* 小字-夜间*/
-.dark-small-content {
-    -fx-alignment: CENTER;
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-font-size: 18px;
-}
-
 /*网格-日间*/
-.light-grid-pane {
+.grid-pane {
     -fx-alignment: CENTER;
     -fx-background-color: #ccffcc;
     -fx-background-radius: 20px;
     -fx-border-color: #dddddd;
-    -fx-border-radius: 20px;
-    -fx-border-width: 2px;
-}
-
-/* 网格-夜间*/
-.dark-grid-pane {
-    -fx-background-color: #003300;
-    -fx-background-radius: 20px;
-    -fx-border-color: #222222;
     -fx-border-radius: 20px;
     -fx-border-width: 2px;
 }
 
 /*自定义横向区域-日间*/
-.light-h-box {
+.h-box {
     -fx-alignment: CENTER;
     -fx-background-color: #ccffcc;
     -fx-background-radius: 20px;
     -fx-border-color: #dddddd;
-    -fx-border-radius: 20px;
-}
-
-/*自定义横向区域-夜间*/
-.dark-h-box {
-    -fx-alignment: CENTER;
-    -fx-background-color: #003300;
-    -fx-background-radius: 20px;
-    -fx-border-color: #222222;
     -fx-border-radius: 20px;
 }
 
 /*自定义纵向区域-日间*/
-.light-v-box {
+.v-box {
     -fx-alignment: CENTER;
     -fx-background-color: #ccffcc;
     -fx-background-radius: 20px;
@@ -135,16 +81,8 @@
     -fx-border-radius: 20px;
 }
 
-/*自定义纵向区域-夜间*/
-.dark-v-box {
-    -fx-alignment: CENTER;
-    -fx-background-color: #003300;
-    -fx-background-radius: 20px;
-    -fx-border-color: #222222;
-    -fx-border-radius: 20px;
-}
 /* 输入框-日间 */
-.light-text-field {
+.text-field {
     -fx-background-color: #99ff99;
     -fx-background-radius: 10px;
     -fx-border-color: #99cc99;
@@ -152,17 +90,8 @@
     -fx-cursor: TEXT;
 }
 
-/* 输入框-夜间 */
-.dark-text-field {
-    -fx-background-color: #006600;
-    -fx-background-radius: 10px;
-    -fx-border-color: #00aa00;
-    -fx-border-radius: 10px;
-    -fx-cursor: TEXT;
-}
-
 /* 选择框-日间 */
-.light-choice-box {
+.choice-box {
     -fx-background-radius: 10px;
     -fx-background-color: #99ff99;
     -fx-border-color: #99cc99;
@@ -170,7 +99,7 @@
 }
 
 /* 选择框-日间-聚焦 */
-.light-choice-box:focused {
+.choice-box:focused {
     -fx-background-color: #88dd88;
     -fx-background-radius: 10px;
     -fx-border-color: #88dd88;
@@ -178,7 +107,7 @@
 }
 
 /*选项菜单-日间*/
-.light-choice-box .context-menu {
+.choice-box .context-menu {
     -fx-background-color: #99ff99;
     -fx-background-radius: 10px;
     -fx-border-color: #99cc99;
@@ -187,85 +116,33 @@
 }
 
 /*选项菜单项-日间*/
-.light-choice-box .menu-item {
+.choice-box .menu-item {
     -fx-background-color: transparent;
     -fx-padding: 5 10 5 10;
 }
 
 /*选项菜单项-日间-聚焦*/
-.light-choice-box .menu-item:focused {
+.choice-box .menu-item:focused {
     -fx-background-color: #88dd88;
     -fx-background-radius: 5px;
 }
 
 /*选项菜单项-日间-标签*/
-.light-choice-box .menu-item .label {
+.choice-box .menu-item .label {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
 }
 
-/* 选择框-夜间 */
-.dark-choice-box {
-    -fx-background-radius: 10px;
-    -fx-background-color: #006600;
-    -fx-border-color: #00aa00;
-    -fx-border-radius: 10px;
-    -fx-font-family: 'Maple Mono NF CN Medium';
-}
-
-/* 选择框-夜间-聚焦 */
-.dark-choice-box:focused {
-    -fx-background-color: #226622;
-    -fx-background-radius: 10px;
-    -fx-border-color: #226622;
-    -fx-border-radius: 10px;
-}
-
-/*选项菜单-夜间*/
-.dark-choice-box .context-menu {
-    -fx-background-color: #006600;
-    -fx-background-radius: 10px;
-    -fx-border-color: #00aa00;
-    -fx-border-radius: 10px;
-    -fx-padding: 5;
-}
-
-/*选项菜单项-夜间*/
-.dark-choice-box .menu-item {
-    -fx-background-color: transparent;
-    -fx-padding: 5 10 5 10;
-}
-
-/*选项菜单项-夜间-聚焦*/
-.dark-choice-box .menu-item:focused {
-    -fx-background-color: #226622;
-    -fx-background-radius: 5px;
-}
-
-/*选项菜单项-夜间-标签*/
-.dark-choice-box .menu-item .label {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-}
-
 /*表格-日间*/
-.light-table {
+.table {
     -fx-background-color: #ccffcc;
     -fx-border-color: #ccffcc;
     -fx-text-fill: #003300;
     -fx-padding: 5;
 }
 
-/*表格-夜间*/
-.dark-table {
-    -fx-background-color: #003300;
-    -fx-border-color: #003300;
-    -fx-text-fill: #ccffcc;
-    -fx-padding: 5;
-}
-
 /*表头-日间*/
-.light-table .column-header {
+.table .column-header {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-background-color: #99ff99;
     -fx-border-color: #559955;
@@ -273,31 +150,15 @@
     -fx-padding: 5;
 }
 
-/*表头-夜间*/
-.dark-table .column-header {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-background-color: #006600;
-    -fx-border-color: #66aa66;
-    -fx-text-fill: #ccffcc;
-    -fx-padding: 5;
-}
-
 /* 表格行-日间 */
-.light-table .table-row-cell {
+.table .table-row-cell {
     -fx-background-color: #ccffcc;
     -fx-border-color: #559955;
     -fx-text-fill: #003300;
 }
 
-/* 表格行-夜间 */
-.dark-table .table-row-cell {
-    -fx-background-color: #003300;
-    -fx-border-color: #66aa66;
-    -fx-text-fill: #ccffcc;
-}
-
 /* 滚动区-日间 */
-.light-scroll-pane {
+.scroll-pane {
     -fx-background-color: #ccffcc;
     -fx-background-radius: 10px;
     -fx-border-color: #99ff99;
@@ -306,24 +167,14 @@
     -fx-padding: 5px;
 }
 
-/* 滚动区-夜间 */
-.dark-scroll-pane {
-    -fx-background-color: #003300;
-    -fx-background-radius: 10px;
-    -fx-border-color: #66ff66;
-    -fx-border-radius: 10px;
-    -fx-border-width: 1px;
-    -fx-padding: 5px;
-}
-
-/* 滚动条轨道-统一*/
+/* 滚动条轨道-日间*/
 ScrollPane .scroll-bar:horizontal .track,
 ScrollPane .scroll-bar:vertical .track {
     -fx-background-color: #339933;
     -fx-background-radius: 5px;
 }
 
-/* 滚动条滑块-统一*/
+/* 滚动条滑块-日间*/
 ScrollPane .scroll-bar:horizontal .thumb,
 ScrollPane .scroll-bar:vertical .thumb {
     -fx-background-color: #eeffee;
@@ -331,7 +182,7 @@ ScrollPane .scroll-bar:vertical .thumb {
     -fx-border-radius: 5px;
 }
 
-/*滚动条滑块-聚焦-统一*/
+/*滚动条滑块-聚焦-日间*/
 ScrollPane .scroll-bar:horizontal .thumb:hover,
 ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-background-color: #66ff66;
@@ -340,7 +191,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /*标题区域-日间*/
-.light-titled-pane {
+.titled-pane {
     -fx-background-color: #88dd88;
     -fx-background-radius: 10px;
     -fx-border-color: #559955;
@@ -349,7 +200,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 标题栏-日间 */
-.light-titled-pane .title {
+.titled-pane .title {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-background-color: #88dd88;
     -fx-text-fill: #002200;
@@ -360,20 +211,8 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 标题栏-夜间 */
-.dark-titled-pane .title {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-background-color: #227722;
-    -fx-text-fill: #ddffdd;
-    -fx-font-size: 18px;
-    -fx-padding: 5px 10px;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
-    -fx-cursor: HAND;
-}
-
 /*伪表格-日间*/
-.light-table-cell {
+.table-cell {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-wrap-text: true;
@@ -381,17 +220,8 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-padding: 0 5px;
 }
 
-/*伪表格-夜间*/
-.dark-table-cell {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-wrap-text: true;
-    -fx-font-size: 16px;
-    -fx-padding: 0 5px;
-}
-
 /* 按钮-日间 */
-.light-button {
+.A-button {
     -fx-background-color: #99ff99;
     -fx-background-radius: 30;
     -fx-border-color: #99cc99;
@@ -404,7 +234,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 按钮-聚焦-日间 */
-.light-button:hover {
+.A-button:hover {
     -fx-background-color: #88ee88;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
@@ -415,7 +245,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 按钮-夜间 */
-.dark-button {
+.B-button {
     -fx-background-color: #336633;
     -fx-background-radius: 30;
     -fx-border-color: #ddffdd;
@@ -428,7 +258,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 按钮-聚焦-夜间 */
-.dark-button:hover {
+.B-button:hover {
     -fx-background-color: #447744;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
@@ -439,7 +269,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 小按钮-日间 */
-.light-small-button {
+.A-small-button {
     -fx-background-color: #99ff99;
     -fx-background-radius: 30;
     -fx-border-color: #99cc99;
@@ -452,7 +282,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 小按钮-聚焦-日间 */
-.light-small-button:hover {
+.A-small-button:hover {
     -fx-background-color: #88ee88;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
@@ -463,7 +293,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /*小按钮-夜间 */
-.dark-small-button {
+.B-small-button {
     -fx-background-color: #336633;
     -fx-background-radius: 30;
     -fx-border-color: #ddffdd;
@@ -476,7 +306,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 小按钮-聚焦-夜间 */
-.dark-small-button:hover {
+.B-small-button:hover {
     -fx-background-color: #447744;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
@@ -487,7 +317,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /* 对话框根面板-日间 */
-.light-dialog-pane {
+.dialog-pane {
     -fx-background-color: #ccffcc;
     -fx-background-radius: 30px;
     -fx-border-color: #99cc99;
@@ -496,68 +326,33 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-padding: 15px;
 }
 
-/* 对话框根面板-夜间 */
-.dark-dialog-pane {
-    -fx-background-color: #003300;
-    -fx-background-radius: 30px;
-    -fx-border-color: #336633;
-    -fx-border-radius: 30px;
-    -fx-border-width: 1px;
-    -fx-padding: 15px;
-}
-
 /* 对话框标题区域-日间 */
-.light-dialog-pane .header-panel {
+.dialog-pane .header-panel {
     -fx-background-color: #99ff99;
     -fx-background-radius: 30px 30px 0 0;
     -fx-border-color: #99cc99;
-    -fx-border-width: 0 0 1px 0;
-    -fx-padding: 10px 15px;
-}
-
-/* 对话框标题区域-夜间 */
-.dark-dialog-pane .header-panel {
-    -fx-background-color: #006600;
-    -fx-background-radius: 30px 30px 0 0;
-    -fx-border-color: #336633;
     -fx-border-width: 0 0 1px 0;
     -fx-padding: 10px 15px;
 }
 
 /* 对话框标题文本-日间 */
-.light-dialog-pane .header-panel .label {
+.dialog-pane .header-panel .label {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-}
-
-/* 对话框标题文本-夜间 */
-.dark-dialog-pane .header-panel .label {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
     -fx-font-size: 24px;
     -fx-font-weight: bold;
 }
 
 /* 对话框内容文本-日间 */
-.light-dialog-pane .content.label {
+.dialog-pane .content.label {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #003300;
     -fx-font-size: 18px;
     -fx-wrap-text: true;
 }
 
-/* 对话框内容文本-夜间 */
-.dark-dialog-pane .content.label {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-font-size: 18px;
-    -fx-wrap-text: true;
-}
-
 /* 对话框按钮区域-日间 */
-.light-dialog-pane .button-bar {
+.dialog-pane .button-bar {
     -fx-background-color: #99ff99;
     -fx-background-radius: 0 0 30px 30px;
     -fx-padding: 10px;
@@ -565,17 +360,8 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-border-width: 1px;
 }
 
-/* 对话框按钮区域-夜间 */
-.dark-dialog-pane .button-bar {
-    -fx-background-color: #006600;
-    -fx-background-radius: 0 0 30px 30px;
-    -fx-padding: 10px;
-    -fx-border-color: #336633;
-    -fx-border-width: 1px;
-}
-
 /* 对话框按钮-日间 */
-.light-dialog-pane .button {
+.dialog-pane .button {
     -fx-background-color: #99ff99;
     -fx-background-radius: 30px;
     -fx-border-color: #99cc99;
@@ -589,34 +375,10 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /*对话框按钮-聚焦-日间*/
-.light-dialog-pane .button:focused {
+.dialog-pane .button:focused {
     -fx-background-color: #88ee88;
     -fx-border-color: #33cc33;
     -fx-text-fill: #003300;
-    -fx-font-size: 18px;
-    -fx-padding: 5px 15px;
-    -fx-cursor: hand;
-}
-
-/* 对话框按钮-夜间 */
-.dark-dialog-pane .button {
-    -fx-background-color: #006600;
-    -fx-background-radius: 30px;
-    -fx-border-color: #336633;
-    -fx-border-radius: 30px;
-    -fx-border-width: 1px;
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-font-size: 18px;
-    -fx-padding: 5px 15px;
-    -fx-cursor: hand;
-}
-
-/*对话框按钮-聚焦-夜间*/
-.dark-dialog-pane .button:focused {
-    -fx-background-color: #117711;
-    -fx-border-color: #006600;
-    -fx-text-fill: #006600;
     -fx-font-size: 18px;
     -fx-padding: 5px 15px;
     -fx-cursor: hand;
