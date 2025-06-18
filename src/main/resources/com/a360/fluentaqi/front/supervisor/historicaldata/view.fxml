@@ -6,11 +6,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
     <stylesheets>
         <URL value="@../../css/total.css" />
     </stylesheets>
@@ -21,16 +20,7 @@
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
             <content>
-                <TableView styleClass="table">
-                    <columns>
-                        <TableColumn prefWidth="50.0" text="编号" />
-                        <TableColumn prefWidth="50.0" text="省" />
-                        <TableColumn prefWidth="50.0" text="市" />
-                        <TableColumn text="预估等级" />
-                        <TableColumn text="反馈时间" />
-                        <TableColumn prefWidth="300.0" text="反馈信息" />
-                    </columns>
-                </TableView>
+                <TableView styleClass="table" />
             </content>
          <styleClass>
             <String fx:value="scroll-pane" />

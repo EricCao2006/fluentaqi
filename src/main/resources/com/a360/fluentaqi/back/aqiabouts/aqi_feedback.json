@@ -5,7 +5,7 @@
   "cityName" : "广州市",
   "address" : "天河区体育西路 123 号",
   "information" : "空气有异味，能见度较低",
-  "state" : "未指派",
+  "state" : "已指派",
   "gmName" : "张三",
   "confirmDate" : "2024-10-17",
   "so2" : 30.5,
@@ -22,8 +22,8 @@
   "cityName" : "南京市",
   "address" : "鼓楼区中山路 456 号",
   "information" : "天空灰蒙蒙，疑似有雾霾",
-  "state" : "未指派",
-  "gmName" : "王五",
+  "state" : "已指派",
+  "gmName" : "张三",
   "confirmDate" : "2024-10-17",
   "so2" : 80.0,
   "co" : 5.5,
@@ -66,4 +66,4 @@
   "confirmExplain" : "经检测，空气质量达到优良标准",
   "date" : "2024-10-20",
   "estimateGrade" : "优"
-}]
+} ]

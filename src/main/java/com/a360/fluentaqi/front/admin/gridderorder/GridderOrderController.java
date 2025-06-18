@@ -40,8 +40,13 @@ public class GridderOrderController implements Initializable{
 
     private FeedbackService aqiFeedbackService = new FeedbackServiceImpl();
     @FXML
-    void assignGridMember(ActionEvent event) {
+    void assignGridMember() {
         Feedback selectedFeedback = txt_tableView.getSelectionModel().getSelectedItem();
+
+        if(selectedFeedback == null){
+            JavafxUtil.showAlert(aqiInfoStage, "指派失败", "请选择要指派的AQI反馈信息", "请选择要指派的AQI反馈信息","warn");
+            return;
+        }
 
         if(combo_realName.getValue().equals("请选择网格员")){
             JavafxUtil.showAlert(aqiInfoStage, "指派失败", "您没有选择要指派的网格员", "请选择您要指派的网格员","warn");
