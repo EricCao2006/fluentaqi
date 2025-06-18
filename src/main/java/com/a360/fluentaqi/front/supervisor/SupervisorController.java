@@ -174,6 +174,6 @@ public class SupervisorController implements Initializable {
 
     public void feedBackList(){
         HistoricalDataController.primaryStage = primaryStage;
-        JavafxUtil.showStage(this.getClass(),"src/main/resources/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml", primaryStage,"监督员端-AQI历史反馈记录");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml", primaryStage,"监督员端-AQI历史反馈记录");
     }
 }
