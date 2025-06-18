@@ -17,7 +17,6 @@ public class ThemeUtils {
      */
     public static void register(Scene scene) {
         scenes.add(scene);
-        isDarkMode = false;
         applyThemeToScene(scene);
     }
 

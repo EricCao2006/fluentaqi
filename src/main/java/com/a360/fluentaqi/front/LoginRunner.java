@@ -1,5 +1,6 @@
 package com.a360.fluentaqi.front;
 
+import com.a360.fluentaqi.back.utils.ThemeUtils;
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -76,5 +77,6 @@ public class LoginRunner extends Application {
         stage.setMinWidth(720);   // 最小宽度
         stage.setMinHeight(580);  // 最小高度（含标题栏）
         stage.show();
+        ThemeUtils.register(scene);
     }
 }

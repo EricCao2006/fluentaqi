@@ -22,6 +22,12 @@ public class SettingsMenu extends HBox {
         getStyleClass().add("floating-menu");
         setMouseTransparent(false);
         setVisible(false);
+        // 只注册一次鼠标点击关闭事件
+        this.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 1) {
+                hide();
+            }
+        });
     }
 
     public static SettingsMenu getInstance() {
@@ -48,21 +54,9 @@ public class SettingsMenu extends HBox {
         // 清空旧内容
         getChildren().clear();
 
-        // 创建“主题”按钮
-        Button themeBtn = new Button();
-        ImageView themeView = new ImageView(new Image("/com/a360/fluentaqi/front/icons/theme.png"));
-        themeView.setFitWidth(24);
-        themeView.setFitHeight(24);
-        themeBtn.setGraphic(themeView);
-        themeBtn.getStyleClass().add("B-button");
-
-        // 创建“语言切换”按钮
-        Button languageBtn = new Button();
-        ImageView languageView = new ImageView(new Image("/com/a360/fluentaqi/front/icons/translate.png"));
-        languageView.setFitWidth(24);
-        languageView.setFitHeight(24);
-        languageBtn.setGraphic(languageView);
-        languageBtn.getStyleClass().add("B-button");
+        // 创建按钮并绑定事件
+        Button themeBtn = createIconButton("/com/a360/fluentaqi/front/icons/theme.png", "切换主题");
+        Button languageBtn = createIconButton("/com/a360/fluentaqi/front/icons/translate.png", "切换语言");
 
         themeBtn.setOnAction(e -> {
             changeTheme();
@@ -89,13 +83,7 @@ public class SettingsMenu extends HBox {
         setLayoutY(y);
 
         setVisible(true);
-
-        // 点击外部关闭
-        stage.getScene().setOnMouseClicked(e -> {
-            if (!localToScene(getBoundsInLocal()).contains(e.getX(), e.getY())) {
-                hide();
-            }
-        });
+        setMouseTransparent(false);
     }
 
     /**
@@ -109,4 +97,26 @@ public class SettingsMenu extends HBox {
             root.getChildren().remove(this);
         }
     }
+
+    /**
+     * 创建图标按钮
+     *
+     * @param iconPath     图标路径
+     * @param tooltipText  提示文本
+     * @return 图标按钮
+     */
+    private static Button createIconButton(String iconPath, String tooltipText) {
+        ImageView imageView = new ImageView(new Image(iconPath));
+        imageView.setFitWidth(24);
+        imageView.setFitHeight(24);
+
+        Button button = new Button();
+        button.getStyleClass().add("B-button");
+        button.setMinSize(48, 48);
+        button.setMaxSize(48, 48);
+        button.setGraphic(imageView);
+
+        return button;
+    }
+
 }

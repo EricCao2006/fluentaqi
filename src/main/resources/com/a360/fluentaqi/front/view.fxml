@@ -19,9 +19,9 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.LoginController">
-    <stylesheets>
-        <URL value="@css/dark.css" />
-    </stylesheets>
+<!--    <stylesheets>-->
+<!--        <URL value="@css/dark.css" />-->
+<!--    </stylesheets>-->
     <children>
       <Label styleClass="styled-title" text="AQI公众管理监督" />
       <GridPane hgap="20.0" styleClass="styled-grid-pane" vgap="20.0" VBox.vgrow="NEVER">
