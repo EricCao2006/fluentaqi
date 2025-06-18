@@ -16,9 +16,13 @@ public class ThemeUtils {
      * 默认浅色模式
      */
     public static void register(Scene scene) {
+        if (scenes.contains(scene)) {
+            return; // 避免重复注册
+        }
         scenes.add(scene);
         applyThemeToScene(scene);
     }
+
 
     /*模式切换*/
     public static void changeTheme() {
