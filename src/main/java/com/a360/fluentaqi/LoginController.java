@@ -62,6 +62,10 @@ public class LoginController{
 
     @FXML
     public void login() throws IOException {
+        if (txt_type.getValue() == null) {
+            JavafxUtil.showAlert(primaryStage, "数据错误", "登录类型未选择", "请选择登录类型", "warn");
+            return;
+        }
         switch(txt_type.getValue().toString()){
             case "管理员":
                 boolean isLogin = adminService.login(txt_id.getText(), txt_password.getText());
