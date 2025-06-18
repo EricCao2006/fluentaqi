@@ -6,7 +6,9 @@ import com.a360.fluentaqi.front.LoginController;
 import com.a360.fluentaqi.back.services.impl.SupervisorServiceImpl;
 import com.a360.fluentaqi.back.users.Supervisor;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
+import com.a360.fluentaqi.front.SettingsMenu;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -94,4 +96,20 @@ public class RegisterController {
             return;
         }
     }
+
+    @FXML
+    private Button btnSettings;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, stage);
+    }
+
 }

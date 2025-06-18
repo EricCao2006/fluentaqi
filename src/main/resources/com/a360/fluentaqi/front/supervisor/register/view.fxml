@@ -1,59 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.layout.*?>
-<?import java.lang.String?>
-<VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.a360.fluentaqi.front.supervisor.register.RegisterController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.register.RegisterController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-    <Label styleClass="styled-title" text="公众监督员注册"/>
+    <Label styleClass="styled-title" text="公众监督员注册" />
     <GridPane hgap="20.0" styleClass="styled-grid-pane" vgap="20.0" VBox.vgrow="NEVER">
         <columnConstraints>
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
-            <ColumnConstraints hgrow="SOMETIMES"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints vgrow="SOMETIMES"/>
-            <RowConstraints vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
         </rowConstraints>
         <padding>
-            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
         </padding>
-        <Label styleClass="styled-content" text="姓名" GridPane.rowIndex="1"/>
-        <Label styleClass="styled-content" text="手机号" GridPane.rowIndex="2"/>
-        <Label styleClass="styled-content" text="确认密码" GridPane.rowIndex="4"/>
-        <ChoiceBox fx:id="txt_sex" maxWidth="1.7976931348623157E308" styleClass="styled-choice-box"
-                   GridPane.columnIndex="1">
+        <Label styleClass="styled-content" text="姓名" GridPane.rowIndex="1" />
+        <Label styleClass="styled-content" text="手机号" GridPane.rowIndex="2" />
+        <Label styleClass="styled-content" text="确认密码" GridPane.rowIndex="4" />
+        <ChoiceBox fx:id="txt_sex" maxWidth="1.7976931348623157E308" styleClass="styled-choice-box" GridPane.columnIndex="1">
             <items>
                 <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="男"/>
-                    <String fx:value="女"/>
+                    <String fx:value="男" />
+                    <String fx:value="女" />
                 </FXCollections>
             </items>
             <cursor>
-                <Cursor fx:constant="HAND"/>
+                <Cursor fx:constant="HAND" />
             </cursor>
         </ChoiceBox>
-        <TextField fx:id="loginCode" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-        <PasswordField fx:id="confirmPassword" styleClass="styled-text-field" GridPane.columnIndex="1"
-                       GridPane.rowIndex="4"/>
-        <Label styleClass="styled-content" text="性别"/>
-        <Label styleClass="styled-content" text="密码" GridPane.rowIndex="3"/>
-        <TextField fx:id="txt_realName" styleClass="styled-text-field" GridPane.columnIndex="1"
-                   GridPane.rowIndex="1"/>
-        <PasswordField fx:id="password" styleClass="styled-text-field" GridPane.columnIndex="1"
-                       GridPane.rowIndex="3"/>
+        <TextField fx:id="loginCode" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <PasswordField fx:id="confirmPassword" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label styleClass="styled-content" text="性别" />
+        <Label styleClass="styled-content" text="密码" GridPane.rowIndex="3" />
+        <TextField fx:id="txt_realName" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <PasswordField fx:id="password" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
     </GridPane>
     <HBox alignment="CENTER" spacing="40.0">
-        <Button mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回"/>
-        <Button mnemonicParsing="false" onAction="#register" styleClass="A-button" text="注册&gt;"/>
+        <Button mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回" />
+        <Button fx:id="btnSettings" mnemonicParsing="false" onAction="#showSettingsMenu" styleClass="B-button">
+            <graphic>
+                <ImageView fitHeight="24" fitWidth="24">
+                    <Image url="@../../icons/settings.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#register" styleClass="A-button" text="注册&gt;" />
     </HBox>
 </VBox>

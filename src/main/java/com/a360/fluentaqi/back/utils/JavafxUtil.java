@@ -67,6 +67,9 @@ public class JavafxUtil {
             primaryStage.setWidth(720);
             primaryStage.setHeight(540);
             ThemeUtils.register(scene);
+            // 获取控制器并注入 Stage
+            Object controller = loader.getController();
+            injectStageToController(controller, primaryStage); // 自定义方法注入 Stage
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -101,5 +104,18 @@ public class JavafxUtil {
             e.printStackTrace();
         }
         return subStage;
+    }
+
+    // 新增私有方法：尝试向控制器注入 Stage
+    private static void injectStageToController(Object controller, Stage stage) {
+        if (controller == null || stage == null) return;
+
+        try {
+            // 尝试查找 setStage(Stage) 方法
+            java.lang.reflect.Method method = controller.getClass().getMethod("setStage", Stage.class);
+            method.invoke(controller, stage);
+        } catch (Exception ignored) {
+            // 如果没有该方法，忽略
+        }
     }
 }
