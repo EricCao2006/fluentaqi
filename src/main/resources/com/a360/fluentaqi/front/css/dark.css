@@ -150,6 +150,29 @@
     -fx-padding: 5px;
 }
 
+/* 滚动条轨道-夜间*/
+ScrollPane .scroll-bar:horizontal .track,
+ScrollPane .scroll-bar:vertical .track {
+    -fx-background-color: #66cc66;
+    -fx-background-radius: 5px;
+}
+
+/* 滚动条滑块-夜间*/
+ScrollPane .scroll-bar:horizontal .thumb,
+ScrollPane .scroll-bar:vertical .thumb {
+    -fx-background-color: #001100;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+/*滚动条滑块-聚焦-夜间*/
+ScrollPane .scroll-bar:horizontal .thumb:hover,
+ScrollPane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #009900;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
 /* 标题栏-夜间 */
 .-titled-pane .title {
     -fx-font-family: 'Maple Mono NF CN Medium';

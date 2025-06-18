@@ -150,6 +150,29 @@
     -fx-padding: 5px;
 }
 
+/* 滚动条轨道-日间*/
+ScrollPane .scroll-bar:horizontal .track,
+ScrollPane .scroll-bar:vertical .track {
+    -fx-background-color: #339933;
+    -fx-background-radius: 5px;
+}
+
+/* 滚动条滑块-日间*/
+ScrollPane .scroll-bar:horizontal .thumb,
+ScrollPane .scroll-bar:vertical .thumb {
+    -fx-background-color: #eeffee;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+/*滚动条滑块-聚焦-日间*/
+ScrollPane .scroll-bar:horizontal .thumb:hover,
+ScrollPane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #66ff66;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
 /*标题区域-日间*/
 .-titled-pane {
     -fx-background-color: #88dd88;
