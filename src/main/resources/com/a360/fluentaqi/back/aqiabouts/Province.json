@@ -3,5 +3,20 @@
     "provinceId": 1,
     "provinceName": "山东省",
     "cityName": ["临沂市","济南市"]
+  },
+  {
+    "provinceId": 2,
+    "provinceName": "陕西省",
+    "cityName": ["西安市", "咸阳市", "宝鸡市","安康市"]
+  },
+  {
+    "provinceId": 3,
+    "provinceName": "河北省",
+    "cityName": ["石家庄市", "唐山市", "秦皇岛市","邯郸市"]
+  },
+  {
+    "provinceId": 4,
+    "provinceName": "辽宁省",
+    "cityName": ["沈阳市", "大连市", "鞍山市"]
   }
 ]
