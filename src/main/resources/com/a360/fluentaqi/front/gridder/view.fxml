@@ -70,24 +70,25 @@
                         <Label styleClass="small-content" text="CO" GridPane.rowIndex="2" />
                         <Label styleClass="small-content" text="PM2.5" GridPane.rowIndex="3" />
                         <Label styleClass="small-content" text="浓度等级" GridPane.columnIndex="2" />
-                        <Label fx:id="label_so2level" styleClass="small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label fx:id="label_colevel" styleClass="small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label fx:id="label_pmlevel" styleClass="small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="label_so2level" styleClass="small-content" text="？级" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="label_colevel" styleClass="small-content" text="？级" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="label_pmlevel" styleClass="small-content" text="？级" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                         <TextField fx:id="txt_so2" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="txt_co" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="txt_pm" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <Label styleClass="small-content" text="污染物" />
                         <Label styleClass="small-content" text="浓度(ug/m3)" GridPane.columnIndex="1" />
                         <Label styleClass="small-content" text="污染等级" GridPane.columnIndex="3" />
-                        <Label styleClass="small-content" text="未知" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Label styleClass="small-content" text="未知" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Label styleClass="small-content" text="未知" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label styleClass="small-content" text="？？污染" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label styleClass="small-content" text="？？污染" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label styleClass="small-content" text="？？污染" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                   <HBox spacing="40.0" styleClass="h-box">
                      <children>
-                        <Label styleClass="small-content" text="实测AQI最终等级：" />
-                        <Label fx:id="label_confirmlevel" styleClass="small-content" text="无" />
+                        <Label styleClass="small-content" text="实测AQI综合等级：" />
+                        <Label fx:id="label_confirmlevel" styleClass="small-content" text="？级" />
+                        <Label styleClass="small-content" text="？？污染" />
                      </children>
                      <padding>
                         <Insets left="20.0" right="20.0" />
