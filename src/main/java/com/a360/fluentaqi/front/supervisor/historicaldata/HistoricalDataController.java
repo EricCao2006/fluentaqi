@@ -7,6 +7,7 @@ import com.a360.fluentaqi.back.utils.JsonReader;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -37,10 +38,6 @@ public class HistoricalDataController implements Initializable {
 
 
 
-
-    public void back(){
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage,"环保公众监督平台-公众监督员端-AQI数据反馈");
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -100,5 +97,9 @@ public class HistoricalDataController implements Initializable {
             }
         }
         txt_tableView.setItems(data);
+    }
+
+    public void getback(ActionEvent actionEvent) {
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage,"环保公众监督平台-公众监督员端-AQI数据反馈");
     }
 }
