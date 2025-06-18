@@ -84,7 +84,7 @@ public class LoginController{
                 GridderController.primaryStage = primaryStage;
                 Gridder gm = gridMemberService.login(txt_id.getText(), txt_password.getText());
                 if(gm!=null){
-                    AqiFromGridController.gridMember = gm;
+                    GridderController.gridMember = gm;
                     JavafxUtil.showStage(LoginRunner.class, "/com/a360/fluentaqi/front/gridder/view.fxml", primaryStage, "环保公众监督平台-确认AQI反馈数据");
 
                 }else{

@@ -10,7 +10,7 @@ import java.util.List;
 public class GridderServiceImpl implements GridderService {
     @Override
     public Gridder login(String loginCode, String password) {
-        String filePath = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/grid_member";
+        String filePath = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/grid_member.json";
         ObjectMapper objectMapper = new ObjectMapper();
         List<Gridder> gridderList;
         try {
