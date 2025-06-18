@@ -1,9 +1,11 @@
 package com.a360.fluentaqi.back.utils;
 
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.DialogPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -33,7 +35,27 @@ public class JavafxUtil {
         alert.setTitle(title);
         alert.setHeaderText(headerText);
         alert.setContentText(contentText);
-        alert.showAndWait();
+
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(JavafxUtil.class.getResource("/com/a360/fluentaqi/front/css/dark.css").toExternalForm());
+        dialogPane.getStyleClass().add("dialog-pane"); // 应用 .dialog-pane 样式
+
+        // ✅ 在 showAndWait 前设置尺寸即可
+        alert.setResizable(false); // 非必须，但推荐禁用缩放
+
+        // ✅ 先 show() 显示对话框
+        alert.show();
+
+        // ✅ 然后再 Platform.runLater 中获取 Stage 并设置尺寸
+        Platform.runLater(() -> {
+            Stage dialogStage = (Stage) dialogPane.getScene().getWindow();
+            if (dialogStage != null) {
+                dialogStage.setMinWidth(400);
+                dialogStage.setMaxWidth(600);
+                dialogStage.setMinHeight(250);
+                dialogStage.setMaxHeight(400);
+            }
+        });
     }
 
     /**

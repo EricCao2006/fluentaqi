@@ -81,6 +81,9 @@
     -fx-background-radius: 10px;
     -fx-border-color: #99cc99;
     -fx-border-radius: 10px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
+    -fx-text-fill: #003300;
     -fx-cursor: TEXT;
 }
 
@@ -90,6 +93,9 @@
     -fx-background-color: #99ff99;
     -fx-border-color: #99cc99;
     -fx-border-radius: 10px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
+    -fx-text-fill: #003300;
 }
 
 /* 选择框-日间-聚焦 */
@@ -98,6 +104,9 @@
     -fx-background-radius: 10px;
     -fx-border-color: #88dd88;
     -fx-border-radius: 10px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
+    -fx-text-fill: #003300;
 }
 
 /*选项菜单-日间*/
@@ -107,23 +116,33 @@
     -fx-border-color: #99cc99;
     -fx-border-radius: 10px;
     -fx-padding: 5;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
+    -fx-text-fill: #003300;
 }
 
 /*选项菜单项-日间*/
 .choice-box .menu-item {
     -fx-background-color: transparent;
     -fx-padding: 5 10 5 10;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
+    -fx-text-fill: #003300;
 }
 
 /*选项菜单项-日间-聚焦*/
 .choice-box .menu-item:focused {
     -fx-background-color: #88dd88;
     -fx-background-radius: 5px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
+    -fx-text-fill: #003300;
 }
 
 /*选项菜单项-日间-标签*/
 .choice-box .menu-item .label {
     -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-font-size: 12px;
     -fx-text-fill: #003300;
 }
 

@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.SupervisorController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.SupervisorController">
     <stylesheets>
         <URL value="@../css/dark.css" />
     </stylesheets>
@@ -76,7 +76,7 @@
                         <children>
                             <VBox styleClass="v-box">
                                 <children>
-                                    <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: trabsparent; -fx-border-radius: 20;" vgap="10.0">
+                                    <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: trabsparent; -fx-border-radius: 20;" vgap="20.0">
                                         <columnConstraints>
                                             <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="120.0" />
                                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="100.0" />
