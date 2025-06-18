@@ -64,7 +64,7 @@
          <children>
             <Button mnemonicParsing="false" onAction="#toRegister" styleClass="A-button" text="监督员注册&gt;" />
             <Button mnemonicParsing="false" onAction="#login" styleClass="B-button" text="登录&gt;" />
-             <Button fx:id="btnSettings" mnemonicParsing="false" styleClass="B-button">
+             <Button fx:id="btnSettings" mnemonicParsing="false" styleClass="B-button" onAction="#showSettingsMenu">
                  <graphic>
                      <ImageView fitHeight="24" fitWidth="24">
                          <image>

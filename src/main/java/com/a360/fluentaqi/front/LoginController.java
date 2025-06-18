@@ -121,6 +121,15 @@ public class LoginController{
         }
     }
 
+    @FXML
+    private Button btnSettings;
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, primaryStage);
+    }
+
 }
 
 
