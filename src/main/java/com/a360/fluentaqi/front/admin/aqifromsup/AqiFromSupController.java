@@ -49,7 +49,7 @@ public class AqiFromSupController implements Initializable {
         TableColumn<Feedback, String> provinceNameColumn = new TableColumn<>("省区域");
         provinceNameColumn.setMinWidth(60);
         provinceNameColumn.setStyle("-fx-alignment: center;");	//居中
-        provinceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
+        provinceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(60);
@@ -73,7 +73,7 @@ public class AqiFromSupController implements Initializable {
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
         infoColumn.setMinWidth(210);
-        infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
+        infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(afIdColumn, provinceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,infoColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
