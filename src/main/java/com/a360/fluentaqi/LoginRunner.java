@@ -29,7 +29,7 @@ public class LoginRunner extends Application {
         }
     }
 
-    // 显示启动画面（带圆角 Logo 和圆角窗口）
+    // 显示启动画面
     private void showSplashScreen(Stage stage) {
         Image splashImage = new Image(getClass().getResourceAsStream("/com/a360/fluentaqi/front/icons/logo.png"));
         ImageView imageView = new ImageView(splashImage);
@@ -46,8 +46,8 @@ public class LoginRunner extends Application {
         stage.setTitle("Fluent AQI");
         stage.setScene(scene);
         stage.show();
-        // 2秒后跳转到登录界面
-        PauseTransition delay = new PauseTransition(Duration.seconds(2));
+        // 1秒后跳转到登录界面
+        PauseTransition delay = new PauseTransition(Duration.seconds(1));
         delay.setOnFinished(e -> {
             try {
                 Stage loginStage = new Stage();

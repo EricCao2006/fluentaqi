@@ -35,8 +35,8 @@ public class JavafxUtil {
         alert.setHeaderText(headerText);
         alert.setContentText(contentText);
         DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add(JavafxUtil.class.getResource("/com/a360/fluentaqi/front/css/darkdialog.css").toExternalForm());
-        dialogPane.getStyleClass().add("dialog-pane");
+        dialogPane.getStylesheets().add(JavafxUtil.class.getResource("/com/a360/fluentaqi/front/css/dark.css").toExternalForm());
+        dialogPane.getStyleClass().add("styled-dialog-pane");
         alert.showAndWait();
 
     }
