@@ -1,12 +1,21 @@
 package com.a360.fluentaqi.back.aqiabouts;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * 污染级别转换函数
  * @author 尚阳@A360
  */
 public class Limits {
+    public static String currentDate(){
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf.format(date);
+    }
+
+
     public static LimitDto coLimit(double value) {
-        // TODO by 尚阳
         LimitDto dto = null;
         if (0 <= value && value <= 5) {
             dto = new LimitDto(1, "一级", "优", "#02E300");
@@ -25,7 +34,6 @@ public class Limits {
     }
 
     public static LimitDto so2Limit(double value) {
-        // TODO by 尚阳
         LimitDto dto = null;
         if (0 <= value && value <= 50) {
             dto = new LimitDto(1, "一级", "优", "#02E300");
@@ -44,7 +52,6 @@ public class Limits {
     }
 
     public static LimitDto pmLimit(double value) {
-        // TODO by 尚阳
         LimitDto dto = null;
         if (0 <= value && value <= 35) {
             dto = new LimitDto(1, "一级", "优", "#02E300");
@@ -63,7 +70,6 @@ public class Limits {
     }
 
     public static LimitDto confirmLevel(int coLimit, int so2Limit, int pmLimit){
-        // TODO by 尚阳
         LimitDto dto = null;
         int max = coLimit > so2Limit ? coLimit : so2Limit;
         max = pmLimit > max ? pmLimit : max;
