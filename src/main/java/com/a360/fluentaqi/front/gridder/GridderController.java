@@ -9,6 +9,7 @@ import com.a360.fluentaqi.back.services.impl.FeedbackServiceImpl;
 import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import com.a360.fluentaqi.front.SettingsMenu;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -17,10 +18,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -295,4 +293,18 @@ public class GridderController implements Initializable {
         label_confirmlevel.setStyle("-fx-text-fill:black;");
     }
 
+    @FXML
+    private Button btnSettings;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, stage);
+    }
 }

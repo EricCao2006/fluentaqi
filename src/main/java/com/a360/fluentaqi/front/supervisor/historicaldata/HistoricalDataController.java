@@ -4,12 +4,14 @@ import com.a360.fluentaqi.back.aqiabouts.Feedback;
 import com.a360.fluentaqi.back.users.Supervisor;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import com.a360.fluentaqi.front.SettingsMenu;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -102,4 +104,20 @@ public class HistoricalDataController implements Initializable {
     public void getback(ActionEvent actionEvent) {
         JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage,"环保公众监督平台-公众监督员端-AQI数据反馈");
     }
+
+    @FXML
+    private Button btnSettings;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, stage);
+    }
+
 }

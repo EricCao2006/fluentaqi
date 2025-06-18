@@ -4,6 +4,7 @@ package com.a360.fluentaqi.front.admin.aqifromsup;
 import com.a360.fluentaqi.back.aqiabouts.Feedback;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import com.a360.fluentaqi.front.SettingsMenu;
 import com.a360.fluentaqi.front.admin.AdminController;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -11,6 +12,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -105,5 +107,20 @@ public class AqiFromSupController implements Initializable {
 
         }
         txt_tableView.setItems(data);
+    }
+
+    @FXML
+    private Button btnSettings;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, stage);
     }
 }

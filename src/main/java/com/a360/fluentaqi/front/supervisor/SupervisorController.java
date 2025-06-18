@@ -9,6 +9,7 @@ import com.a360.fluentaqi.back.users.Supervisor;
 import com.a360.fluentaqi.back.utils.CommonUtil;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import com.a360.fluentaqi.front.SettingsMenu;
 import com.a360.fluentaqi.front.supervisor.historicaldata.HistoricalDataController;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -189,5 +190,20 @@ public class SupervisorController implements Initializable {
     public void feedBackList() {
         HistoricalDataController.primaryStage = primaryStage;
         JavafxUtil.showStage(this.getClass(), "/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml", primaryStage, "监督员端-AQI历史反馈记录");
+    }
+
+    @FXML
+    private Button btnSettings;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, stage);
     }
 }

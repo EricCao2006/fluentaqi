@@ -1,8 +1,10 @@
 package com.a360.fluentaqi.front.admin;
 
 import com.a360.fluentaqi.back.utils.JavafxUtil;
+import com.a360.fluentaqi.front.SettingsMenu;
 import com.a360.fluentaqi.front.admin.gridderorder.GridderOrderController;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
@@ -47,5 +49,19 @@ public class AdminController  {
         JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml",primaryStage,"登录");
     }
 
+    @FXML
+    private Button btnSettings;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void showSettingsMenu() {
+        SettingsMenu menu = SettingsMenu.getInstance();
+        menu.show(btnSettings, stage);
+    }
 }
 
