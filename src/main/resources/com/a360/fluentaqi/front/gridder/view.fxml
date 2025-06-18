@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
     <stylesheets>
         <URL value="@../css/total.css" />
     </stylesheets>
@@ -49,11 +49,12 @@
                         <Insets left="20.0" right="20.0" />
                      </padding>
                   </HBox>
-                  <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: trabsparent; -fx-border-radius: 20;" vgap="10.0">
+                  <GridPane alignment="CENTER" hgap="10.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: trabsparent; -fx-border-radius: 20;" vgap="10.0">
                     <columnConstraints>
-                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
-                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="80.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="120.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="90.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="90.0" />
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
@@ -68,7 +69,7 @@
                         <Label styleClass="small-content" text="SO2" GridPane.rowIndex="1" />
                         <Label styleClass="small-content" text="CO" GridPane.rowIndex="2" />
                         <Label styleClass="small-content" text="PM2.5" GridPane.rowIndex="3" />
-                        <Label styleClass="small-content" text="浓度等级：" GridPane.columnIndex="2" />
+                        <Label styleClass="small-content" text="浓度等级" GridPane.columnIndex="2" />
                         <Label fx:id="label_so2level" styleClass="small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <Label fx:id="label_colevel" styleClass="small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <Label fx:id="label_pmlevel" styleClass="small-content" text="无" GridPane.columnIndex="2" GridPane.rowIndex="3" />
@@ -76,7 +77,11 @@
                         <TextField fx:id="txt_co" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="txt_pm" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <Label styleClass="small-content" text="污染物" />
-                        <Label styleClass="small-content" text="浓度（单位：ug/m3）" GridPane.columnIndex="1" />
+                        <Label styleClass="small-content" text="浓度(ug/m3)" GridPane.columnIndex="1" />
+                        <Label styleClass="small-content" text="污染等级" GridPane.columnIndex="3" />
+                        <Label styleClass="small-content" text="未知" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label styleClass="small-content" text="未知" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label styleClass="small-content" text="未知" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                   <HBox spacing="40.0" styleClass="h-box">
@@ -97,7 +102,7 @@
                         <Insets bottom="-10.0" />
                      </padding>
                   </Label>
-                  <VBox spacing="5.0" styleClass="v-box">
+                  <VBox minWidth="120.0" spacing="5.0" styleClass="v-box">
                      <children>
                         <Label fx:id="label_realName" styleClass="small-content" text="某某某" />
                      </children>
@@ -108,8 +113,8 @@
                         <Insets bottom="-10.0" top="-5.0" />
                      </VBox.margin>
                   </VBox>
-                    <Button mnemonicParsing="false" onAction="#confirmData" styleClass="A-button" text="提交&gt;" />
-                  <Button mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回" />
+                    <Button minWidth="120.0" mnemonicParsing="false" onAction="#confirmData" styleClass="A-button" text="提交&gt;" />
+                  <Button minWidth="120.0" mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回" />
                </children>
             </VBox>
          </children>
