@@ -1,6 +1,5 @@
 package com.a360.fluentaqi.back.utils;
 
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,10 +13,10 @@ import java.net.URL;
 public class JavafxUtil {
     /**
      * 配置各类型提示框
-     * @param primaryStage
-     * @param title
-     * @param headerText
-     * @param contentText
+     * @param primaryStage 舞台
+     * @param title 标题栏
+     * @param headerText 标题
+     * @param contentText  内容
      */
     public static void showAlert(Stage primaryStage, String title, String headerText, String contentText, String alertType){
         Alert alert = null;
@@ -35,37 +34,21 @@ public class JavafxUtil {
         alert.setTitle(title);
         alert.setHeaderText(headerText);
         alert.setContentText(contentText);
-
         DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add(JavafxUtil.class.getResource("/com/a360/fluentaqi/front/css/dark.css").toExternalForm());
-        dialogPane.getStyleClass().add("dialog-pane"); // 应用 .dialog-pane 样式
+        dialogPane.getStylesheets().add(JavafxUtil.class.getResource("/com/a360/fluentaqi/front/css/darkdialog.css").toExternalForm());
+        dialogPane.getStyleClass().add("dialog-pane");
+        alert.showAndWait();
 
-        // ✅ 在 showAndWait 前设置尺寸即可
-        alert.setResizable(false); // 非必须，但推荐禁用缩放
-
-        // ✅ 先 show() 显示对话框
-        alert.show();
-
-        // ✅ 然后再 Platform.runLater 中获取 Stage 并设置尺寸
-        Platform.runLater(() -> {
-            Stage dialogStage = (Stage) dialogPane.getScene().getWindow();
-            if (dialogStage != null) {
-                dialogStage.setMinWidth(400);
-                dialogStage.setMaxWidth(600);
-                dialogStage.setMinHeight(250);
-                dialogStage.setMaxHeight(400);
-            }
-        });
     }
 
     /**
      * 界面切换函数
      *
-     * @param clazz
-     * @param path
-     * @param primaryStage
-     * @param title
-     * @return
+     * @param clazz 类本身
+     * @param path 路径
+     * @param primaryStage 舞台
+     * @param title 标题
+     * @return 舞台
      */
     public static Stage showStage(Class clazz, String path, Stage primaryStage, String title){
         FXMLLoader loader = new FXMLLoader();

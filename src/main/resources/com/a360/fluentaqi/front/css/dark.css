@@ -99,7 +99,7 @@
 
 /* 选择框-夜间-聚焦 */
 .choice-box:focused {
-    -fx-background-color: #226622;
+    -fx-background-color: #228822;
     -fx-background-radius: 10px;
     -fx-border-color: #226622;
     -fx-border-radius: 10px;
@@ -122,7 +122,7 @@
 
 /*选项菜单项-夜间*/
 .choice-box .menu-item {
-    -fx-background-color: transparent;
+    -fx-background-color: #006600;
     -fx-padding: 5 10 5 10;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
@@ -131,7 +131,7 @@
 
 /*选项菜单项-夜间-聚焦*/
 .choice-box .menu-item:focused {
-    -fx-background-color: #226622;
+    -fx-background-color: #228822;
     -fx-background-radius: 5px;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
@@ -223,78 +223,6 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-padding: 0 5px;
 }
 
-/* 对话框根面板-夜间 */
-.dialog-pane {
-    -fx-background-color: #003300;
-    -fx-border-color: #336633;
-    -fx-pref-width: 400;
-    -fx-pref-height: 200;
-    -fx-min-width: 300;
-    -fx-max-width: 500;
-    /*-fx-min-height: 400;*/
-    /*-fx-max-height: 600;*/
-    -fx-spacing: 10px;
-}
-
-/* 对话框标题区域-夜间 */
-.dialog-pane .header-panel {
-    -fx-background-color: #006600;
-    -fx-border-color: #336633;
-    -fx-spacing: 10px;
-}
-
-/* 对话框标题文本-夜间 */
-.dialog-pane .header-panel .label {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-font-size: 20px; /* 适度减小 */
-    -fx-font-weight: bold;
-
-}
-
-/* 对话框内容文本-夜间 */
-.dialog-pane .content.label {
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-font-size: 16px;
-    -fx-wrap-text: true;
-    -fx-max-width: 300;
-    -fx-spacing: 10px;
-}
-
-/* 对话框按钮区域-夜间 */
-.dialog-pane .button-bar {
-    -fx-background-color: #006600;
-    -fx-border-color: #336633;
-    -fx-border-width: 1px;
-    -fx-spacing: 10px;
-}
-
-/* 对话框按钮-夜间 */
-.dialog-pane .button {
-    -fx-background-color: #006600;
-    -fx-background-radius: 30px;
-    -fx-border-color: #336633;
-    -fx-border-radius: 30px;
-    -fx-border-width: 1px;
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ccffcc;
-    -fx-font-size: 16px;
-    -fx-cursor: hand;
-}
-
-/* 对话框按钮-聚焦-夜间 */
-.dialog-pane .button:focused {
-    -fx-background-color: #117711;
-    -fx-background-radius: 30px;
-    -fx-border-color: #006600;
-    -fx-border-radius: 30px;
-    -fx-border-width: 1px;
-    -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #ddffdd;
-    -fx-cursor: hand;
-}
-
 /* B按钮-日间 */
 .B-button {
     -fx-background-color: #99ff99;
@@ -310,7 +238,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 
 /* B按钮-聚焦-日间 */
 .B-button:hover {
-    -fx-background-color: #88ee88;
+    -fx-background-color: #77dd77;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
     -fx-border-radius: 30;
@@ -334,7 +262,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 
 /* A按钮-聚焦-日间 */
 .A-button:hover {
-    -fx-background-color: #447744;
+    -fx-background-color: #558855;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
     -fx-border-radius: 30;
@@ -358,7 +286,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 
 /* B小按钮-聚焦-日间 */
 .B-small-button:hover {
-    -fx-background-color: #88ee88;
+    -fx-background-color: #77dd77;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
     -fx-border-radius: 30;
@@ -382,7 +310,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 
 /* A小按钮-聚焦-日间 */
 .A-small-button:hover {
-    -fx-background-color: #447744;
+    -fx-background-color: #558855;
     -fx-background-radius: 30;
     -fx-border-color: #66ff66;
     -fx-border-radius: 30;

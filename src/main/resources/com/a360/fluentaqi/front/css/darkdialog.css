@@ -1,0 +1,49 @@
+/* 对话框-夜间 */
+.dialog-pane {
+    -fx-background-color: #003300;
+    -fx-border-color: #336633;
+    -fx-spacing: 10px;
+}
+
+/* 对话框标题区域-夜间 */
+.dialog-pane .header-panel {
+    -fx-background-color: #006600;
+    -fx-border-color: #336633;
+    -fx-spacing: 10px;
+}
+
+/* 对话框标题文本-夜间 */
+.dialog-pane .header-panel .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 20px;
+}
+
+/* 对话框内容文本-夜间 */
+.dialog-pane .content.label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 16px;
+    -fx-spacing: 10px;
+}
+
+/* 对话框按钮区域-夜间 */
+.dialog-pane .button-bar {
+    -fx-background-color: #006600;
+    -fx-border-color: #336633;
+    -fx-border-width: 1px;
+    -fx-spacing: 10px;
+}
+
+/* 对话框按钮-夜间 */
+.dialog-pane .button {
+    -fx-background-color: #006600;
+    -fx-background-radius: 30px;
+    -fx-border-color: #336633;
+    -fx-border-radius: 30px;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
