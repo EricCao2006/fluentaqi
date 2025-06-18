@@ -2,6 +2,8 @@ package com.a360.fluentaqi.back.services.impl;
 
 import com.a360.fluentaqi.back.services.SupervisorService;
 import com.a360.fluentaqi.back.users.Supervisor;
+import com.a360.fluentaqi.front.supervisor.SupervisorController;
+import com.a360.fluentaqi.front.supervisor.historicaldata.HistoricalDataController;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -23,8 +25,8 @@ public class SupervisorServiceImpl implements SupervisorService {
 
             for (Supervisor s : slist) {
                 if (s.getLoginCode().equals(loginCode) && s.getPassword().equals(password)) {
-//                    AqiViewController.supervisor = s;
-//                    FeedbackViewController.supervisor = s;
+                    SupervisorController.supervisor = s;
+                    HistoricalDataController.supervisor = s;
                     return true;
                 }
             }
