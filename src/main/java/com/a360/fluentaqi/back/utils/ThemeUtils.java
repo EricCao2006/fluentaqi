@@ -13,25 +13,17 @@ public class ThemeUtils {
 
     /**
      * 注册 Scene 以支持主题切换
+     * 默认浅色模式
      */
     public static void register(Scene scene) {
         scenes.add(scene);
+        isDarkMode = false;
         applyThemeToScene(scene);
     }
 
-    /**
-     * 切换为浅色模式
-     */
-    public static void setLight() {
-        isDarkMode = false;
-        applyThemeToAllScenes();
-    }
-
-    /**
-     * 切换为深色模式
-     */
-    public static void setDark() {
-        isDarkMode = true;
+    /*模式切换*/
+    public static void changeTheme() {
+        isDarkMode = !isDarkMode;
         applyThemeToAllScenes();
     }
 
