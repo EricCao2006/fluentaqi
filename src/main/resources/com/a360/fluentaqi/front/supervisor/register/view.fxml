@@ -16,13 +16,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.register.RegisterController">
+<VBox styleClass="light-container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.register.RegisterController">
     <stylesheets>
         <URL value="@../../total.css" />
     </stylesheets>
     <children>
         <Label styleClass="light-title" text="公众监督员注册" />
-        <GridPane styleClass="light-grid-pane" hgap="20.0" vgap="20.0" VBox.vgrow="NEVER">
+        <GridPane hgap="20.0" styleClass="light-grid-pane" vgap="20.0" VBox.vgrow="NEVER">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" />
                 <ColumnConstraints hgrow="SOMETIMES" />
@@ -63,7 +63,7 @@
       <HBox alignment="CENTER" spacing="40.0">
          <children>
             <Button mnemonicParsing="false" onAction="#getback" styleClass="dark-button" text="&lt;返回" />
-              <Button mnemonicParsing="false" styleClass="light-button" text="注册&gt;" />
+              <Button mnemonicParsing="false" onAction="#register" styleClass="light-button" text="注册&gt;" />
          </children>
       </HBox>
     </children>
@@ -71,5 +71,3 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 </VBox>
-
-
