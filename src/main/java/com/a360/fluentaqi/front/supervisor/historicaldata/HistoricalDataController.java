@@ -7,6 +7,7 @@ import com.a360.fluentaqi.back.utils.JsonReader;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -38,35 +39,31 @@ public class HistoricalDataController implements Initializable {
 
 
 
-    public void back(){
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage,"环保公众监督平台-公众监督员端-AQI数据反馈");
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //初始化table 数据表
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
-        afIdColumn.setMinWidth(40);
+        afIdColumn.setMinWidth(200);
         afIdColumn.setStyle("-fx-alignment: center;");	//居中
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
-        proviceNameColumn.setMinWidth(60);
+        proviceNameColumn.setMinWidth(200);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
         proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");	//居中
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估等级");
-        estimateGradeColumn.setMinWidth(60);
+        estimateGradeColumn.setMinWidth(200);
         estimateGradeColumn.setStyle("-fx-alignment: center;");	//居中
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> dateColumn = new TableColumn<>("反馈时间");
-        dateColumn.setMinWidth(80);
+        dateColumn.setMinWidth(200);
         dateColumn.setStyle("-fx-alignment: center;");	//居中
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
@@ -100,5 +97,9 @@ public class HistoricalDataController implements Initializable {
             }
         }
         txt_tableView.setItems(data);
+    }
+
+    public void getback(ActionEvent actionEvent) {
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/view.fxml", primaryStage,"环保公众监督平台-公众监督员端-AQI数据反馈");
     }
 }

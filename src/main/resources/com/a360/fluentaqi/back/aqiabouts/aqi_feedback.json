@@ -66,4 +66,21 @@
   "confirmExplain" : "经检测，空气质量达到优良标准",
   "date" : "2024-10-20",
   "estimateGrade" : "优"
+}, {
+  "afId" : 5,
+  "afName" : "柯镇恶",
+  "provinceName" : "请选择省区域",
+  "cityName" : "请选择市区域",
+  "address" : "",
+  "information" : "",
+  "state" : "未指派",
+  "gmName" : null,
+  "confirmDate" : null,
+  "so2" : null,
+  "co" : null,
+  "pm" : null,
+  "confirmLevel" : null,
+  "confirmExplain" : null,
+  "date" : "2025-06-19",
+  "estimateGrade" : "预估AQI等级"
 } ]
