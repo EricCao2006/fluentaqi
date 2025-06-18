@@ -220,7 +220,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-padding: 0 5px;
 }
 
-/* 按钮-日间 */
+/* A按钮-日间 */
 .A-button {
     -fx-background-color: #99ff99;
     -fx-background-radius: 30;
@@ -233,7 +233,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 按钮-聚焦-日间 */
+/* A按钮-聚焦-日间 */
 .A-button:hover {
     -fx-background-color: #88ee88;
     -fx-background-radius: 30;
@@ -244,7 +244,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 按钮-夜间 */
+/* B按钮-日间 */
 .B-button {
     -fx-background-color: #336633;
     -fx-background-radius: 30;
@@ -257,7 +257,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 按钮-聚焦-夜间 */
+/* B按钮-聚焦-日间 */
 .B-button:hover {
     -fx-background-color: #447744;
     -fx-background-radius: 30;
@@ -268,7 +268,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 小按钮-日间 */
+/* A小按钮-日间 */
 .A-small-button {
     -fx-background-color: #99ff99;
     -fx-background-radius: 30;
@@ -281,7 +281,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 小按钮-聚焦-日间 */
+/* A小按钮-聚焦-日间 */
 .A-small-button:hover {
     -fx-background-color: #88ee88;
     -fx-background-radius: 30;
@@ -292,7 +292,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/*小按钮-夜间 */
+/*B小按钮-日间 */
 .B-small-button {
     -fx-background-color: #336633;
     -fx-background-radius: 30;
@@ -305,7 +305,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-cursor: HAND;
 }
 
-/* 小按钮-聚焦-夜间 */
+/* B小按钮-聚焦-日间 */
 .B-small-button:hover {
     -fx-background-color: #447744;
     -fx-background-radius: 30;

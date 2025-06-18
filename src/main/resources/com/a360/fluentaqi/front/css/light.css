@@ -150,6 +150,29 @@
     -fx-padding: 5px;
 }
 
+/* 滚动条轨道-日间*/
+ScrollPane .scroll-bar:horizontal .track,
+ScrollPane .scroll-bar:vertical .track {
+    -fx-background-color: #339933;
+    -fx-background-radius: 5px;
+}
+
+/* 滚动条滑块-日间*/
+ScrollPane .scroll-bar:horizontal .thumb,
+ScrollPane .scroll-bar:vertical .thumb {
+    -fx-background-color: #eeffee;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+/*滚动条滑块-聚焦-日间*/
+ScrollPane .scroll-bar:horizontal .thumb:hover,
+ScrollPane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #66ff66;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
 /*标题区域-日间*/
 .-titled-pane {
     -fx-background-color: #88dd88;
@@ -246,4 +269,101 @@
     -fx-font-size: 18px;
     -fx-padding: 5px 15px;
     -fx-cursor: hand;
+}
+
+
+/* A按钮-日间 */
+.A-button {
+    -fx-background-color: #99ff99;
+    -fx-background-radius: 30;
+    -fx-border-color: #99cc99;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #002200;
+    -fx-font-size: 24px;
+    -fx-cursor: HAND;
+}
+
+/* A按钮-聚焦-日间 */
+.A-button:hover {
+    -fx-background-color: #88ee88;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
+    -fx-text-fill: #002200;
+    -fx-font-size: 24px;
+    -fx-cursor: HAND;
+}
+
+/* B按钮-日间 */
+.B-button {
+    -fx-background-color: #336633;
+    -fx-background-radius: 30;
+    -fx-border-color: #ddffdd;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 24px;
+    -fx-cursor: HAND;
+}
+
+/* B按钮-聚焦-日间 */
+.B-button:hover {
+    -fx-background-color: #447744;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 24px;
+    -fx-cursor: HAND;
+}
+
+/* A小按钮-日间 */
+.A-small-button {
+    -fx-background-color: #99ff99;
+    -fx-background-radius: 30;
+    -fx-border-color: #99cc99;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #002200;
+    -fx-font-size: 18px;
+    -fx-cursor: HAND;
+}
+
+/* A小按钮-聚焦-日间 */
+.A-small-button:hover {
+    -fx-background-color: #88ee88;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
+    -fx-text-fill: #002200;
+    -fx-font-size: 18px;
+    -fx-cursor: HAND;
+}
+
+/*B小按钮-日间 */
+.B-small-button {
+    -fx-background-color: #336633;
+    -fx-background-radius: 30;
+    -fx-border-color: #ddffdd;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 18px;
+    -fx-cursor: HAND;
+}
+
+/* B小按钮-聚焦-日间 */
+.B-small-button:hover {
+    -fx-background-color: #447744;
+    -fx-background-radius: 30;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 30;
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 18px;
+    -fx-cursor: HAND;
 }

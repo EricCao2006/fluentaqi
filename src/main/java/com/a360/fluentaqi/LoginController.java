@@ -62,6 +62,10 @@ public class LoginController{
 
     @FXML
     public void login() throws IOException {
+        if (txt_type.getValue() == null) {
+            JavafxUtil.showAlert(primaryStage, "数据错误", "登录类型未选择", "请选择登录类型", "warn");
+            return;
+        }
         switch(txt_type.getValue().toString()){
             case "管理员":
                 boolean isLogin = adminService.login(txt_id.getText(), txt_password.getText());
@@ -84,7 +88,7 @@ public class LoginController{
                 GridderController.primaryStage = primaryStage;
                 Gridder gm = gridMemberService.login(txt_id.getText(), txt_password.getText());
                 if(gm!=null){
-                    AqiFromGridController.gridMember = gm;
+                    GridderController.gridMember = gm;
                     JavafxUtil.showStage(LoginRunner.class, "/com/a360/fluentaqi/front/gridder/view.fxml", primaryStage, "环保公众监督平台-确认AQI反馈数据");
 
                 }else{
