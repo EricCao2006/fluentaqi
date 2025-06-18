@@ -149,9 +149,10 @@ public class GridderOrderController implements Initializable{
     @FXML
     void queryFeedback(ActionEvent event) {
         String afId = txt_afId.getText();
+        System.out.println(afId);
         // 修正文件路径为正确的反馈数据路径
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
-        String filePath = ProPaht + "Aqi.json";
+        String filePath = ProPaht + "aqi_feedback.json";
         List<Feedback> alist = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
 
         boolean found = false;
