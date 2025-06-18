@@ -186,13 +186,13 @@ public class GridderController implements Initializable {
                     label_so2level.setText(dto.getLevel());
                     label_so2level.setStyle("-fx-text-fill:"+dto.getColor()+";");
                     label_so2explain.setText(dto.getExplain());
-                    label_so2explain.setStyle("-fx-background-color:"+dto.getColor()+";");
+                    label_so2explain.setStyle("-fx-text-fill:"+dto.getColor()+";");
                     so2level = dto.getIntlevel();
                     confirmDto = Limits.confirmLevel(so2level, colevel, pmlevel);
                     label_confirmlevel.setText(confirmDto.getLevel());
                     label_confirmlevel.setStyle("-fx-text-fill:"+confirmDto.getColor()+";");
                     label_confirmexplain.setText(confirmDto.getExplain());
-                    label_confirmexplain.setStyle("-fx-background-color:"+confirmDto.getColor()+";");
+                    label_confirmexplain.setStyle("-fx-text-fill:"+confirmDto.getColor()+";");
                 }
             }
 
@@ -206,13 +206,13 @@ public class GridderController implements Initializable {
                     label_colevel.setText(dto.getLevel());
                     label_colevel.setStyle("-fx-text-fill:"+dto.getColor()+";");
                     label_coexplain.setText(dto.getExplain());
-                    label_coexplain.setStyle("-fx-background-color:"+dto.getColor()+";");
+                    label_coexplain.setStyle("-fx-text-fill:"+dto.getColor()+";");
                     colevel = dto.getIntlevel();
                     confirmDto = Limits.confirmLevel(so2level, colevel, pmlevel);
                     label_confirmlevel.setText(confirmDto.getLevel());
                     label_confirmlevel.setStyle("-fx-text-fill:"+confirmDto.getColor()+";");
                     label_confirmexplain.setText(confirmDto.getExplain());
-                    label_confirmexplain.setStyle("-fx-background-color:"+confirmDto.getColor()+";");
+                    label_confirmexplain.setStyle("-fx-text-fill:"+confirmDto.getColor()+";");
                 }
             }
 
@@ -225,13 +225,13 @@ public class GridderController implements Initializable {
                     label_pmlevel.setText(dto.getLevel());
                     label_pmlevel.setStyle("-fx-text-fill:"+dto.getColor()+";");
                     label_pmexplain.setText(dto.getExplain());
-                    label_pmexplain.setStyle("-fx-background-color:"+dto.getColor()+";");
+                    label_pmexplain.setStyle("-fx-text-fill:"+dto.getColor()+";");
                     pmlevel = dto.getIntlevel();
                     confirmDto = Limits.confirmLevel(so2level, colevel, pmlevel);
                     label_confirmlevel.setText(confirmDto.getLevel());
                     label_confirmlevel.setStyle("-fx-text-fill:"+confirmDto.getColor()+";");
                     label_confirmexplain.setText(confirmDto.getExplain());
-                    label_confirmexplain.setStyle("-fx-background-color:"+confirmDto.getColor()+";");
+                    label_confirmexplain.setStyle("-fx-text-fill:"+confirmDto.getColor()+";");
                 }
             }
 
@@ -278,13 +278,13 @@ public class GridderController implements Initializable {
         txt_co.setText("");
         txt_pm.setText("");
         label_so2explain.setText("");
-        label_so2explain.setStyle("-fx-background-color:none;");
+        label_so2explain.setStyle("-fx-text-fill:none;");
         label_coexplain.setText("");
-        label_coexplain.setStyle("-fx-background-color:none;");
+        label_coexplain.setStyle("-fx-text-fill:none;");
         label_pmexplain.setText("");
-        label_pmexplain.setStyle("-fx-background-color:none;");
+        label_pmexplain.setStyle("-fx-text-fill:none;");
         label_confirmexplain.setText("");
-        label_confirmexplain.setStyle("-fx-background-color:none;");
+        label_confirmexplain.setStyle("-fx-text-fill:none;");
         label_so2level.setText("无");
         label_so2level.setStyle("-fx-text-fill:black;");
         label_colevel.setText("无");
