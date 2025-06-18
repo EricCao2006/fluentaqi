@@ -88,37 +88,37 @@ public class GridderOrderController implements Initializable{
         txt_tableView.getColumns().clear();
 
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
-        afIdColumn.setMinWidth(40);
+        afIdColumn.setMinWidth(200);
         afIdColumn.setStyle("-fx-alignment: center;");
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> confirmDateColumn = new TableColumn<>("日期");
-        confirmDateColumn.setMinWidth(80);
+        confirmDateColumn.setMinWidth(200);
         confirmDateColumn.setStyle("-fx-alignment: center;");
         confirmDateColumn.setCellValueFactory(new PropertyValueFactory<>("confirmDate"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
-        proviceNameColumn.setMinWidth(60);
+        proviceNameColumn.setMinWidth(200);
         proviceNameColumn.setStyle("-fx-alignment: center;");
         proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> addressColumn = new TableColumn<>("详细地址");
-        addressColumn.setMinWidth(100);
+        addressColumn.setMinWidth(200);
         addressColumn.setStyle("-fx-alignment: center;");
         addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估AQI");
-        estimateGradeColumn.setMinWidth(60);
+        estimateGradeColumn.setMinWidth(200);
         estimateGradeColumn.setStyle("-fx-alignment: center;");
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> afNameColumn = new TableColumn<>("反馈者");
-        afNameColumn.setMinWidth(60);
+        afNameColumn.setMinWidth(200);
         afNameColumn.setStyle("-fx-alignment: center;");
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 

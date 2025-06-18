@@ -41,62 +41,62 @@ public class AqiFromGridController implements Initializable {
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
-        proviceNameColumn.setMinWidth(60);
+        proviceNameColumn.setMinWidth(80);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
         proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");	//居中
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估等级");
-        estimateGradeColumn.setMinWidth(80);
+        estimateGradeColumn.setMinWidth(500);
         estimateGradeColumn.setStyle("-fx-alignment: center;");	//居中
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> dateColumn = new TableColumn<>("反馈时间");
-        dateColumn.setMinWidth(80);
+        dateColumn.setMinWidth(200);
         dateColumn.setStyle("-fx-alignment: center;");	//居中
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         TableColumn<Feedback, String> afNameColumn = new TableColumn<>("反馈者");
-        afNameColumn.setMinWidth(60);
+        afNameColumn.setMinWidth(200);
         afNameColumn.setStyle("-fx-alignment: center;");	//居中
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
         TableColumn<Feedback, String> so2Column = new TableColumn<>("SQ2浓度(ug/m3)");
-        so2Column.setMinWidth(200);
+        so2Column.setMinWidth(150);
         so2Column.setStyle("-fx-alignment: center;");	//居中
         so2Column.setCellValueFactory(new PropertyValueFactory<>("so2"));
 
         TableColumn<Feedback, String> coColumn = new TableColumn<>("CO浓度(ug/m3)");
-        coColumn.setMinWidth(200);
+        coColumn.setMinWidth(150);
         coColumn.setStyle("-fx-alignment: center;");	//居中
         coColumn.setCellValueFactory(new PropertyValueFactory<>("co"));
 
         TableColumn<Feedback, String> pmColumn = new TableColumn<>("PM2.5浓度(ug/m3)");
-        pmColumn.setMinWidth(200);
+        pmColumn.setMinWidth(150);
         pmColumn.setStyle("-fx-alignment: center;");	//居中
         pmColumn.setCellValueFactory(new PropertyValueFactory<>("pm"));
 
         TableColumn<Feedback, String> confirmLevelColumn = new TableColumn<>("实测等级");
-        confirmLevelColumn.setMinWidth(80);
+        confirmLevelColumn.setMinWidth(500);
         confirmLevelColumn.setStyle("-fx-alignment: center;");	//居中
         confirmLevelColumn.setCellValueFactory(new PropertyValueFactory<>("confirmLevel"));
 
         TableColumn<Feedback, String> confirmExplainColumn = new TableColumn<>("等级说明");
-        confirmExplainColumn.setMinWidth(80);
+        confirmExplainColumn.setMinWidth(1000);
         confirmExplainColumn.setStyle("-fx-alignment: center;");	//居中
         confirmExplainColumn.setCellValueFactory(new PropertyValueFactory<>("confirmExplain"));
 
         TableColumn<Feedback, String> confirmDateColumn = new TableColumn<>("实测日期");
-        confirmDateColumn.setMinWidth(80);
+        confirmDateColumn.setMinWidth(200);
         confirmDateColumn.setStyle("-fx-alignment: center;");	//居中
         confirmDateColumn.setCellValueFactory(new PropertyValueFactory<>("confirmDate"));
 
         TableColumn<Feedback, String> gmNameColumn = new TableColumn<>("网格员");
-        gmNameColumn.setMinWidth(60);
+        gmNameColumn.setMinWidth(150);
         gmNameColumn.setStyle("-fx-alignment: center;");	//居中
         gmNameColumn.setCellValueFactory(new PropertyValueFactory<>("gmName"));
 

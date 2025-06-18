@@ -99,32 +99,32 @@ public class GridderController implements Initializable {
         label_realName.setText(gridMember.getRealName());
         //初始化table 数据表
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
-        afIdColumn.setMinWidth(40);
+        afIdColumn.setMinWidth(200);
         afIdColumn.setStyle("-fx-alignment: center;");	//居中
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
-        proviceNameColumn.setMinWidth(60);
+        proviceNameColumn.setMinWidth(200);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
         proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");	//居中
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估等级");
-        estimateGradeColumn.setMinWidth(60);
+        estimateGradeColumn.setMinWidth(200);
         estimateGradeColumn.setStyle("-fx-alignment: center;");	//居中
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> dateColumn = new TableColumn<>("反馈时间");
-        dateColumn.setMinWidth(80);
+        dateColumn.setMinWidth(200);
         dateColumn.setStyle("-fx-alignment: center;");	//居中
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         TableColumn<Feedback, String> afNameColumn = new TableColumn<>("反馈者");
-        afNameColumn.setMinWidth(60);
+        afNameColumn.setMinWidth(200);
         afNameColumn.setStyle("-fx-alignment: center;");	//居中
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
@@ -181,7 +181,6 @@ public class GridderController implements Initializable {
         txt_so2.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
                 if(!txt_so2.getText().equals("")){
                     LimitDto dto = Limits.so2Limit(Double.parseDouble(txt_so2.getText()));
                     label_so2level.setText(dto.getLevel());
@@ -202,7 +201,6 @@ public class GridderController implements Initializable {
         txt_co.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
                 if(!txt_co.getText().equals("")){
                     LimitDto dto = Limits.coLimit(Double.parseDouble(txt_co.getText()));
                     label_colevel.setText(dto.getLevel());
@@ -222,7 +220,6 @@ public class GridderController implements Initializable {
         txt_pm.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
                 if(!txt_pm.getText().equals("")){
                     LimitDto dto = Limits.pmLimit(Double.parseDouble(txt_pm.getText()));
                     label_pmlevel.setText(dto.getLevel());
