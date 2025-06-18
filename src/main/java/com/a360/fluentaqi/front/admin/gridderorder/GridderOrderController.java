@@ -7,6 +7,7 @@ import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -122,12 +123,27 @@ public class GridderOrderController implements Initializable{
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
-        infoColumn.setMinWidth(210);
+        infoColumn.setMinWidth(200);
         infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
 
         txt_tableView.getColumns().addAll(
                 afIdColumn, confirmDateColumn, proviceNameColumn, cityNameColumn,
                 addressColumn, estimateGradeColumn, afNameColumn, infoColumn);
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.06 + 0.12 + 0.09 + 0.09 + 0.15 + 0.09 + 0.09 + 0.22; // 8列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.06 / totalPercent);
+            confirmDateColumn.setPrefWidth(tableWidth * 0.12 / totalPercent);
+            proviceNameColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            addressColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            afNameColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.22 / totalPercent);
+        });
     }
 
     @FXML

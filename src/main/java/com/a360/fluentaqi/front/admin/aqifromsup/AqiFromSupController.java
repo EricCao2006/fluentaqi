@@ -5,6 +5,7 @@ import com.a360.fluentaqi.back.aqiabouts.Feedback;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -40,6 +41,7 @@ public class AqiFromSupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         //初始化table 数据表
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
         afIdColumn.setMinWidth(40);
@@ -76,6 +78,22 @@ public class AqiFromSupController implements Initializable {
         infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(afIdColumn, provinceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,infoColumn);
+
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.10 + 0.15 + 0.15 + 0.10 + 0.20 + 0.15 + 0.15; // 7列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            provinceNameColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            dateColumn.setPrefWidth(tableWidth * 0.20 / totalPercent);
+            afNameColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+        });
+
         ObservableList<Feedback> data = FXCollections.observableArrayList();
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
         String filePath = ProPaht + "aqi_feedback.json";
