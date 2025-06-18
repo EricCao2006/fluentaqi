@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.gridder.GridderController">
     <stylesheets>
         <URL value="@../css/total.css" />
     </stylesheets>
@@ -99,7 +99,7 @@
                   </Label>
                   <VBox spacing="5.0" styleClass="v-box">
                      <children>
-                        <Label fx:id="txt_name" styleClass="small-content" text="某某某" />
+                        <Label fx:id="label_realName" styleClass="small-content" text="某某某" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" top="5.0" />
