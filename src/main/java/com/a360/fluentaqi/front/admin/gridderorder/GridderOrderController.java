@@ -7,6 +7,7 @@ import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -87,55 +88,71 @@ public class GridderOrderController implements Initializable{
         txt_tableView.getColumns().clear();
 
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
-        afIdColumn.setMinWidth(40);
+        afIdColumn.setMinWidth(200);
         afIdColumn.setStyle("-fx-alignment: center;");
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> confirmDateColumn = new TableColumn<>("日期");
-        confirmDateColumn.setMinWidth(80);
+        confirmDateColumn.setMinWidth(200);
         confirmDateColumn.setStyle("-fx-alignment: center;");
         confirmDateColumn.setCellValueFactory(new PropertyValueFactory<>("confirmDate"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
-        proviceNameColumn.setMinWidth(60);
+        proviceNameColumn.setMinWidth(200);
         proviceNameColumn.setStyle("-fx-alignment: center;");
         proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> addressColumn = new TableColumn<>("详细地址");
-        addressColumn.setMinWidth(100);
+        addressColumn.setMinWidth(200);
         addressColumn.setStyle("-fx-alignment: center;");
         addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估AQI");
-        estimateGradeColumn.setMinWidth(60);
+        estimateGradeColumn.setMinWidth(200);
         estimateGradeColumn.setStyle("-fx-alignment: center;");
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> afNameColumn = new TableColumn<>("反馈者");
-        afNameColumn.setMinWidth(60);
+        afNameColumn.setMinWidth(200);
         afNameColumn.setStyle("-fx-alignment: center;");
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
-        infoColumn.setMinWidth(210);
+        infoColumn.setMinWidth(200);
         infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
 
         txt_tableView.getColumns().addAll(
                 afIdColumn, confirmDateColumn, proviceNameColumn, cityNameColumn,
                 addressColumn, estimateGradeColumn, afNameColumn, infoColumn);
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.06 + 0.12 + 0.09 + 0.09 + 0.15 + 0.09 + 0.09 + 0.22; // 8列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.06 / totalPercent);
+            confirmDateColumn.setPrefWidth(tableWidth * 0.12 / totalPercent);
+            proviceNameColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            addressColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            afNameColumn.setPrefWidth(tableWidth * 0.09 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.22 / totalPercent);
+        });
     }
 
     @FXML
     void queryFeedback(ActionEvent event) {
         String afId = txt_afId.getText();
+        System.out.println(afId);
         // 修正文件路径为正确的反馈数据路径
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
-        String filePath = ProPaht + "Aqi.json";
+        String filePath = ProPaht + "aqi_feedback.json";
         List<Feedback> alist = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
 
         boolean found = false;

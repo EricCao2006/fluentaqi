@@ -5,6 +5,7 @@ import com.a360.fluentaqi.back.aqiabouts.Feedback;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
 import com.a360.fluentaqi.front.admin.AdminController;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -40,34 +41,35 @@ public class AqiFromSupController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         //初始化table 数据表
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
-        afIdColumn.setMinWidth(40);
+        afIdColumn.setMinWidth(200);
         afIdColumn.setStyle("-fx-alignment: center;");	//居中
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> provinceNameColumn = new TableColumn<>("省区域");
-        provinceNameColumn.setMinWidth(60);
+        provinceNameColumn.setMinWidth(200);
         provinceNameColumn.setStyle("-fx-alignment: center;");	//居中
         provinceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");	//居中
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估等级");
-        estimateGradeColumn.setMinWidth(60);
+        estimateGradeColumn.setMinWidth(200);
         estimateGradeColumn.setStyle("-fx-alignment: center;");	//居中
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> dateColumn = new TableColumn<>("反馈时间");
-        dateColumn.setMinWidth(80);
+        dateColumn.setMinWidth(200);
         dateColumn.setStyle("-fx-alignment: center;");	//居中
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         TableColumn<Feedback, String> afNameColumn = new TableColumn<>("反馈者");
-        afNameColumn.setMinWidth(60);
+        afNameColumn.setMinWidth(200);
         afNameColumn.setStyle("-fx-alignment: center;");	//居中
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
@@ -76,6 +78,22 @@ public class AqiFromSupController implements Initializable {
         infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(afIdColumn, provinceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,afNameColumn,infoColumn);
+
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.10 + 0.15 + 0.15 + 0.10 + 0.20 + 0.15 + 0.15; // 7列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            provinceNameColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            dateColumn.setPrefWidth(tableWidth * 0.20 / totalPercent);
+            afNameColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.15 / totalPercent);
+        });
+
         ObservableList<Feedback> data = FXCollections.observableArrayList();
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
         String filePath = ProPaht + "aqi_feedback.json";

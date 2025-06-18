@@ -4,6 +4,7 @@ import com.a360.fluentaqi.back.aqiabouts.Feedback;
 import com.a360.fluentaqi.back.users.Supervisor;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -74,6 +75,19 @@ public class HistoricalDataController implements Initializable {
         infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
 
         txt_tableView.getColumns().addAll(afIdColumn, proviceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,infoColumn);
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.06 + 0.10 + 0.10 + 0.10 + 0.13 + 0.51; // 6列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.06 / totalPercent);
+            proviceNameColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            dateColumn.setPrefWidth(tableWidth * 0.13 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.51 / totalPercent);
+        });
         ObservableList<Feedback> data = FXCollections.observableArrayList();
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
         String filepath = ProPaht + "feedback.json";

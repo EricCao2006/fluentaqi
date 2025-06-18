@@ -9,6 +9,7 @@ import com.a360.fluentaqi.back.services.impl.FeedbackServiceImpl;
 import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -98,42 +99,59 @@ public class GridderController implements Initializable {
         label_realName.setText(gridMember.getRealName());
         //初始化table 数据表
         TableColumn<Feedback, Integer> afIdColumn = new TableColumn<>("编号");
-        afIdColumn.setMinWidth(40);
+        afIdColumn.setMinWidth(200);
         afIdColumn.setStyle("-fx-alignment: center;");	//居中
         afIdColumn.setCellValueFactory(new PropertyValueFactory<>("afId"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
-        proviceNameColumn.setMinWidth(60);
+        proviceNameColumn.setMinWidth(200);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
         proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
-        cityNameColumn.setMinWidth(60);
+        cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");	//居中
         cityNameColumn.setCellValueFactory(new PropertyValueFactory<>("cityName"));
 
         TableColumn<Feedback, String> estimateGradeColumn = new TableColumn<>("预估等级");
-        estimateGradeColumn.setMinWidth(60);
+        estimateGradeColumn.setMinWidth(200);
         estimateGradeColumn.setStyle("-fx-alignment: center;");	//居中
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
         TableColumn<Feedback, String> dateColumn = new TableColumn<>("反馈时间");
-        dateColumn.setMinWidth(80);
+        dateColumn.setMinWidth(200);
         dateColumn.setStyle("-fx-alignment: center;");	//居中
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         TableColumn<Feedback, String> afNameColumn = new TableColumn<>("反馈者");
-        afNameColumn.setMinWidth(60);
+        afNameColumn.setMinWidth(200);
         afNameColumn.setStyle("-fx-alignment: center;");	//居中
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
         TableColumn<Feedback, String> addressColumn = new TableColumn<>("具体地址");
+        addressColumn.setMinWidth(200);
         addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
+        infoColumn.setMinWidth(200);
         infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
 
         txt_tableView.getColumns().addAll(afIdColumn,afNameColumn,dateColumn,estimateGradeColumn, proviceNameColumn,cityNameColumn,addressColumn,infoColumn);
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.05 + 0.08 + 0.08 + 0.08 + 0.10 + 0.08 + 0.25 + 0.28; // 8列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.05 / totalPercent);
+            afNameColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            dateColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            proviceNameColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            addressColumn.setPrefWidth(tableWidth * 0.25 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.28 / totalPercent);
+        });
         ObservableList<Feedback> data = FXCollections.observableArrayList();
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
         String filePath = ProPaht + "aqi_feedback.json";
@@ -163,7 +181,6 @@ public class GridderController implements Initializable {
         txt_so2.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
                 if(!txt_so2.getText().equals("")){
                     LimitDto dto = Limits.so2Limit(Double.parseDouble(txt_so2.getText()));
                     label_so2level.setText(dto.getLevel());
@@ -184,7 +201,6 @@ public class GridderController implements Initializable {
         txt_co.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
                 if(!txt_co.getText().equals("")){
                     LimitDto dto = Limits.coLimit(Double.parseDouble(txt_co.getText()));
                     label_colevel.setText(dto.getLevel());
@@ -204,7 +220,6 @@ public class GridderController implements Initializable {
         txt_pm.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                // TODO Auto-generated method stub
                 if(!txt_pm.getText().equals("")){
                     LimitDto dto = Limits.pmLimit(Double.parseDouble(txt_pm.getText()));
                     label_pmlevel.setText(dto.getLevel());
