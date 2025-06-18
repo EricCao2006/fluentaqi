@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.historicaldata.HistoricalDataController">
     <stylesheets>
         <URL value="@../../css/dark.css" />
     </stylesheets>
@@ -20,7 +20,7 @@
                 <Insets left="20.0" right="20.0" />
             </VBox.margin>
             <content>
-                <TableView styleClass="table" />
+                <TableView fx:id="txt_tableView" styleClass="table" />
             </content>
          <styleClass>
             <String fx:value="scroll-pane" />
