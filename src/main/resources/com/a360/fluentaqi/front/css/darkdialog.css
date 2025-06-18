@@ -20,7 +20,7 @@
 }
 
 /* 对话框内容文本-夜间 */
-.dialog-pane .content.label {
+.dialog-pane .styled-content.label {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
     -fx-font-size: 16px;

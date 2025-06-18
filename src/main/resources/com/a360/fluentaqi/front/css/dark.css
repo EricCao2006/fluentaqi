@@ -12,7 +12,7 @@
 }
 
 /*主容器 */
-.container {
+.styled-container {
     -fx-alignment: center;
     -fx-fill-width: false;
     -fx-min-height: 540px;
@@ -24,7 +24,7 @@
 }
 
 /* 标题-夜间 */
-.title {
+.styled-title {
     -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Bold';
     -fx-text-fill: #ccffcc;
@@ -32,7 +32,7 @@
 }
 
  /* 内容-夜间*/
-.content {
+.styled-content {
     -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
@@ -40,7 +40,7 @@
 }
 
 /* 小字-夜间*/
-.small-content {
+.styled-small-content {
     -fx-alignment: CENTER;
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
@@ -48,7 +48,7 @@
 }
 
 /* 网格-夜间*/
-.grid-pane {
+.styled-grid-pane {
     -fx-background-color: #225522;
     -fx-background-radius: 20px;
     -fx-border-color: #444444;
@@ -57,7 +57,7 @@
 }
 
 /*自定义横向区域-夜间*/
-.h-box {
+.styled-h-box {
     -fx-alignment: CENTER;
     -fx-background-color: #225522;
     -fx-background-radius: 20px;
@@ -66,7 +66,7 @@
 }
 
 /*自定义纵向区域-夜间*/
-.v-box {
+.styled-v-box {
     -fx-alignment: CENTER;
     -fx-background-color: #225522;
     -fx-background-radius: 20px;
@@ -75,7 +75,7 @@
 }
 
 /* 输入框-夜间 */
-.text-field {
+.styled-text-field {
     -fx-background-color: #006600;
     -fx-background-radius: 10px;
     -fx-border-color: #00aa00;
@@ -87,18 +87,17 @@
 }
 
 /* 选择框-夜间 */
-.choice-box {
+.styled-choice-box {
     -fx-background-radius: 10px;
     -fx-background-color: #006600;
     -fx-border-color: #00aa00;
     -fx-border-radius: 10px;
     -fx-font-family: 'Maple Mono NF CN Medium';
-    -fx-text-fill: #999999;
-    -fx-font-size: 12px;
+
 }
 
 /* 选择框-夜间-聚焦 */
-.choice-box:focused {
+.styled-choice-box:focused {
     -fx-background-color: #228822;
     -fx-background-radius: 10px;
     -fx-border-color: #226622;
@@ -108,8 +107,15 @@
     -fx-font-size: 12px;
 }
 
+/*选择框-文字-夜间*/
+.styled-choice-box .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 12px;
+}
+
 /*选项菜单-夜间*/
-.choice-box .context-menu {
+.styled-choice-box .context-menu {
     -fx-background-color: #006600;
     -fx-background-radius: 10px;
     -fx-border-color: #00aa00;
@@ -121,7 +127,7 @@
 }
 
 /*选项菜单项-夜间*/
-.choice-box .menu-item {
+.styled-choice-box .menu-item {
     -fx-background-color: #006600;
     -fx-padding: 5 10 5 10;
     -fx-font-family: 'Maple Mono NF CN Medium';
@@ -130,7 +136,7 @@
 }
 
 /*选项菜单项-夜间-聚焦*/
-.choice-box .menu-item:focused {
+.styled-choice-box .menu-item:focused {
     -fx-background-color: #228822;
     -fx-background-radius: 5px;
     -fx-font-family: 'Maple Mono NF CN Medium';
@@ -139,14 +145,14 @@
 }
 
 /*选项菜单项-夜间-标签*/
-.choice-box .menu-item .label {
+.styled-choice-box .menu-item .label {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
     -fx-font-size: 12px;
 }
 
 /*表格-夜间*/
-.table {
+.styled-table {
     -fx-background-color: #003300;
     -fx-border-color: #003300;
     -fx-text-fill: #ccffcc;
@@ -154,23 +160,45 @@
 }
 
 /*表头-夜间*/
-.table .column-header {
-    -fx-font-family: 'Maple Mono NF CN Medium';
+.styled-table .column-header {
     -fx-background-color: #006600;
     -fx-border-color: #66aa66;
-    -fx-text-fill: #ccffcc;
     -fx-padding: 5;
 }
 
+/*表头-夜间-标签*/
+.styled-table .column-header .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 16px;
+}
+
 /* 表格行-夜间 */
-.table .table-row-cell {
+.styled-table .table-row-cell {
     -fx-background-color: #003300;
     -fx-border-color: #66aa66;
+}
+
+ /* 表格行-夜间-聚焦 */
+.styled-table .table-row-cell:focused {
+    -fx-background-color: #225522;
+    -fx-border-color: #66aa66;
+}
+
+/* 表格列-夜间-聚焦 */
+.styled-table .table-cell:focused {
+    -fx-background-color: #228822;
+    -fx-border-color: #66aa66;
+}
+
+/*表格内容-夜间*/
+.styled-table .table-cell {
+    -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
 }
 
 /* 滚动区-夜间 */
-.scroll-pane {
+.styled-scroll-pane {
     -fx-background-color: #003300;
     -fx-background-radius: 10px;
     -fx-border-color: #66ff66;
@@ -202,8 +230,17 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-border-radius: 5px;
 }
 
+/*标题区域-夜间*/
+.styled-titled-pane {
+    -fx-background-color: #228822;
+    -fx-background-radius: 10px;
+    -fx-border-color: #559955;
+    -fx-border-radius: 10px;
+    -fx-padding: 5px;
+}
+
 /* 标题栏-夜间 */
-.titled-pane .title {
+.styled-titled-pane .title {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-background-color: #227722;
     -fx-text-fill: #ddffdd;
@@ -215,7 +252,7 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 }
 
 /*伪表格-夜间*/
-.table-cell {
+.styled-table-cell {
     -fx-font-family: 'Maple Mono NF CN Medium';
     -fx-text-fill: #ccffcc;
     -fx-wrap-text: true;

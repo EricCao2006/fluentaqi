@@ -12,16 +12,16 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.TableColumn?>
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.gridderorder.GridderOrderController">
+<VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.gridderorder.GridderOrderController">
     <stylesheets>
         <URL value="@../../css/dark.css" />
     </stylesheets>
     <children>
-        <Label styleClass="title" text="公众监督AQI反馈指派" />
-      <HBox styleClass="h-box" spacing="20.0">
+        <Label styleClass="styled-title" text="公众监督AQI反馈指派" />
+      <HBox styleClass="styled-h-box" spacing="20.0">
          <children>
-            <Label styleClass="content" text="请输入反馈数据编号：" />
-            <TextField fx:id="txt_afId" prefHeight="30.0" prefWidth="200.0" styleClass="text-field" />
+            <Label styleClass="styled-content" text="请输入反馈数据编号：" />
+            <TextField fx:id="txt_afId" prefHeight="30.0" prefWidth="200.0" styleClass="styled-text-field" />
             <Button mnemonicParsing="false" onAction="#queryFeedback" styleClass="A-small-button" text="查询" />
          </children>
          <VBox.margin>
@@ -31,9 +31,9 @@
             <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
          </padding>
       </HBox>
-      <ScrollPane styleClass="scroll-pane" hbarPolicy="ALWAYS">
+      <ScrollPane styleClass="styled-scroll-pane" hbarPolicy="ALWAYS">
          <content>
-            <TableView fx:id="txt_tableView" styleClass="table">
+            <TableView fx:id="txt_tableView" styleClass="styled-table">
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
@@ -43,10 +43,10 @@
             <Insets left="20.0" right="20.0" />
          </VBox.margin>
       </ScrollPane>
-      <HBox styleClass="h-box" spacing="20.0">
+      <HBox styleClass="styled-h-box" spacing="20.0">
          <children>
-            <Label styleClass="content" text="请选择要指派的网格员：" />
-            <ChoiceBox fx:id="combo_realName" prefWidth="200.0" styleClass="choice-box" />
+            <Label styleClass="styled-content" text="请选择要指派的网格员：" />
+            <ChoiceBox fx:id="combo_realName" prefWidth="200.0" styleClass="styled-choice-box" />
             <Button mnemonicParsing="false" onAction="#assignGridMember" styleClass="A-small-button" text="指派" />
          </children>
          <padding>

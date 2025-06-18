@@ -16,13 +16,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.register.RegisterController">
+<VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.register.RegisterController">
     <stylesheets>
         <URL value="@../../css/dark.css" />
     </stylesheets>
     <children>
-        <Label styleClass="title" text="公众监督员注册" />
-        <GridPane hgap="20.0" styleClass="grid-pane" vgap="20.0" VBox.vgrow="NEVER">
+        <Label styleClass="styled-title" text="公众监督员注册" />
+        <GridPane hgap="20.0" styleClass="styled-grid-pane" vgap="20.0" VBox.vgrow="NEVER">
             <columnConstraints>
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
                 <ColumnConstraints hgrow="SOMETIMES" />
@@ -35,10 +35,10 @@
                 <RowConstraints vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label styleClass="content" text="姓名" GridPane.rowIndex="1" />
-                <Label styleClass="content" text="手机号" GridPane.rowIndex="2" />
-                <Label styleClass="content" text="确认密码" GridPane.rowIndex="4" />
-                <ChoiceBox fx:id="txt_sex" maxWidth="1.7976931348623157E308" styleClass="choice-box" GridPane.columnIndex="1">
+                <Label styleClass="styled-content" text="姓名" GridPane.rowIndex="1" />
+                <Label styleClass="styled-content" text="手机号" GridPane.rowIndex="2" />
+                <Label styleClass="styled-content" text="确认密码" GridPane.rowIndex="4" />
+                <ChoiceBox fx:id="txt_sex" maxWidth="1.7976931348623157E308" styleClass="styled-choice-box" GridPane.columnIndex="1">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="男" />
@@ -49,12 +49,12 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ChoiceBox>
-                <TextField fx:id="loginCode" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <PasswordField fx:id="confirmPassword" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label styleClass="content" text="性别" />
-            <Label styleClass="content" text="密码" GridPane.rowIndex="3" />
-            <TextField fx:id="txt_realName" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <PasswordField fx:id="password" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="loginCode" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <PasswordField fx:id="confirmPassword" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label styleClass="styled-content" text="性别" />
+            <Label styleClass="styled-content" text="密码" GridPane.rowIndex="3" />
+            <TextField fx:id="txt_realName" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="password" styleClass="styled-text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
             <padding>
                 <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
