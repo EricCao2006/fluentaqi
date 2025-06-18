@@ -10,4 +10,10 @@
   "realName" : "尚阳",
   "sex" : "男",
   "birthday" : null
+}, {
+  "loginCode" : "1",
+  "password" : "1",
+  "realName" : "1",
+  "sex" : "男",
+  "birthday" : null
 } ]

@@ -182,7 +182,7 @@ public class SupervisorController implements Initializable {
         aqiFeedbackService.saveFeedBack(afb);
         JavafxUtil.showAlert(primaryStage, "反馈信息成功", "您的预估AQI信息提交成功", "感谢您的反馈!", "info");
         HistoricalDataController.primaryStage = primaryStage;
-        JavafxUtil.showStage(this.getClass(), "src/main/resources/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml", primaryStage, "监督员端-AQI历史反馈记录");
+        JavafxUtil.showStage(this.getClass(), "/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml", primaryStage, "监督员端-AQI历史反馈记录");
 
     }
 
