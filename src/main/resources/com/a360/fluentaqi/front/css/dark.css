@@ -405,3 +405,12 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
     -fx-font-size: 16px;
     -fx-cursor: hand;
 }
+
+/* 浮动菜单-夜间 */
+.floating-menu {
+    -fx-background-color: TRANSPARENT;
+    -fx-padding: 10;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-spacing: 10;
+}
