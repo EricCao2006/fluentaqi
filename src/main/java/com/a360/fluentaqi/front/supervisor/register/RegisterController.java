@@ -3,6 +3,7 @@ package com.a360.fluentaqi.front.supervisor.register;
 import com.a360.fluentaqi.back.services.SupervisorService;
 
 import com.a360.fluentaqi.LoginController;
+import com.a360.fluentaqi.back.services.impl.SupervisorServiceImpl;
 import com.a360.fluentaqi.back.users.Supervisor;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import javafx.fxml.FXML;
@@ -70,18 +71,19 @@ public class RegisterController {
         supervisor.setPassword(password.getText());
         supervisor.setRealName(txt_realName.getText());
         supervisor.setSex((String) txt_sex.getValue());
-        SupervisorService supervisorService = new SupervisorService() {
-            @Override
-            public boolean login(String loginCode, String password) {
-                return false;
-            }
-
-            @Override
-            public boolean register(Supervisor supervisor) {
-                // 实现注册逻辑
-                return true; // 示例返回值
-            }
-        };
+//        SupervisorService supervisorService = new SupervisorService() {
+//            @Override
+//            public boolean login(String loginCode, String password) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean register(Supervisor supervisor) {
+//                // 实现注册逻辑
+//                return true; // 示例返回值
+//            }
+//        };
+        SupervisorService supervisorService = new SupervisorServiceImpl();
         boolean flag = supervisorService.register(supervisor);
         if(flag){
             JavafxUtil.showAlert(primaryStage, "注册成功", loginCode.getText()+" 账号注册成功!","可以进行用户登录!" ,"info");

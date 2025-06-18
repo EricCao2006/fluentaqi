@@ -34,12 +34,12 @@ public class AdminController  {
 
     @FXML
     void aqiConfirm(){
-        JavafxUtil.showStage(this.getClass(), "/com/a360/fluentaqi/front/admin/aqifromgrid/view.fxml", primaryStage, "环保公众监督平台-管理端-AQI实测数据查询");
+        JavafxUtil.showStage(this.getClass(), "/com/a360/fluentaqi/front/admin/aqifromgrid/view.fxml", primaryStage, "管理员端-AQI实测数据查询");
     }
 
     @FXML
     void aqiInfo() {
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/aqifromsup/view.fxml",primaryStage,"环保公众监督平台-管理端-AQI反馈数据查询");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/aqifromsup/view.fxml",primaryStage,"管理员端-AQI反馈数据查询");
     }
 
     @FXML
