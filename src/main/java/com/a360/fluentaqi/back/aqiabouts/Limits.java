@@ -13,6 +13,7 @@ public class Limits {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         return sdf.format(date);
     }
+
     public static LimitDto coLimit(double value) {
         LimitDto dto = null;
         if (0 <= value && value <= 5) {
