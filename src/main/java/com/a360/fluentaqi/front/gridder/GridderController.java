@@ -93,6 +93,7 @@ public class GridderController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         // 初始化网格员姓名
         label_realName.setText(gridMember.getRealName());
         //初始化table 数据表
