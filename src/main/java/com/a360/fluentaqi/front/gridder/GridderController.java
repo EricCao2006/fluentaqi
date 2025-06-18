@@ -9,6 +9,7 @@ import com.a360.fluentaqi.back.services.impl.FeedbackServiceImpl;
 import com.a360.fluentaqi.back.users.Gridder;
 import com.a360.fluentaqi.back.utils.JavafxUtil;
 import com.a360.fluentaqi.back.utils.JsonReader;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -105,7 +106,7 @@ public class GridderController implements Initializable {
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(60);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
-        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
+        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(60);
@@ -128,12 +129,29 @@ public class GridderController implements Initializable {
         afNameColumn.setCellValueFactory(new PropertyValueFactory<>("afName"));
 
         TableColumn<Feedback, String> addressColumn = new TableColumn<>("具体地址");
+        addressColumn.setMinWidth(200);
         addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
-        infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
+        infoColumn.setMinWidth(200);
+        infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
 
         txt_tableView.getColumns().addAll(afIdColumn,afNameColumn,dateColumn,estimateGradeColumn, proviceNameColumn,cityNameColumn,addressColumn,infoColumn);
+        txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+
+        Platform.runLater(() -> {
+            double tableWidth = txt_tableView.getWidth();
+            double totalPercent = 0.05 + 0.08 + 0.08 + 0.08 + 0.10 + 0.08 + 0.25 + 0.28; // 8列比例总和
+
+            afIdColumn.setPrefWidth(tableWidth * 0.05 / totalPercent);
+            afNameColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            dateColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            estimateGradeColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            proviceNameColumn.setPrefWidth(tableWidth * 0.10 / totalPercent);
+            cityNameColumn.setPrefWidth(tableWidth * 0.08 / totalPercent);
+            addressColumn.setPrefWidth(tableWidth * 0.25 / totalPercent);
+            infoColumn.setPrefWidth(tableWidth * 0.28 / totalPercent);
+        });
         ObservableList<Feedback> data = FXCollections.observableArrayList();
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
         String filePath = ProPaht + "aqi_feedback.json";
@@ -240,8 +258,8 @@ public class GridderController implements Initializable {
         JavafxUtil.showAlert(primaryStage, "提交成功", "污染物实测数据提交成功", "","info");
         //刷新页面数据表格
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
-        String filePath = ProPaht + "aqi_feedback.json";
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
+        String filePath = ProPaht + "Feedback.json";
         List<Feedback> aList = (List<Feedback>)JsonReader.readListFromJson(filePath, Feedback.class);
         for(Feedback a:aList){
             if(a.getGmName() != null && a.getGmName().equals(gridMember.getRealName()) && a.getState().equals("已指派")){
