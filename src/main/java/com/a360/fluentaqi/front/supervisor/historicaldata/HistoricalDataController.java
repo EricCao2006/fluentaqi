@@ -50,7 +50,7 @@ public class HistoricalDataController implements Initializable {
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(60);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
-        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
+        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(60);
@@ -69,7 +69,7 @@ public class HistoricalDataController implements Initializable {
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
         infoColumn.setMinWidth(330);
-        infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
+        infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(afIdColumn, proviceNameColumn,cityNameColumn,estimateGradeColumn,dateColumn,infoColumn);
         txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);

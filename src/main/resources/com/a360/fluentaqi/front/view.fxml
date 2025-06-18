@@ -20,7 +20,7 @@
 
 <VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.LoginController">
     <stylesheets>
-        <URL value="@css/total.css" />
+        <URL value="@css/dark.css" />
     </stylesheets>
     <children>
       <Label styleClass="title" text="AQI公众管理监督" />
