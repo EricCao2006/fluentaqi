@@ -359,14 +359,12 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 /* 对话框-夜间 */
 .styled-dialog-pane {
     -fx-background-color: #003300;
-    -fx-border-color: #336633;
     -fx-spacing: 10px;
 }
 
 /* 对话框标题区域-夜间 */
 .styled-dialog-pane .header-panel {
     -fx-background-color: #006600;
-    -fx-border-color: #336633;
     -fx-spacing: 10px;
 }
 
@@ -388,8 +386,6 @@ ScrollPane .scroll-bar:vertical .thumb:hover {
 /* 对话框按钮区域-夜间 */
 .styled-dialog-pane .button-bar {
     -fx-background-color: #006600;
-    -fx-border-color: #336633;
-    -fx-border-width: 1px;
     -fx-spacing: 10px;
 }
 

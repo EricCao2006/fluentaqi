@@ -35,7 +35,6 @@ public class JavafxUtil {
         alert.setHeaderText(headerText);
         alert.setContentText(contentText);
         DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add(JavafxUtil.class.getResource("/com/a360/fluentaqi/front/css/dark.css").toExternalForm());
         dialogPane.getStyleClass().add("styled-dialog-pane");
         alert.showAndWait();
 
@@ -65,6 +64,9 @@ public class JavafxUtil {
             Scene scene = new Scene(root);
             primaryStage.setTitle(title);
             primaryStage.setScene(scene);
+            primaryStage.setWidth(720);
+            primaryStage.setHeight(540);
+            ThemeUtils.register(scene);
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,6 +94,7 @@ public class JavafxUtil {
             subStage.setScene(scene);
             subStage.initOwner(primaryStage);
             subStage.initModality(Modality.WINDOW_MODAL);
+            ThemeUtils.register(scene);
             subStage.showAndWait();
         } catch (Exception e) {
             // TODO: handle exception

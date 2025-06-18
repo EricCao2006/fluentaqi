@@ -1,44 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-
-<VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.AdminController">
-   <stylesheets>
-      <URL value="@../css/dark.css" />
-   </stylesheets>
-   <children>
-      <Label styleClass="styled-title" text="AQI管理系统" />
-      <GridPane styleClass="styled-grid-pane" hgap="30.0" vgap="30.0" VBox.vgrow="NEVER">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox styleClass="styled-container" xmlns="http://javafx.com/javafx/17.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.a360.fluentaqi.front.admin.AdminController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <Label styleClass="styled-title" text="AQI管理系统"/>
+    <GridPane styleClass="styled-grid-pane" hgap="30.0" vgap="30.0" VBox.vgrow="NEVER">
         <columnConstraints>
-          <ColumnConstraints fillWidth="false" hgrow="NEVER" />
-          <ColumnConstraints fillWidth="false" hgrow="NEVER" />
+            <ColumnConstraints fillWidth="false" hgrow="NEVER"/>
+            <ColumnConstraints fillWidth="false" hgrow="NEVER"/>
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints fillHeight="false" vgrow="NEVER" />
-          <RowConstraints fillHeight="false" vgrow="NEVER" />
-          <RowConstraints fillHeight="false" vgrow="NEVER" />
+            <RowConstraints fillHeight="false" vgrow="NEVER"/>
+            <RowConstraints fillHeight="false" vgrow="NEVER"/>
+            <RowConstraints fillHeight="false" vgrow="NEVER"/>
         </rowConstraints>
-         <children>
-            <Label styleClass="styled-content" text="监督员端" GridPane.rowSpan="2" />
-            <Label styleClass="styled-content" text="网格员端" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#aqiInfo" styleClass="A-button" text="反馈数据查询&gt;" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#aqiAssign" styleClass="A-button" text="反馈数据指派&gt;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" onAction="#aqiConfirm" styleClass="A-button" text="实测数据查询&gt;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         </children>
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding>
-      </GridPane>
-      <Button mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回" />
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+        <Label styleClass="styled-content" text="监督员端" GridPane.rowSpan="2"/>
+        <Label styleClass="styled-content" text="网格员端" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#aqiInfo" styleClass="A-button" text="反馈数据查询&gt;"
+                GridPane.columnIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#aqiAssign" styleClass="A-button" text="反馈数据指派&gt;"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#aqiConfirm" styleClass="A-button" text="实测数据查询&gt;"
+                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+    <Button mnemonicParsing="false" onAction="#getback" styleClass="B-button" text="&lt;返回"/>
 </VBox>
