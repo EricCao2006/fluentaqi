@@ -106,7 +106,7 @@ public class GridderController implements Initializable {
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(200);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
-        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
+        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(200);
@@ -134,7 +134,7 @@ public class GridderController implements Initializable {
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
         infoColumn.setMinWidth(200);
-        infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
+        infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(afIdColumn,afNameColumn,dateColumn,estimateGradeColumn, proviceNameColumn,cityNameColumn,addressColumn,infoColumn);
         txt_tableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
