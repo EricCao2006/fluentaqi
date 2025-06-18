@@ -121,54 +121,6 @@ public class LoginController{
         }
     }
 
-    @FXML
-    private void showSettingsMenu(ActionEvent event) {
-        if (floatingMenu == null) {
-            // 创建圆形按钮1
-            Button btnEdit = new Button("✏️");
-            btnEdit.getStyleClass().add("round-button");
-
-            // 创建圆形按钮2
-            Button btnHelp = new Button("❓");
-            btnHelp.getStyleClass().add("round-button");
-
-            // 设置点击事件
-            btnEdit.setOnAction(e -> System.out.println("编辑按钮被点击"));
-            btnHelp.setOnAction(e -> System.out.println("帮助按钮被点击"));
-
-            // 创建浮动菜单容器
-            floatingMenu = new VBox(10); // 按钮间距
-            floatingMenu.getChildren().addAll(btnEdit, btnHelp);
-            floatingMenu.setAlignment(Pos.CENTER_LEFT);
-            floatingMenu.setStyle("-fx-background-color: #ffffff; -fx-padding: 10; -fx-border-radius: 8; -fx-background-radius: 8; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);");
-
-            // 添加到当前场景中
-            Scene scene = btnSettings.getScene();
-            AnchorPane root = (AnchorPane) scene.getRoot();
-            root.getChildren().add(floatingMenu);
-
-            // 定位菜单
-            floatingMenu.setLayoutX(btnSettings.localToScene(0, 0).getX() + btnSettings.getWidth() - floatingMenu.getWidth() - 10);
-            floatingMenu.setLayoutY(btnSettings.localToScene(0, 0).getY() + btnSettings.getHeight() + 5);
-
-            // 点击其他地方关闭菜单
-            scene.setOnMouseClicked(e -> {
-                if (!btnSettings.getBoundsInParent().contains(e.getX(), e.getY())) {
-                    hideFloatingMenu();
-                }
-            });
-        } else {
-            hideFloatingMenu();
-        }
-    }
-
-    private void hideFloatingMenu() {
-        if (floatingMenu != null) {
-            ((AnchorPane) btnSettings.getScene().getRoot()).getChildren().remove(floatingMenu);
-            floatingMenu = null;
-        }
-    }
-
 }
 
 
