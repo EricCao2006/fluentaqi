@@ -1,0 +1,240 @@
+/*夜间模式*/
+
+/*主容器 */
+.-container {
+    -fx-alignment: center;
+    -fx-fill-width: false;
+    -fx-min-height: 540px;
+    -fx-min-width: 720px;
+    -fx-pref-height: 540px;
+    -fx-pref-width: 720px;
+    -fx-spacing: 10px;
+    -fx-background-color: #003300;
+}
+
+/* 标题-夜间 */
+.-title {
+    -fx-alignment: CENTER;
+    -fx-font-family: 'Maple Mono NF CN Bold';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 48px;
+}
+
+ /* 内容-夜间*/
+.-content {
+    -fx-alignment: CENTER;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 24px;
+}
+
+/* 小字-夜间*/
+.-small-content {
+    -fx-alignment: CENTER;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 18px;
+}
+
+/* 网格-夜间*/
+.-grid-pane {
+    -fx-background-color: #003300;
+    -fx-background-radius: 20px;
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+    -fx-border-width: 2px;
+}
+
+/*自定义横向区域-夜间*/
+.-h-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: #003300;
+    -fx-background-radius: 20px;
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
+
+/*自定义纵向区域-夜间*/
+.-v-box {
+    -fx-alignment: CENTER;
+    -fx-background-color: #003300;
+    -fx-background-radius: 20px;
+    -fx-border-color: #222222;
+    -fx-border-radius: 20px;
+}
+
+/* 输入框-夜间 */
+.-text-field {
+    -fx-background-color: #006600;
+    -fx-background-radius: 10px;
+    -fx-border-color: #00aa00;
+    -fx-border-radius: 10px;
+    -fx-cursor: TEXT;
+}
+
+/* 选择框-夜间 */
+.-choice-box {
+    -fx-background-radius: 10px;
+    -fx-background-color: #006600;
+    -fx-border-color: #00aa00;
+    -fx-border-radius: 10px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+}
+
+/* 选择框-夜间-聚焦 */
+.-choice-box:focused {
+    -fx-background-color: #226622;
+    -fx-background-radius: 10px;
+    -fx-border-color: #226622;
+    -fx-border-radius: 10px;
+}
+
+/*选项菜单-夜间*/
+.-choice-box .context-menu {
+    -fx-background-color: #006600;
+    -fx-background-radius: 10px;
+    -fx-border-color: #00aa00;
+    -fx-border-radius: 10px;
+    -fx-padding: 5;
+}
+
+/*选项菜单项-夜间*/
+.-choice-box .menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+}
+
+/*选项菜单项-夜间-聚焦*/
+.-choice-box .menu-item:focused {
+    -fx-background-color: #226622;
+    -fx-background-radius: 5px;
+}
+
+/*选项菜单项-夜间-标签*/
+.-choice-box .menu-item .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+}
+
+/*表格-夜间*/
+.-table {
+    -fx-background-color: #003300;
+    -fx-border-color: #003300;
+    -fx-text-fill: #ccffcc;
+    -fx-padding: 5;
+}
+
+/*表头-夜间*/
+.-table .column-header {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-background-color: #006600;
+    -fx-border-color: #66aa66;
+    -fx-text-fill: #ccffcc;
+    -fx-padding: 5;
+}
+
+/* 表格行-夜间 */
+.-table .table-row-cell {
+    -fx-background-color: #003300;
+    -fx-border-color: #66aa66;
+    -fx-text-fill: #ccffcc;
+}
+
+/* 滚动区-夜间 */
+.-scroll-pane {
+    -fx-background-color: #003300;
+    -fx-background-radius: 10px;
+    -fx-border-color: #66ff66;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-padding: 5px;
+}
+
+/* 标题栏-夜间 */
+.-titled-pane .title {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-background-color: #227722;
+    -fx-text-fill: #ddffdd;
+    -fx-font-size: 18px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: HAND;
+}
+
+/*伪表格-夜间*/
+.-table-cell {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-wrap-text: true;
+    -fx-font-size: 16px;
+    -fx-padding: 0 5px;
+}
+
+/* 对话框根面板-夜间 */
+.-dialog-pane {
+    -fx-background-color: #003300;
+    -fx-background-radius: 30px;
+    -fx-border-color: #336633;
+    -fx-border-radius: 30px;
+    -fx-border-width: 1px;
+    -fx-padding: 15px;
+}
+
+/* 对话框标题区域-夜间 */
+.-dialog-pane .header-panel {
+    -fx-background-color: #006600;
+    -fx-background-radius: 30px 30px 0 0;
+    -fx-border-color: #336633;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 10px 15px;
+}
+
+/* 对话框标题文本-夜间 */
+.-dialog-pane .header-panel .label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* 对话框内容文本-夜间 */
+.-dialog-pane .content.label {
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 18px;
+    -fx-wrap-text: true;
+}
+
+/* 对话框按钮区域-夜间 */
+.-dialog-pane .button-bar {
+    -fx-background-color: #006600;
+    -fx-background-radius: 0 0 30px 30px;
+    -fx-padding: 10px;
+    -fx-border-color: #336633;
+    -fx-border-width: 1px;
+}
+
+/* 对话框按钮-夜间 */
+.-dialog-pane .button {
+    -fx-background-color: #006600;
+    -fx-background-radius: 30px;
+    -fx-border-color: #336633;
+    -fx-border-radius: 30px;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
+    -fx-font-size: 18px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
+
+/*对话框按钮-聚焦-夜间*/
+.-dialog-pane .button:focused {
+    -fx-background-color: #117711;
+    -fx-border-color: #006600;
+    -fx-text-fill: #006600;
+    -fx-font-size: 18px;
+    -fx-padding: 5px 15px;
+    -fx-cursor: hand;
+}
