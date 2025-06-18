@@ -86,8 +86,8 @@ public class HistoricalDataController implements Initializable {
             infoColumn.setPrefWidth(tableWidth * 0.51 / totalPercent);
         });
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
-        String filepath = ProPaht + "feedback.json";
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
+        String filepath = ProPaht + "aqi_feedback.json";
         List<Feedback> afList = (List<Feedback>) JsonReader.readListFromJson(filepath, Feedback.class);
         System.out.println("afList"+afList);
         for(int i = afList.size()-1;i>=0 ;i--){			//按照时间排序,有近到远
