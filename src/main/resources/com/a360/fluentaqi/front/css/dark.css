@@ -80,6 +80,8 @@
     -fx-background-radius: 10px;
     -fx-border-color: #00aa00;
     -fx-border-radius: 10px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
     -fx-cursor: TEXT;
 }
 
@@ -90,6 +92,7 @@
     -fx-border-color: #00aa00;
     -fx-border-radius: 10px;
     -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
 }
 
 /* 选择框-夜间-聚焦 */
@@ -98,6 +101,8 @@
     -fx-background-radius: 10px;
     -fx-border-color: #226622;
     -fx-border-radius: 10px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
 }
 
 /*选项菜单-夜间*/
@@ -107,18 +112,24 @@
     -fx-border-color: #00aa00;
     -fx-border-radius: 10px;
     -fx-padding: 5;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
 }
 
 /*选项菜单项-夜间*/
 .choice-box .menu-item {
     -fx-background-color: transparent;
     -fx-padding: 5 10 5 10;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
 }
 
 /*选项菜单项-夜间-聚焦*/
 .choice-box .menu-item:focused {
     -fx-background-color: #226622;
     -fx-background-radius: 5px;
+    -fx-font-family: 'Maple Mono NF CN Medium';
+    -fx-text-fill: #ccffcc;
 }
 
 /*选项菜单项-夜间-标签*/

@@ -14,7 +14,7 @@
 <?import javafx.scene.control.TableColumn?>
 <VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.gridderorder.GridderOrderController">
     <stylesheets>
-        <URL value="@../../css/total.css" />
+        <URL value="@../../css/dark.css" />
     </stylesheets>
     <children>
         <Label styleClass="title" text="公众监督AQI反馈指派" />
