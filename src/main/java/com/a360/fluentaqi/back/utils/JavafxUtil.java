@@ -57,7 +57,6 @@ public class JavafxUtil {
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         }
         return primaryStage;

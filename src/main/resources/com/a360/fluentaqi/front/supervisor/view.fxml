@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.SupervisorController">
+<VBox styleClass="container" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.supervisor.SupervisorController">
     <stylesheets>
         <URL value="@../css/total.css" />
     </stylesheets>
@@ -97,11 +97,11 @@
                                             <Label styleClass="small-content" text="预估AQI等级" GridPane.rowIndex="2" />
                                             <Label styleClass="small-content" text="反馈信息" GridPane.rowIndex="3" />
                                             <Label styleClass="small-content" text="市" GridPane.columnIndex="2" />
-                                            <TextField styleClass="text-field" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
-                                            <TextField styleClass="text-field" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                            <TextField fx:id="txt_address" styleClass="text-field" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                                            <TextField fx:id="txt_information" styleClass="text-field" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3" />
                                             <Label styleClass="small-content" text="所在省" />
-                                    <ChoiceBox maxWidth="1.7976931348623157E308" styleClass="choice-box" GridPane.columnIndex="1" />
-                                    <ChoiceBox maxWidth="1.7976931348623157E308" styleClass="choice-box" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <ChoiceBox fx:id="txt_province" maxWidth="1.7976931348623157E308" styleClass="choice-box" GridPane.columnIndex="1" />
+                                    <ChoiceBox fx:id="txt_level" maxWidth="1.7976931348623157E308" styleClass="choice-box" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                         <items>
                                             <FXCollections fx:factory="observableArrayList">
                                                 <String fx:value="一级" />
@@ -113,7 +113,7 @@
                                             </FXCollections>
                                         </items>
                                     </ChoiceBox>
-                                    <ChoiceBox maxWidth="1.7976931348623157E308" minWidth="80.0" styleClass="choice-box" GridPane.columnIndex="3" />
+                                    <ChoiceBox fx:id="txt_city" maxWidth="1.7976931348623157E308" minWidth="80.0" styleClass="choice-box" GridPane.columnIndex="3" />
                                         </children>
                                     </GridPane>
                                 </children>
@@ -125,7 +125,7 @@
                                     <Label styleClass="small-content" text="监督员" />
                                     <VBox styleClass="v-box">
                                        <children>
-                                                  <Label styleClass="small-content" text="某某某">
+                                                  <Label fx:id="label_realName" styleClass="small-content" text="某某某">
                                              <padding>
                                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                              </padding>
@@ -134,11 +134,11 @@
                                     </VBox>
                                  </children>
                               </HBox>
-                              <Button mnemonicParsing="false" styleClass="A-small-button" text="查询历史记录&gt;" />
+                              <Button mnemonicParsing="false" onAction="#feedBackList" styleClass="A-small-button" text="查询历史记录&gt;" />
                               <HBox alignment="CENTER" prefHeight="12.0" prefWidth="194.0" spacing="20.0">
                                  <children>
                                           <Button mnemonicParsing="false" onAction="#getback" styleClass="B-small-button" text="&lt;返回" />
-                                          <Button mnemonicParsing="false" styleClass="A-small-button" text="提交&gt;" />
+                                          <Button mnemonicParsing="false" onAction="#saveFeedBack" styleClass="A-small-button" text="提交&gt;" />
                                  </children>
                               </HBox>
                                 </children>

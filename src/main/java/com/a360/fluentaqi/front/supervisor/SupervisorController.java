@@ -30,48 +30,48 @@ public class SupervisorController implements Initializable {
     public static Stage primaryStage;
     @FXML
     void historicalData(){
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml",primaryStage,"环保公众监督平台-监督员端-AQI反馈历史记录");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/historicaldata/view.fxml",primaryStage,"监督员端-AQI反馈历史记录");
     }
     void register(){
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/register/view.fxml",primaryStage,"环保公众监督平台-监督员端-注册页面");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/supervisor/register/view.fxml",primaryStage,"监督员端-注册页面");
     }
     @FXML
     void getback() {
         JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml", primaryStage,"Fluent AQI 登录");
     }
+//    @FXML
+//    private TableView<Aqi> txt_tableView;
     @FXML
-    private TableView<Aqi> txt_tableView;
+    private ChoiceBox<String> txt_province;
     @FXML
-    private ComboBox<String> txt_province;
-    @FXML
-    private ComboBox<String> txt_city;
+    private ChoiceBox<String> txt_city;
     @FXML
     private TextField txt_address;
     @FXML
-    private ComboBox<String> txt_level;
+    private ChoiceBox<String> txt_level;
     @FXML
-    private TextArea txt_information;
+    private TextField txt_information;
     @FXML
     private Label label_realName;
     public static Supervisor supervisor;
     private FeedbackService aqiFeedbackService = new FeedbackServiceImpl();
 
-    public TableView<Aqi> getTxt_tableView() {
-        return txt_tableView;
-    }
-    public void setTxt_tableView(TableView<Aqi> txt_tableView) {
-        this.txt_tableView = txt_tableView;
-    }
-    public ComboBox<String> getTxt_province() {
+//    public TableView<Aqi> getTxt_tableView() {
+//        return txt_tableView;
+//    }
+//    public void setTxt_tableView(TableView<Aqi> txt_tableView) {
+//        this.txt_tableView = txt_tableView;
+//    }
+    public ChoiceBox<String> getTxt_province() {
         return txt_province;
     }
-    public void setTxt_province(ComboBox<String> txt_province) {
+    public void setTxt_province(ChoiceBox<String> txt_province) {
         this.txt_province = txt_province;
     }
-    public ComboBox<String> getTxt_city() {
+    public ChoiceBox<String> getTxt_city() {
         return txt_city;
     }
-    public void setTxt_city(ComboBox<String> txt_city) {
+    public void setTxt_city(ChoiceBox<String> txt_city) {
         this.txt_city = txt_city;
     }
     public TextField getTxt_address() {
@@ -80,16 +80,16 @@ public class SupervisorController implements Initializable {
     public void setTxt_address(TextField txt_address) {
         this.txt_address = txt_address;
     }
-    public ComboBox<String> getTxt_level() {
+    public ChoiceBox<String> getTxt_level() {
         return txt_level;
     }
-    public void setTxt_level(ComboBox<String> txt_level) {
+    public void setTxt_level(ChoiceBox<String> txt_level) {
         this.txt_level = txt_level;
     }
-    public TextArea getTxt_information() {
+    public TextField getTxt_information() {
         return txt_information;
     }
-    public void setTxt_information(TextArea txt_information) {
+    public void setTxt_information(TextField txt_information) {
         this.txt_information = txt_information;
     }
     @Override
@@ -110,7 +110,7 @@ public class SupervisorController implements Initializable {
         impactColumn.setMinWidth(425);
         impactColumn.setCellValueFactory(new PropertyValueFactory<>("impact"));
 
-        txt_tableView.getColumns().addAll(levelColumn, explainColumn,impactColumn);
+//        txt_tableView.getColumns().addAll(levelColumn, explainColumn,impactColumn);
         ObservableList<Aqi> data = FXCollections.observableArrayList();
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
         String filePath1 = ProPaht + "aqi.json"; // 添加文件路径
@@ -118,7 +118,7 @@ public class SupervisorController implements Initializable {
         for(Aqi aqi:afList){
             data.add(aqi);
         }
-        txt_tableView.setItems(data);
+//        txt_tableView.setItems(data);
         //初始化AQI等级下拉列表
         for(Aqi aqi:afList){
             txt_level.getItems().add(aqi.getLevel());
