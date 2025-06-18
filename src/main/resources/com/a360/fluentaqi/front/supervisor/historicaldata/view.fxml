@@ -12,7 +12,7 @@
 
 <VBox styleClass="container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.a360.fluentaqi.front.admin.aqifromsup.AqiFromSupController">
     <stylesheets>
-        <URL value="@../../css/total.css" />
+        <URL value="@../../total.css" />
     </stylesheets>
     <children>
         <Label styleClass="title" text="AQI反馈历史记录" />

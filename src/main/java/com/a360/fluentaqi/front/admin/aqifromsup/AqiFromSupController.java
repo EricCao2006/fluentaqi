@@ -23,7 +23,7 @@ public class AqiFromSupController implements Initializable {
 
     private static Stage primaryStage;
     public void getback(ActionEvent actionEvent) {
-        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/view.fxml",AdminController.primaryStage,"管理员端-主功能界面");
+        JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/admin/view.fxml",AdminController.primaryStage,"环保公众监督平台-管理端-主功能界面");
 
     }
 
