@@ -49,6 +49,11 @@ public class JavafxUtil {
         FXMLLoader loader = new FXMLLoader();
         System.out.println("path:"+path);
         URL url = clazz.getResource(path);
+        if (url == null) {
+            System.out.println("wcnmlgb");
+            throw new IllegalArgumentException("FXML file not found: " + path);
+        }
+
         loader.setLocation(url);
         try {
             Parent root = loader.load();
