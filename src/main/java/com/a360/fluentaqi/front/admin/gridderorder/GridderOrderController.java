@@ -99,7 +99,7 @@ public class GridderOrderController implements Initializable{
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(60);
         proviceNameColumn.setStyle("-fx-alignment: center;");
-        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
+        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(60);
@@ -123,7 +123,7 @@ public class GridderOrderController implements Initializable{
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
         infoColumn.setMinWidth(210);
-        infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
+        infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(
                 afIdColumn, confirmDateColumn, proviceNameColumn, cityNameColumn,
@@ -135,7 +135,7 @@ public class GridderOrderController implements Initializable{
         String afId = txt_afId.getText();
         // 修正文件路径为正确的反馈数据路径
         String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
-        String filePath = ProPaht + "Aqi.json";
+        String filePath = ProPaht + "aqi_feedback.json";
         List<Feedback> alist = (List<Feedback>) JsonReader.readListFromJson(filePath, Feedback.class);
 
         boolean found = false;

@@ -105,7 +105,7 @@ public class GridderController implements Initializable {
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(60);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
-        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
+        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(60);
@@ -131,7 +131,7 @@ public class GridderController implements Initializable {
         addressColumn.setCellValueFactory(new PropertyValueFactory<>("address"));
 
         TableColumn<Feedback, String> infoColumn = new TableColumn<>("反馈信息");
-        infoColumn.setCellValueFactory(new PropertyValueFactory<>("infomation"));
+        infoColumn.setCellValueFactory(new PropertyValueFactory<>("information"));
 
         txt_tableView.getColumns().addAll(afIdColumn,afNameColumn,dateColumn,estimateGradeColumn, proviceNameColumn,cityNameColumn,addressColumn,infoColumn);
         ObservableList<Feedback> data = FXCollections.observableArrayList();
@@ -240,8 +240,8 @@ public class GridderController implements Initializable {
         JavafxUtil.showAlert(primaryStage, "提交成功", "污染物实测数据提交成功", "","info");
         //刷新页面数据表格
         ObservableList<Feedback> data = FXCollections.observableArrayList();
-        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/";
-        String filePath = ProPaht + "Feedback.json";
+        String ProPaht = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/";
+        String filePath = ProPaht + "aqi_feedback.json";
         List<Feedback> aList = (List<Feedback>)JsonReader.readListFromJson(filePath, Feedback.class);
         for(Feedback a:aList){
             if(a.getGmName() != null && a.getGmName().equals(gridMember.getRealName()) && a.getState().equals("已指派")){
