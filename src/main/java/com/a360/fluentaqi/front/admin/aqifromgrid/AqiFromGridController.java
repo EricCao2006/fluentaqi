@@ -43,7 +43,7 @@ public class AqiFromGridController implements Initializable {
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(60);
         proviceNameColumn.setStyle("-fx-alignment: center;");	//居中
-        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("proviceName"));
+        proviceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(60);

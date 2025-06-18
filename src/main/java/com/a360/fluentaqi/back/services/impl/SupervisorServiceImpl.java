@@ -57,6 +57,9 @@ public class SupervisorServiceImpl implements SupervisorService {
                     }
                 }
             }
+            else {
+
+            }
 
             slist.add(supervisor);
             ObjectMapper objectMapper = new ObjectMapper();

@@ -1,11 +1,13 @@
-[
-  {
-    "loginCode": "13147859658",
-    "password": "123",
-    "realName": "柯镇恶",
-    "birthday": "1984-12-09",
-    "sex": 1,
-    "remarks": null
-  }
-
-]
+[ {
+  "loginCode" : "13147859658",
+  "password" : "123",
+  "realName" : "柯镇恶",
+  "sex" : "男",
+  "birthday" : "1984-12-09"
+}, {
+  "loginCode" : "15289252989",
+  "password" : "123",
+  "realName" : "尚阳",
+  "sex" : "男",
+  "birthday" : null
+} ]
