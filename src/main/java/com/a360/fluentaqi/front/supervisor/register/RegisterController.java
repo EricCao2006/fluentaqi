@@ -88,7 +88,7 @@ public class RegisterController {
         SupervisorService supervisorService = new SupervisorServiceImpl();
         boolean flag = supervisorService.register(supervisor);
         if(flag){
-            JavafxUtil.showAlert(primaryStage, "注册成功", loginCode.getText()+" 账号注册成功!","可以进行用户登录!" ,"info");
+            JavafxUtil.showAlert(primaryStage, "注册成功", loginCode.getText()+" 账号注册成功!","请重启程序进行登录!" ,"info");
             JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml", LoginController.primaryStage,"Fluent AQI 登录");
         }else{
             JavafxUtil.showAlert(primaryStage, "注册失败", "手机号已被注册", "请重新输入注册手机号码","warn");

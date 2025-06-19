@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FeedbackServiceImpl implements FeedbackService {
-    String FILE_PATH = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/aqiabouts/aqi_feedback.json";
+    private static final String EXTERNAL_PATH = System.getProperty("user.dir") + "/data/aqi_feedback.json";
     ObjectMapper objectMapper = new ObjectMapper();
     @Override
     public void saveFeedBack(Feedback afb) {
@@ -67,13 +67,13 @@ public class FeedbackServiceImpl implements FeedbackService {
     }
     //读Json文件并将其转化为对象列表
     private List<Feedback> readJsonFile() {
-        File file = new File(FILE_PATH);
-        if (!file.exists()) {
+        File externalFile = new File(EXTERNAL_PATH);
+        if (!externalFile.exists()) {
             return new ArrayList<>();
         }
 
         try {
-            return objectMapper.readValue(file,
+            return objectMapper.readValue(externalFile,
                     objectMapper.getTypeFactory().constructCollectionType(List.class, Feedback.class));
         } catch (Exception e) {
             e.printStackTrace();
@@ -84,7 +84,7 @@ public class FeedbackServiceImpl implements FeedbackService {
     private void writeJsonFile(List<Feedback> afList) {
         try {
             // 确保目录存在
-            File file = new File(FILE_PATH);
+            File file = new File(EXTERNAL_PATH);
             file.getParentFile().mkdirs();
 
             // 格式化输出，方便查看

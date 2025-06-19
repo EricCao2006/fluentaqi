@@ -50,4 +50,11 @@ public class ThemeUtils {
         scene.getStylesheets().clear();
         scene.getStylesheets().add(stylesheet);
     }
+
+    /**
+     * 获取当前主题模式
+     */
+    public static boolean getIsDarkMode() {
+        return isDarkMode;
+    }
 }
