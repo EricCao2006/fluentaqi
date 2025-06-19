@@ -1,8 +1,16 @@
 [
   {
     "admin_id": 1,
-    "admin_code": "admin001",
-    "loginCode": "admin123",
+    "admin_code": "xcy",
+    "loginCode": "admin001",
+    "password": "123",
+    "remarks": null
+  }
+  ,
+  {
+    "admin_id": 2,
+    "admin_code": "cby",
+    "loginCode": "admin002",
     "password": "123",
     "remarks": null
   }
