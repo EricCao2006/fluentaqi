@@ -99,7 +99,7 @@ public class GridderOrderController implements Initializable{
         TableColumn<Feedback, String> confirmDateColumn = new TableColumn<>("日期");
         confirmDateColumn.setMinWidth(200);
         confirmDateColumn.setStyle("-fx-alignment: center;");
-        confirmDateColumn.setCellValueFactory(new PropertyValueFactory<>("confirmDate"));
+        confirmDateColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         TableColumn<Feedback, String> proviceNameColumn = new TableColumn<>("省区域");
         proviceNameColumn.setMinWidth(200);
