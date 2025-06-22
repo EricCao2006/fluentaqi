@@ -27,6 +27,7 @@ public class RegisterController {
     @FXML
     private TextField txt_realName;
 
+
     @FXML
     private ChoiceBox<?> txt_sex;
     public static Stage primaryStage;

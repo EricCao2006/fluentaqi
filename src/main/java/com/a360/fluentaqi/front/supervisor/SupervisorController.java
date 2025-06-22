@@ -107,6 +107,7 @@ public class SupervisorController implements Initializable {
         this.txt_information = txt_information;
     }
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if (supervisor != null) {

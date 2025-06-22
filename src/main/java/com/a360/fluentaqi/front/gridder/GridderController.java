@@ -270,6 +270,7 @@ public class GridderController implements Initializable {
         JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml", LoginController.primaryStage,"Fluent AQI 登录");
     }
 
+
     public void reset(){
         txt_afId.setText("");
         txt_so2.setText("");

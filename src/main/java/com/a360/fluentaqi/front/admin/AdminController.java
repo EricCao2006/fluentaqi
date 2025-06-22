@@ -45,6 +45,7 @@ public class AdminController  {
     }
 
     @FXML
+
     void getback() {
         JavafxUtil.showStage(this.getClass(),"/com/a360/fluentaqi/front/view.fxml",primaryStage,"登录");
     }

@@ -37,6 +37,7 @@ public class LoginController{
 
     public SupervisorService supervisorService = new SupervisorServiceImpl();
 
+
     public static Stage primaryStage;
 
     public  TextField getTxt_id(){

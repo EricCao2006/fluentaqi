@@ -84,6 +84,7 @@ public class AqiFromGridController implements Initializable {
 
         TableColumn<Feedback, String> confirmLevelColumn = new TableColumn<>("实测等级");
         confirmLevelColumn.setMinWidth(500);
+
         confirmLevelColumn.setStyle("-fx-alignment: center;");	//居中
         confirmLevelColumn.setCellValueFactory(new PropertyValueFactory<>("confirmLevel"));
 

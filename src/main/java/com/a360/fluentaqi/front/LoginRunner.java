@@ -27,6 +27,7 @@ public class LoginRunner extends Application {
             showSplashScreen(stage);
         } else {
             showLoginScene(stage);
+
         }
     }
 

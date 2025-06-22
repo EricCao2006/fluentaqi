@@ -55,6 +55,7 @@ public class AqiFromSupController implements Initializable {
         provinceNameColumn.setStyle("-fx-alignment: center;");	//居中
         provinceNameColumn.setCellValueFactory(new PropertyValueFactory<>("provinceName"));
 
+
         TableColumn<Feedback, String> cityNameColumn = new TableColumn<>("市区域");
         cityNameColumn.setMinWidth(200);
         cityNameColumn.setStyle("-fx-alignment: center;");	//居中

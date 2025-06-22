@@ -64,6 +64,7 @@ public class HistoricalDataController implements Initializable {
         estimateGradeColumn.setStyle("-fx-alignment: center;");	//居中
         estimateGradeColumn.setCellValueFactory(new PropertyValueFactory<>("estimateGrade"));
 
+
         TableColumn<Feedback, String> dateColumn = new TableColumn<>("反馈时间");
         dateColumn.setMinWidth(200);
         dateColumn.setStyle("-fx-alignment: center;");	//居中
