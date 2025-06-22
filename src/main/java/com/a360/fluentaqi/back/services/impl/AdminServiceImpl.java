@@ -8,16 +8,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class AdminServiceImpl implements AdminService {
     @Override
     public boolean login(String loginCode, String password) throws IOException {
-        String filePath = System.getProperty("user.dir") + "/src/main/resources/com/a360/fluentaqi/back/users/admins.json";
         ObjectMapper objectMapper = new ObjectMapper();
-        try {
+        try (InputStream is = getClass().getResourceAsStream("/com/a360/fluentaqi/back/users/admins.json")) {
+            if (is == null) {
+                throw new RuntimeException("admins.json not found in classpath");
+            }
+
             List<Admin> adminList = objectMapper.readValue(
-                    new File(filePath),
+                    is,
                     objectMapper.getTypeFactory().constructCollectionType(List.class, Admin.class)
             );
             for (Admin admin : adminList) {

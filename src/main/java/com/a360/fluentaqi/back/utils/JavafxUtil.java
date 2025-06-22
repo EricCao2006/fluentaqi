@@ -36,6 +36,12 @@ public class JavafxUtil {
         alert.setContentText(contentText);
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.getStyleClass().add("styled-dialog-pane");
+        String themeCssPath = ThemeUtils.getIsDarkMode() ?
+                "/com/a360/fluentaqi/front/css/dark.css" :
+                "/com/a360/fluentaqi/front/css/light.css";
+
+        dialogPane.getStylesheets().add(JavafxUtil.class.getResource(themeCssPath).toExternalForm());
+
         alert.showAndWait();
 
     }

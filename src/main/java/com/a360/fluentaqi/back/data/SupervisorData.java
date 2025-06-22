@@ -18,6 +18,6 @@ public class SupervisorData {
         alist.add(s2);
         alist.add(s3);
         String ProPaht = System.getProperty("user.dir") + "src/main/resources/com/a360/fluentaqi/back/users";
-        JsonReader.writeListToJson(alist,ProPaht+"Supervisor.json");
+        JsonReader.writeListToJson(alist,ProPaht+"supervisor.json");
     }
 }
